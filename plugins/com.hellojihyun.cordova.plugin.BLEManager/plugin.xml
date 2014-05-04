@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="com.hellojihyun.cordova.plugin.BLEManager"
+    version="1.0.0">
+
+    <name>BLEManager Plugin for Cordova</name>
+    <description>BLEManager</description>
+    <license>Apache 2.0</license>
+    <keywords>BLE, Bluetooth Low Energy</keywords>	
+    
+    <engines>
+        <engine name="cordova" version=">=2.2.0" />
+    </engines>
+	
+    <asset src="www/BLEManager.js" target="plugins/BLEManager.js" />
+
+	<js-module src="www/BLEManager.js" name="BLEManager">
+    	<clobbers target="window.BLEManager" />
+	</js-module>
+	
+    <!-- ios -->
+    <platform name="ios">
+        <!-- feature tag in config.xml -->
+        <config-file target="config.xml" parent="/widget">
+          <feature name="BLEManager">
+            <param name="ios-package" value="CDVBLEManager"/>
+          </feature>
+        </config-file>
+        
+        <header-file src="src/ios/CDVBLEManager.h" />
+        <source-file src="src/ios/CDVBLEManager.m"/>
+        <header-file src="src/ios/BLEDefines.h" />
+        <header-file src="src/ios/BLECentral.h" />
+        <source-file src="src/ios/BLECentral.m"/>
+        <header-file src="src/ios/BLEPeripheral.h" />
+        <source-file src="src/ios/BLEPeripheral.m"/>
+        <header-file src="src/ios/CBPeripheral+Extensions.h" />
+        <source-file src="src/ios/CBPeripheral+Extensions.m"/>
+                
+        <!-- frameworks -->
+        <framework src="CoreBluetooth.framework" />
+    </platform>
+</plugin>

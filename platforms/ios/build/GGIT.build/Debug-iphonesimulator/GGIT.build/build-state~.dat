@@ -1,0 +1,1089 @@
+TGGIT
+v6
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/Info.plist /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/GGIT-Info.plist
+cPhaseScriptExecution Copy\ www\ directory /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Script-304B58A110DAC018002A0835.sh
+cCpResource GGIT/Resources/icons/icon-76.png build/emulator/GGIT.app/icon-76.png
+cCpResource GGIT/Resources/icons/icon-40@2x.png build/emulator/GGIT.app/icon-40@2x.png
+cCpResource GGIT/Resources/icons/icon-72.png build/emulator/GGIT.app/icon-72.png
+cCpResource GGIT/Resources/icons/icon.png build/emulator/GGIT.app/icon.png
+cCpResource GGIT/Resources/icons/icon@2x.png build/emulator/GGIT.app/icon@2x.png
+cCopyStringsFile /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/en.lproj/Localizable.strings GGIT/Resources/en.lproj/Localizable.strings
+cCompileXIB /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/MainViewController.xib
+cCpResource GGIT/Resources/icons/icon-50.png build/emulator/GGIT.app/icon-50.png
+cCpResource GGIT/Resources/icons/icon-60@2x.png build/emulator/GGIT.app/icon-60@2x.png
+cCopyStringsFile /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/de.lproj/Localizable.strings GGIT/Resources/de.lproj/Localizable.strings
+cCpResource GGIT/Resources/icons/icon-small.png build/emulator/GGIT.app/icon-small.png
+cCpResource GGIT/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/GGIT.app/Default-Landscape@2x~ipad.png
+cCpResource GGIT/Resources/splash/Default-Landscape~ipad.png build/emulator/GGIT.app/Default-Landscape~ipad.png
+cCpResource GGIT/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/GGIT.app/Default-Portrait@2x~ipad.png
+cCpResource GGIT/Resources/icons/icon-small@2x.png build/emulator/GGIT.app/icon-small@2x.png
+cCpResource GGIT/Resources/splash/Default-Portrait~ipad.png build/emulator/GGIT.app/Default-Portrait~ipad.png
+cCpResource GGIT/Resources/icons/icon-40.png build/emulator/GGIT.app/icon-40.png
+cCpResource GGIT/Resources/splash/Default@2x~iphone.png build/emulator/GGIT.app/Default@2x~iphone.png
+cCpResource GGIT/Resources/icons/icon-60.png build/emulator/GGIT.app/icon-60.png
+cCpResource GGIT/Resources/splash/Default~iphone.png build/emulator/GGIT.app/Default~iphone.png
+cCpResource GGIT/Resources/splash/Default-568h@2x~iphone.png build/emulator/GGIT.app/Default-568h@2x~iphone.png
+cCpResource GGIT/Resources/icons/icon-50@2x.png build/emulator/GGIT.app/icon-50@2x.png
+cCpResource GGIT/Resources/icons/icon-76@2x.png build/emulator/GGIT.app/icon-76@2x.png
+cCpResource GGIT/Resources/icons/icon-72@2x.png build/emulator/GGIT.app/icon-72@2x.png
+cProcessPCH /var/folders/_b/f3hpk0190cjf9dspb_2tykdh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/GGIT-Prefix-glpmvzfdllyizxaauibdyvecnnvl/GGIT-Prefix.pch.pch GGIT/GGIT-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/main.o /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/AppDelegate.o /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/MainViewController.o /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVLogger.o /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/org.apache.cordova.console/CDVLogger.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVM7StepCounter.o /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.M7StepCounter/CDVM7StepCounter.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVBLEManager.o /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/BLECentral.o /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/BLEPeripheral.o /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLEPeripheral.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CBPeripheral+Extensions.o /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CBPeripheral+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/GGIT normal i386
+cGenerateDSYMFile /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app.dSYM /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/GGIT
+cTouch /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk
+c0000000053119F8A0000000000000198
+t1393663882
+s408
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/SDKSettings.plist
+c00000000534E0CE100000000000003B4
+t1397624033
+s948
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000534E0D01000000000000019E
+t1397624065
+s414
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AssetsLibrary.framework/AssetsLibrary
+c00000000534E0D050000000000059340
+t1397624069
+s365376
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreBluetooth.framework/CoreBluetooth
+c00000000534E0D090000000000066480
+t1397624073
+s418944
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c00000000534E0D0B0000000000446820
+t1397624075
+s4483104
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
+c00000000534E0D0C00000000000F1A80
+t1397624076
+s989824
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreMotion.framework/CoreMotion
+c00000000534E0D0E00000000001D2FF0
+t1397624078
+s1912816
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+c00000000534E0D1C00000000001BE790
+t1397624092
+s1828752
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/AppDelegate.m
+c000000005361E900000000000000139F
+t1398925568
+s5023
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/MainViewController.m
+c000000005361E9000000000000001265
+t1398925568
+s4709
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/MainViewController.xib
+c000000005361E9000000000000001759
+t1398925568
+s5977
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/GGIT-Info.plist
+c000000005361E91A0000000000000A10
+t1398925594
+s2576
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/GGIT-Prefix.pch
+c000000005361E90100000000000003B9
+t1398925569
+s953
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m
+c000000005361E91400000000000049B2
+t1398925588
+s18866
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLEPeripheral.m
+c000000005361E9140000000000001259
+t1398925588
+s4697
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CBPeripheral+Extensions.m
+c000000005361E9140000000000000BBE
+t1398925588
+s3006
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.m
+c000000005361E9140000000000004E0C
+t1398925588
+s19980
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.M7StepCounter/CDVM7StepCounter.m
+c000000005361E90D0000000000000EB9
+t1398925581
+s3769
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/org.apache.cordova.console/CDVLogger.m
+c000000005361E9070000000000000490
+t1398925575
+s1168
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/de.lproj/Localizable.strings
+c000000005361E90000000000000004C0
+t1398925568
+s1216
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/en.lproj/Localizable.strings
+c000000005361E90000000000000004AB
+t1398925568
+s1195
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-40.png
+c000000005361E9000000000000000FF2
+t1398925568
+s4082
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-40@2x.png
+c000000005361E9000000000000001CF3
+t1398925568
+s7411
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-50.png
+c000000005361E900000000000000130A
+t1398925568
+s4874
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-50@2x.png
+c000000005361E900000000000000258B
+t1398925568
+s9611
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-60.png
+c000000005361E90000000000000016B3
+t1398925568
+s5811
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-60@2x.png
+c000000005361E9000000000000002E94
+t1398925568
+s11924
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-72.png
+c000000005361E9000000000000001350
+t1398925568
+s4944
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-72@2x.png
+c000000005361E9000000000000002DBA
+t1398925568
+s11706
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-76.png
+c000000005361E9000000000000001B71
+t1398925568
+s7025
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-76@2x.png
+c000000005361E9000000000000003B9E
+t1398925568
+s15262
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-small.png
+c000000005361E9000000000000000CDE
+t1398925568
+s3294
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-small@2x.png
+c000000005361E90000000000000015E8
+t1398925568
+s5608
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon.png
+c000000005361E9000000000000000F3E
+t1398925568
+s3902
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon@2x.png
+c000000005361E9000000000000001EBD
+t1398925568
+s7869
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/splash/Default-568h@2x~iphone.png
+c000000005361E90000000000000085B1
+t1398925568
+s34225
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/splash/Default-Landscape@2x~ipad.png
+c000000005361E9000000000000033D0A
+t1398925568
+s212234
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/splash/Default-Landscape~ipad.png
+c000000005361E90000000000000166A2
+t1398925568
+s91810
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/splash/Default-Portrait@2x~ipad.png
+c000000005361E9000000000000033F7C
+t1398925568
+s212860
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/splash/Default-Portrait~ipad.png
+c000000005361E9000000000000016641
+t1398925568
+s91713
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/splash/Default@2x~iphone.png
+c000000005361E9000000000000007323
+t1398925568
+s29475
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/splash/Default~iphone.png
+c000000005361E900000000000000289A
+t1398925568
+s10394
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/main.m
+c000000005361E9000000000000000456
+t1398925568
+s1110
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/AppDelegate.o
+t1398925605
+s73932
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/BLECentral.o
+t1398925605
+s67164
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/BLEPeripheral.o
+t1398925605
+s32340
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CBPeripheral+Extensions.o
+t1398925605
+s13976
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVBLEManager.o
+t1398925605
+s103304
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVLogger.o
+t1398925605
+s41476
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVM7StepCounter.o
+t1398925605
+s57004
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/GGIT.LinkFileList
+c000000005361E920000000000000049B
+t1398925600
+s1179
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/MainViewController.o
+t1398925605
+s50740
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/main.o
+t1398925605
+s2940
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Script-304B58A110DAC018002A0835.sh
+c000000005361E920000000000000002D
+t1398925600
+s45
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app
+t1398925606
+s1020
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app.dSYM
+t2
+s0
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/Default-568h@2x~iphone.png
+t1398925601
+s34225
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/Default-Landscape@2x~ipad.png
+t1398925600
+s212234
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/Default-Landscape~ipad.png
+t1398925600
+s91810
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/Default-Portrait@2x~ipad.png
+t1398925600
+s212860
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/Default-Portrait~ipad.png
+t1398925601
+s91713
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/Default@2x~iphone.png
+t1398925601
+s29475
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/Default~iphone.png
+t1398925601
+s10394
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/GGIT
+t1398925606
+s373604
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/Info.plist
+t1398925600
+s1272
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/MainViewController.nib
+t1398925604
+s1332
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/PkgInfo
+t2
+s0
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/de.lproj/Localizable.strings
+t1398925600
+s280
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/en.lproj/Localizable.strings
+t1398925600
+s166
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-40.png
+t1398925601
+s4082
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-40@2x.png
+t1398925600
+s7411
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-50.png
+t1398925600
+s4874
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-50@2x.png
+t1398925601
+s9611
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-60.png
+t1398925601
+s5811
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-60@2x.png
+t1398925600
+s11924
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-72.png
+t1398925600
+s4944
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-72@2x.png
+t1398925601
+s11706
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-76.png
+t1398925600
+s7025
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-76@2x.png
+t1398925601
+s15262
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-small.png
+t1398925600
+s3294
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-small@2x.png
+t1398925601
+s5608
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon.png
+t1398925600
+s3902
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon@2x.png
+t1398925600
+s7869
+
+N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/libCordova.a
+c000000005361E92000000000000D2888
+t1398925600
+s862344
+
+N/var/folders/_b/f3hpk0190cjf9dspb_2tykdh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/GGIT-Prefix-glpmvzfdllyizxaauibdyvecnnvl/GGIT-Prefix.pch.pch
+t1398925604
+s5373500
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciese657b7a02012b941^aa82b9a02012b941^---0#1#1#--18"Check dependencies36"A3835CC8-06EE-4888-902B-3B5632BD111F-
+
+CCompileC build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/AppDelegate.o /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s420618404.974903
+e420618405.161598
+r1
+xCompileC
+xbuild/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/AppDelegate.o
+x/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/AppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/AppDelegate.m
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/AppDelegate.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/MainViewController.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/AppDelegate.m203"[1mCompileC[0m build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/AppDelegate.o [1mGGIT/Classes/AppDelegate.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler8ac7f9a42012b941^feee29a52012b941^---0#0#1#-19%DVTDocumentLocation2@78"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/AppDelegate.m0000000000000000^3714"[1mCompileC[0m build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/AppDelegate.o [1mGGIT/Classes/AppDelegate.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=150 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-generated-files.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-own-target-headers.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-all-target-headers.hmap -iquote /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-project-headers.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/usr/local/lib/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/UninstalledProducts/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/DerivedSources/i386 -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/DerivedSources -F/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator -include /var/folders/_b/f3hpk0190cjf9dspb_2tykdh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/GGIT-Prefix-glpmvzfdllyizxaauibdyvecnnvl/GGIT-Prefix.pch -MMD -MT dependencies -MF /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/AppDelegate.dia -c /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/AppDelegate.m -o /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/AppDelegate.o36"6AEA026A-067A-4E0F-A0C1-8EFA70747C41-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCompileC build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/BLECentral.o /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s420618405.429824
+e420618405.660787
+r1
+xCompileC
+xbuild/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/BLECentral.o
+x/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLEDefines.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CBPeripheral+Extensions.h
+o[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m:9:17: [0m[0;1;35mwarning: [0m[1mmethod definition for
+o      'disconnect' not found [-Wincomplete-implementation][0m
+o@implementation BLECentral
+o[0;1;32m                ^
+o[0mIn file included from /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m:4:
+o[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.h:55:1: [0m[0;1;30mnote: [0mmethod 'disconnect'
+o      declared here[0m
+o- (void)disconnect;
+o[0;1;32m^
+o[0m[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m:9:17: [0m[0;1;35mwarning: [0m[1mmethod definition for
+o      'centralManager:didDisconnectPeripheral:error:' not found [-Wincomplete-implementation][0m
+o@implementation BLECentral
+o[0;1;32m                ^
+o[0mIn file included from /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m:4:
+o[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.h:56:1: [0m[0;1;30mnote: [0mmethod
+o      'centralManager:didDisconnectPeripheral:error:' declared here[0m
+o- (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error;
+o[0;1;32m^
+o[0m[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m:9:17: [0m[0;1;35mwarning: [0m[1mmethod definition for
+o      'readActiveRSSI' not found [-Wincomplete-implementation][0m
+o@implementation BLECentral
+o[0;1;32m                ^
+o[0mIn file included from /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m:4:
+o[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.h:74:1: [0m[0;1;30mnote: [0mmethod 'readActiveRSSI'
+o      declared here[0m
+o-(void) readActiveRSSI;
+o[0;1;32m^
+o[0m[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m:18:13: [0m[0;1;35mwarning: [0m[1munused variable
+o      'done' [-Wunused-variable][0m
+ostatic bool done = false;
+o[0;1;32m            ^
+o[0m4 warnings generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"Compile /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m243"[1mCompileC[0m build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/BLECentral.o [1mGGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilere5416ea52012b941^8447aba52012b941^-2447"[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m:9:17: [0m[0;1;35mwarning: [0m[1mmethod definition for      'disconnect' not found [-Wincomplete-implementation][0m@implementation BLECentral[0;1;32m                ^[0mIn file included from /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m:4:[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.h:55:1: [0m[0;1;30mnote: [0mmethod 'disconnect'      declared here[0m- (void)disconnect;[0;1;32m^[0m[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m:9:17: [0m[0;1;35mwarning: [0m[1mmethod definition for      'centralManager:didDisconnectPeripheral:error:' not found [-Wincomplete-implementation][0m@implementation BLECentral[0;1;32m                ^[0mIn file included from /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m:4:[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.h:56:1: [0m[0;1;30mnote: [0mmethod      'centralManager:didDisconnectPeripheral:error:' declared here[0m- (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error;[0;1;32m^[0m[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m:9:17: [0m[0;1;35mwarning: [0m[1mmethod definition for      'readActiveRSSI' not found [-Wincomplete-implementation][0m@implementation BLECentral[0;1;32m                ^[0mIn file included from /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m:4:[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.h:74:1: [0m[0;1;30mnote: [0mmethod 'readActiveRSSI'      declared here[0m-(void) readActiveRSSI;[0;1;32m^[0m[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m:18:13: [0m[0;1;35mwarning: [0m[1munused variable      'done' [-Wunused-variable][0mstatic bool done = false;[0;1;32m            ^[0m4 warnings generated.4(36%IDEClangDiagnosticActivityLogMessage2@44"Method definition for 'disconnect' not found-420618405#18446744073709551615#0#1(2@33"Method 'disconnect' declared here-420618405#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@119"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.h0000000000000000^54#0#54#0#1461#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@119"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m0000000000000000^8#16#8#16#136#0#14"Semantic Issue--2@79"Method definition for 'centralManager:didDisconnectPeripheral:error:' not found-420618405#18446744073709551615#0#1(2@68"Method 'centralManager:didDisconnectPeripheral:error:' declared here-420618405#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@119"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.h0000000000000000^55#0#55#0#1481#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@119"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m0000000000000000^8#16#8#16#136#0#14"Semantic Issue--2@48"Method definition for 'readActiveRSSI' not found-420618405#18446744073709551615#0#1(2@37"Method 'readActiveRSSI' declared here-420618405#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@119"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.h0000000000000000^73#0#73#0#2456#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@119"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m0000000000000000^8#16#8#16#136#0#14"Semantic Issue--2@22"Unused variable 'done'-420618405#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@119"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m0000000000000000^17#12#17#12#313#0#19"Unused Entity Issue--0#0#1#-19%DVTDocumentLocation4@119"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m0000000000000000^3792"[1mCompileC[0m build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/BLECentral.o [1mGGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=150 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-generated-files.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-own-target-headers.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-all-target-headers.hmap -iquote /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-project-headers.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/usr/local/lib/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/UninstalledProducts/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/DerivedSources/i386 -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/DerivedSources -F/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator -include /var/folders/_b/f3hpk0190cjf9dspb_2tykdh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/GGIT-Prefix-glpmvzfdllyizxaauibdyvecnnvl/GGIT-Prefix.pch -MMD -MT dependencies -MF /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/BLECentral.d --serialize-diagnostics /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/BLECentral.dia -c /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.m -o /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/BLECentral.o36"F8419B5D-94DF-4172-AAC7-03A9702006D3-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCompileC build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/BLEPeripheral.o /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLEPeripheral.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s420618405.630828
+e420618405.776573
+r1
+xCompileC
+xbuild/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/BLEPeripheral.o
+x/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLEPeripheral.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLEPeripheral.m
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLEPeripheral.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLEDefines.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection123"Compile /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLEPeripheral.m249"[1mCompileC[0m build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/BLEPeripheral.o [1mGGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLEPeripheral.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilere1b7a1a52012b941^dcdac6a52012b941^---0#0#1#-19%DVTDocumentLocation2@122"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLEPeripheral.m0000000000000000^3810"[1mCompileC[0m build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/BLEPeripheral.o [1mGGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLEPeripheral.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=150 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-generated-files.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-own-target-headers.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-all-target-headers.hmap -iquote /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-project-headers.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/usr/local/lib/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/UninstalledProducts/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/DerivedSources/i386 -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/DerivedSources -F/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator -include /var/folders/_b/f3hpk0190cjf9dspb_2tykdh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/GGIT-Prefix-glpmvzfdllyizxaauibdyvecnnvl/GGIT-Prefix.pch -MMD -MT dependencies -MF /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/BLEPeripheral.d --serialize-diagnostics /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/BLEPeripheral.dia -c /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLEPeripheral.m -o /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/BLEPeripheral.o36"0FEB6F99-9146-41B0-B21E-2B8FAF0C5BD9-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCompileC build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CBPeripheral+Extensions.o /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CBPeripheral+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s420618405.662515
+e420618405.778843
+r1
+xCompileC
+xbuild/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CBPeripheral+Extensions.o
+x/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CBPeripheral+Extensions.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CBPeripheral+Extensions.m
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CBPeripheral+Extensions.h
+o[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CBPeripheral+Extensions.m:59:28: [0m[0;1;35mwarning: [0m[1munused
+o      variable 'bytes' [-Wunused-variable][0m
+o            const uint8_t *bytes = [manufacturerData bytes];
+o[0;1;32m                           ^
+o[0m[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CBPeripheral+Extensions.m:60:17: [0m[0;1;35mwarning: [0m[1munused
+o      variable 'len' [-Wunused-variable][0m
+o            int len = [manufacturerData length];
+o[0;1;32m                ^
+o[0m2 warnings generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection133"Compile /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CBPeripheral+Extensions.m269"[1mCompileC[0m build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CBPeripheral+Extensions.o [1mGGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CBPeripheral+Extensions.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerb5e0a9a52012b941^973ac8a52012b941^-645"[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CBPeripheral+Extensions.m:59:28: [0m[0;1;35mwarning: [0m[1munused      variable 'bytes' [-Wunused-variable][0m            const uint8_t *bytes = [manufacturerData bytes];[0;1;32m                           ^[0m[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CBPeripheral+Extensions.m:60:17: [0m[0;1;35mwarning: [0m[1munused      variable 'len' [-Wunused-variable][0m            int len = [manufacturerData length];[0;1;32m                ^[0m2 warnings generated.2(36%IDEClangDiagnosticActivityLogMessage2@23"Unused variable 'bytes'-420618405#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@132"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CBPeripheral+Extensions.m0000000000000000^58#27#58#27#2030#0#19"Unused Entity Issue--2@21"Unused variable 'len'-420618405#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@132"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CBPeripheral+Extensions.m0000000000000000^59#16#59#16#2080#0#19"Unused Entity Issue--0#0#1#-19%DVTDocumentLocation4@132"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CBPeripheral+Extensions.m0000000000000000^3870"[1mCompileC[0m build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CBPeripheral+Extensions.o [1mGGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CBPeripheral+Extensions.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=150 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-generated-files.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-own-target-headers.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-all-target-headers.hmap -iquote /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-project-headers.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/usr/local/lib/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/UninstalledProducts/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/DerivedSources/i386 -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/DerivedSources -F/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator -include /var/folders/_b/f3hpk0190cjf9dspb_2tykdh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/GGIT-Prefix-glpmvzfdllyizxaauibdyvecnnvl/GGIT-Prefix.pch -MMD -MT dependencies -MF /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CBPeripheral+Extensions.d --serialize-diagnostics /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CBPeripheral+Extensions.dia -c /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CBPeripheral+Extensions.m -o /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CBPeripheral+Extensions.o36"F3BE4EEE-7432-4212-A501-4B8F4327A3BF-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCompileC build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVBLEManager.o /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s420618405.298411
+e420618405.630210
+r1
+xCompileC
+xbuild/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVBLEManager.o
+x/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.m
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLECentral.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLEPeripheral.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CBPeripheral+Extensions.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLEDefines.h
+o[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.m:281:66: [0m[0;1;35mwarning: [0m[1mincompatible
+o      pointer types sending 'NSData *' to parameter of type 'NSString *' [-Wincompatible-pointer-types][0m
+o        [PM doAddService:serviceName key:characteristicKey value:characteristicValue];
+o[0;1;32m                                                                 ^~~~~~~~~~~~~~~~~~~
+o[0mIn file included from /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.m:9:
+oIn file included from /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.h:18:
+o[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLEPeripheral.h:33:98: [0m[0;1;30mnote: [0mpassing argument to
+o      parameter 'characteristicValue' here[0m
+o- (void)doAddService:(NSString *)serviceName key:(NSString *)characteristicKey value:(NSString *)characteristicValue;
+o[0;1;32m                                                                                                 ^
+o[0m[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.m:500:46: [0m[0;1;35mwarning: [0m[1mundeclared
+o      selector 'connectFirstDeviceTimer:' [-Wundeclared-selector][0m
+o                                   selector:@selector(connectFirstDeviceTimer:)
+o[0;1;32m                                             ^
+o[0m[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.m:517:46: [0m[0;1;35mwarning: [0m[1mundeclared
+o      selector 'connectUuidTimer:' [-Wundeclared-selector][0m
+o                                   selector:@selector(connectUuidTimer:)
+o[0;1;32m                                             ^
+o[0m3 warnings generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection123"Compile /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.m249"[1mCompileC[0m build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVBLEManager.o [1mGGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler5ea04ca52012b941^3a5da2a52012b941^-1960"[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.m:281:66: [0m[0;1;35mwarning: [0m[1mincompatible      pointer types sending 'NSData *' to parameter of type 'NSString *' [-Wincompatible-pointer-types][0m        [PM doAddService:serviceName key:characteristicKey value:characteristicValue];[0;1;32m                                                                 ^~~~~~~~~~~~~~~~~~~[0mIn file included from /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.m:9:In file included from /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.h:18:[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLEPeripheral.h:33:98: [0m[0;1;30mnote: [0mpassing argument to      parameter 'characteristicValue' here[0m- (void)doAddService:(NSString *)serviceName key:(NSString *)characteristicKey value:(NSString *)characteristicValue;[0;1;32m                                                                                                 ^[0m[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.m:500:46: [0m[0;1;35mwarning: [0m[1mundeclared      selector 'connectFirstDeviceTimer:' [-Wundeclared-selector][0m                                   selector:@selector(connectFirstDeviceTimer:)[0;1;32m                                             ^[0m[1m/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.m:517:46: [0m[0;1;35mwarning: [0m[1mundeclared      selector 'connectUuidTimer:' [-Wundeclared-selector][0m                                   selector:@selector(connectUuidTimer:)[0;1;32m                                             ^[0m3 warnings generated.3(36%IDEClangDiagnosticActivityLogMessage2@79"Incompatible pointer types sending 'NSData *' to parameter of type 'NSString *'-420618405#18446744073709551615#0#1(2@56"Passing argument to parameter 'characteristicValue' here-420618405#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@122"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/BLEPeripheral.h0000000000000000^32#97#32#97#928#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@122"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.m0000000000000000^280#65#280#65#10118#0#14"Semantic Issue1(3@122"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.m0000000000000000^280#65#280#84#10118#0#-2@46"Undeclared selector 'connectFirstDeviceTimer:'-420618405#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@122"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.m0000000000000000^499#45#499#45#17901#0#14"Semantic Issue--2@39"Undeclared selector 'connectUuidTimer:'-420618405#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@122"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.m0000000000000000^516#45#516#45#18401#0#14"Semantic Issue--0#0#1#-19%DVTDocumentLocation4@122"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.m0000000000000000^3810"[1mCompileC[0m build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVBLEManager.o [1mGGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=150 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-generated-files.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-own-target-headers.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-all-target-headers.hmap -iquote /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-project-headers.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/usr/local/lib/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/UninstalledProducts/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/DerivedSources/i386 -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/DerivedSources -F/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator -include /var/folders/_b/f3hpk0190cjf9dspb_2tykdh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/GGIT-Prefix-glpmvzfdllyizxaauibdyvecnnvl/GGIT-Prefix.pch -MMD -MT dependencies -MF /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVBLEManager.d --serialize-diagnostics /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVBLEManager.dia -c /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.BLEManager/CDVBLEManager.m -o /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVBLEManager.o36"19EE744F-DA14-492F-BA76-9C19E81A2790-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCompileC build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVLogger.o /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/org.apache.cordova.console/CDVLogger.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s420618405.162401
+e420618405.296510
+r1
+xCompileC
+xbuild/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVLogger.o
+x/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/org.apache.cordova.console/CDVLogger.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/org.apache.cordova.console/CDVLogger.m
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/org.apache.cordova.console/CDVLogger.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDV.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVDebug.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVTimer.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVJSON.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"Compile /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/org.apache.cordova.console/CDVLogger.m226"[1mCompileC[0m build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVLogger.o [1mGGIT/Plugins/org.apache.cordova.console/CDVLogger.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerefcb29a52012b941^724e4ca52012b941^---0#0#1#-19%DVTDocumentLocation2@103"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/org.apache.cordova.console/CDVLogger.m0000000000000000^3756"[1mCompileC[0m build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVLogger.o [1mGGIT/Plugins/org.apache.cordova.console/CDVLogger.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=150 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-generated-files.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-own-target-headers.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-all-target-headers.hmap -iquote /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-project-headers.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/usr/local/lib/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/UninstalledProducts/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/DerivedSources/i386 -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/DerivedSources -F/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator -include /var/folders/_b/f3hpk0190cjf9dspb_2tykdh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/GGIT-Prefix-glpmvzfdllyizxaauibdyvecnnvl/GGIT-Prefix.pch -MMD -MT dependencies -MF /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVLogger.d --serialize-diagnostics /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVLogger.dia -c /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/org.apache.cordova.console/CDVLogger.m -o /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVLogger.o36"557C58BD-9867-4CAB-8593-8CC2475AF56D-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCompileC build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVM7StepCounter.o /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.M7StepCounter/CDVM7StepCounter.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s420618405.195471
+e420618405.427163
+r1
+xCompileC
+xbuild/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVM7StepCounter.o
+x/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.M7StepCounter/CDVM7StepCounter.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.M7StepCounter/CDVM7StepCounter.m
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.M7StepCounter/CDVM7StepCounter.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection129"Compile /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.M7StepCounter/CDVM7StepCounter.m258"[1mCompileC[0m build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVM7StepCounter.o [1mGGIT/Plugins/com.hellojihyun.cordova.plugin.M7StepCounter/CDVM7StepCounter.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler1c4132a52012b941^4a7d6da52012b941^---0#0#1#-19%DVTDocumentLocation2@128"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.M7StepCounter/CDVM7StepCounter.m0000000000000000^3834"[1mCompileC[0m build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVM7StepCounter.o [1mGGIT/Plugins/com.hellojihyun.cordova.plugin.M7StepCounter/CDVM7StepCounter.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=150 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-generated-files.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-own-target-headers.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-all-target-headers.hmap -iquote /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-project-headers.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/usr/local/lib/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/UninstalledProducts/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/DerivedSources/i386 -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/DerivedSources -F/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator -include /var/folders/_b/f3hpk0190cjf9dspb_2tykdh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/GGIT-Prefix-glpmvzfdllyizxaauibdyvecnnvl/GGIT-Prefix.pch -MMD -MT dependencies -MF /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVM7StepCounter.d --serialize-diagnostics /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVM7StepCounter.dia -c /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Plugins/com.hellojihyun.cordova.plugin.M7StepCounter/CDVM7StepCounter.m -o /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVM7StepCounter.o36"FF7BECFB-4907-4818-8FDD-A79B1134716D-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCompileC build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/MainViewController.o /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s420618405.049010
+e420618405.194103
+r1
+xCompileC
+xbuild/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/MainViewController.o
+x/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/MainViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/MainViewController.m
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/MainViewController.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/MainViewController.m217"[1mCompileC[0m build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/MainViewController.o [1mGGIT/Classes/MainViewController.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilera0c30ca52012b941^80b631a52012b941^---0#0#1#-19%DVTDocumentLocation2@85"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/MainViewController.m0000000000000000^3756"[1mCompileC[0m build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/MainViewController.o [1mGGIT/Classes/MainViewController.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=150 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-generated-files.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-own-target-headers.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-all-target-headers.hmap -iquote /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-project-headers.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/usr/local/lib/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/UninstalledProducts/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/DerivedSources/i386 -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/DerivedSources -F/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator -include /var/folders/_b/f3hpk0190cjf9dspb_2tykdh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/GGIT-Prefix-glpmvzfdllyizxaauibdyvecnnvl/GGIT-Prefix.pch -MMD -MT dependencies -MF /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/MainViewController.d --serialize-diagnostics /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/MainViewController.dia -c /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/MainViewController.m -o /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/MainViewController.o36"C39F67C1-CBFE-4BA4-A45B-406F1B7B065B-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCompileC build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/main.o /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s420618404.973661
+e420618405.048482
+r1
+xCompileC
+xbuild/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/main.o
+x/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/main.m
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Compile /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/main.m181"[1mCompileC[0m build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/main.o [1mGGIT/main.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler317bf9a42012b941^ea420ca52012b941^---0#0#1#-19%DVTDocumentLocation2@63"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/main.m0000000000000000^3656"[1mCompileC[0m build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/main.o [1mGGIT/main.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=150 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-generated-files.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-own-target-headers.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-all-target-headers.hmap -iquote /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-project-headers.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/usr/local/lib/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/UninstalledProducts/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/DerivedSources/i386 -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/DerivedSources -F/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator -include /var/folders/_b/f3hpk0190cjf9dspb_2tykdh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/GGIT-Prefix-glpmvzfdllyizxaauibdyvecnnvl/GGIT-Prefix.pch -MMD -MT dependencies -MF /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/main.dia -c /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/main.m -o /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/main.o36"06F91ED3-03F4-4AC6-8F39-9F0B13827F40-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCompileXIB /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/MainViewController.xib
+s420618400.966454
+e420618404.142833
+r1
+xCompileXIB
+x/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/MainViewController.xib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Compiling /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/MainViewController.xib62"[1mCompileXIB[0m [1mGGIT/Classes/MainViewController.xib[0m0ddef7a02012b941^e0d724a42012b941^---0#0#1#-19%DVTDocumentLocation2@87"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/MainViewController.xib0000000000000000^984"[1mCompileXIB[0m [1mGGIT/Classes/MainViewController.xib[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 5.0 --output-format human-readable-text --compile /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/MainViewController.nib /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Classes/MainViewController.xib36"CF341A0E-5C96-4939-BB36-1D984D814519-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCopyStringsFile /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/de.lproj/Localizable.strings GGIT/Resources/de.lproj/Localizable.strings
+s420618400.971829
+e420618400.977486
+r1
+xCopyStringsFile
+x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/de.lproj/Localizable.strings
+xGGIT/Resources/de.lproj/Localizable.strings
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Copy GGIT/Resources/de.lproj/Localizable.strings120"[1mCopyStringsFile[0m build/emulator/GGIT.app/de.lproj/Localizable.strings GGIT/Resources/de.lproj/Localizable.strings70edf8a02012b941^8350faa02012b941^---0#0#1#-19%DVTDocumentLocation2@95"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/de.lproj/Localizable.strings0000000000000000^779"[1mCopyStringsFile[0m build/emulator/GGIT.app/de.lproj/Localizable.strings GGIT/Resources/de.lproj/Localizable.strings    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/de.lproj -- GGIT/Resources/de.lproj/Localizable.strings36"C6401523-03CD-40C6-BBC3-4EC206003C0C-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCopyStringsFile /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/en.lproj/Localizable.strings GGIT/Resources/en.lproj/Localizable.strings
+s420618400.963856
+e420618400.966481
+r1
+xCopyStringsFile
+x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/en.lproj/Localizable.strings
+xGGIT/Resources/en.lproj/Localizable.strings
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Copy GGIT/Resources/en.lproj/Localizable.strings120"[1mCopyStringsFile[0m build/emulator/GGIT.app/en.lproj/Localizable.strings GGIT/Resources/en.lproj/Localizable.strings9cfcf6a02012b941^d26ff7a02012b941^---0#0#1#-19%DVTDocumentLocation2@95"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/en.lproj/Localizable.strings0000000000000000^779"[1mCopyStringsFile[0m build/emulator/GGIT.app/en.lproj/Localizable.strings GGIT/Resources/en.lproj/Localizable.strings    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/en.lproj -- GGIT/Resources/en.lproj/Localizable.strings36"9B89A405-C8C7-488E-9112-9FE11BF0CC12-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCpResource GGIT/Resources/icons/icon-40.png build/emulator/GGIT.app/icon-40.png
+s420618401.019451
+e420618401.021182
+r1
+xCpResource
+xGGIT/Resources/icons/icon-40.png
+xbuild/emulator/GGIT.app/icon-40.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Copy build/emulator/GGIT.app/icon-40.png87"[1mCpResource[0m GGIT/Resources/icons/icon-40.png build/emulator/GGIT.app/icon-40.png9f1c05a12012b941^daa905a12012b941^---0#0#1#-19%DVTDocumentLocation2@87"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-40.png0034bcb5dcffdf42^790"[1mCpResource[0m GGIT/Resources/icons/icon-40.png build/emulator/GGIT.app/icon-40.png    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-40.png /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app36"65F8CB46-744A-4E5E-99C7-D2E61B50456B-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCpResource GGIT/Resources/icons/icon-40@2x.png build/emulator/GGIT.app/icon-40@2x.png
+s420618400.957434
+e420618400.959740
+r1
+xCpResource
+xGGIT/Resources/icons/icon-40@2x.png
+xbuild/emulator/GGIT.app/icon-40@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy build/emulator/GGIT.app/icon-40@2x.png93"[1mCpResource[0m GGIT/Resources/icons/icon-40@2x.png build/emulator/GGIT.app/icon-40@2x.pngac3cf5a02012b941^ead0f5a02012b941^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-40@2x.png0034bcb5dcffdf42^799"[1mCpResource[0m GGIT/Resources/icons/icon-40@2x.png build/emulator/GGIT.app/icon-40@2x.png    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-40@2x.png /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app36"17A677E3-BF32-47B5-8FA6-FED2F1E05880-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCpResource GGIT/Resources/icons/icon-50.png build/emulator/GGIT.app/icon-50.png
+s420618400.966757
+e420618400.968555
+r1
+xCpResource
+xGGIT/Resources/icons/icon-50.png
+xbuild/emulator/GGIT.app/icon-50.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Copy build/emulator/GGIT.app/icon-50.png87"[1mCpResource[0m GGIT/Resources/icons/icon-50.png build/emulator/GGIT.app/icon-50.pngd49df7a02012b941^30f1f7a02012b941^---0#0#1#-19%DVTDocumentLocation2@87"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-50.png0034bcb5dcffdf42^790"[1mCpResource[0m GGIT/Resources/icons/icon-50.png build/emulator/GGIT.app/icon-50.png    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-50.png /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app36"2AAB28BB-6A16-4208-8043-99B1044E7017-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCpResource GGIT/Resources/icons/icon-50@2x.png build/emulator/GGIT.app/icon-50@2x.png
+s420618401.086962
+e420618401.104889
+r1
+xCpResource
+xGGIT/Resources/icons/icon-50@2x.png
+xbuild/emulator/GGIT.app/icon-50@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy build/emulator/GGIT.app/icon-50@2x.png93"[1mCpResource[0m GGIT/Resources/icons/icon-50@2x.png build/emulator/GGIT.app/icon-50@2x.pngb42117a12012b941^c2c31ca12012b941^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-50@2x.png0034bcb5dcffdf42^799"[1mCpResource[0m GGIT/Resources/icons/icon-50@2x.png build/emulator/GGIT.app/icon-50@2x.png    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-50@2x.png /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app36"593999FC-AB1C-4493-9D8E-9428B6EA0FCF-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCpResource GGIT/Resources/icons/icon-60.png build/emulator/GGIT.app/icon-60.png
+s420618401.032471
+e420618401.034690
+r1
+xCpResource
+xGGIT/Resources/icons/icon-60.png
+xbuild/emulator/GGIT.app/icon-60.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Copy build/emulator/GGIT.app/icon-60.png87"[1mCpResource[0m GGIT/Resources/icons/icon-60.png build/emulator/GGIT.app/icon-60.png857808a12012b941^10e808a12012b941^---0#0#1#-19%DVTDocumentLocation2@87"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-60.png0034bcb5dcffdf42^790"[1mCpResource[0m GGIT/Resources/icons/icon-60.png build/emulator/GGIT.app/icon-60.png    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-60.png /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app36"CDC316BA-DE49-4B25-9954-293F504D5F80-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCpResource GGIT/Resources/icons/icon-60@2x.png build/emulator/GGIT.app/icon-60@2x.png
+s420618400.969491
+e420618400.971477
+r1
+xCpResource
+xGGIT/Resources/icons/icon-60@2x.png
+xbuild/emulator/GGIT.app/icon-60@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy build/emulator/GGIT.app/icon-60@2x.png93"[1mCpResource[0m GGIT/Resources/icons/icon-60@2x.png build/emulator/GGIT.app/icon-60@2x.pngf453f8a02012b941^c70ff9a02012b941^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-60@2x.png0034bcb5dcffdf42^799"[1mCpResource[0m GGIT/Resources/icons/icon-60@2x.png build/emulator/GGIT.app/icon-60@2x.png    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-60@2x.png /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app36"C86084B5-D860-402F-9208-3335799A02CF-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCpResource GGIT/Resources/icons/icon-72.png build/emulator/GGIT.app/icon-72.png
+s420618400.959562
+e420618400.962405
+r1
+xCpResource
+xGGIT/Resources/icons/icon-72.png
+xbuild/emulator/GGIT.app/icon-72.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Copy build/emulator/GGIT.app/icon-72.png87"[1mCpResource[0m GGIT/Resources/icons/icon-72.png build/emulator/GGIT.app/icon-72.png65fef5a02012b941^ae65f6a02012b941^---0#0#1#-19%DVTDocumentLocation2@87"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-72.png0034bcb5dcffdf42^790"[1mCpResource[0m GGIT/Resources/icons/icon-72.png build/emulator/GGIT.app/icon-72.png    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-72.png /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app36"EBC6EB9E-9918-4535-AD50-DF8D2900C454-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCpResource GGIT/Resources/icons/icon-72@2x.png build/emulator/GGIT.app/icon-72@2x.png
+s420618401.132625
+e420618401.145306
+r1
+xCpResource
+xGGIT/Resources/icons/icon-72@2x.png
+xbuild/emulator/GGIT.app/icon-72@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy build/emulator/GGIT.app/icon-72@2x.png93"[1mCpResource[0m GGIT/Resources/icons/icon-72@2x.png build/emulator/GGIT.app/icon-72@2x.pngf41722a12012b941^a2d125a12012b941^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-72@2x.png0034bcb5dcffdf42^799"[1mCpResource[0m GGIT/Resources/icons/icon-72@2x.png build/emulator/GGIT.app/icon-72@2x.png    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-72@2x.png /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app36"2E2F730A-56B5-4F8B-A103-D2533B9B3403-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCpResource GGIT/Resources/icons/icon-76.png build/emulator/GGIT.app/icon-76.png
+s420618400.956633
+e420618400.959113
+r1
+xCpResource
+xGGIT/Resources/icons/icon-76.png
+xbuild/emulator/GGIT.app/icon-76.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Copy build/emulator/GGIT.app/icon-76.png87"[1mCpResource[0m GGIT/Resources/icons/icon-76.png build/emulator/GGIT.app/icon-76.png350af5a02012b941^999df5a02012b941^---0#0#1#-19%DVTDocumentLocation2@87"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-76.png0034bcb5dcffdf42^790"[1mCpResource[0m GGIT/Resources/icons/icon-76.png build/emulator/GGIT.app/icon-76.png    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-76.png /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app36"63007BB0-2559-487C-B541-2827F0EE57BC-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCpResource GGIT/Resources/icons/icon-76@2x.png build/emulator/GGIT.app/icon-76@2x.png
+s420618401.105239
+e420618401.132268
+r1
+xCpResource
+xGGIT/Resources/icons/icon-76@2x.png
+xbuild/emulator/GGIT.app/icon-76@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy build/emulator/GGIT.app/icon-76@2x.png93"[1mCpResource[0m GGIT/Resources/icons/icon-76@2x.png build/emulator/GGIT.app/icon-76@2x.pngec141ba12012b941^524323a12012b941^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-76@2x.png0034bcb5dcffdf42^799"[1mCpResource[0m GGIT/Resources/icons/icon-76@2x.png build/emulator/GGIT.app/icon-76@2x.png    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-76@2x.png /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app36"09DF69F6-9DB1-4A14-A54F-783735AD3AAA-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCpResource GGIT/Resources/icons/icon-small.png build/emulator/GGIT.app/icon-small.png
+s420618400.983481
+e420618400.985361
+r1
+xCpResource
+xGGIT/Resources/icons/icon-small.png
+xbuild/emulator/GGIT.app/icon-small.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy build/emulator/GGIT.app/icon-small.png93"[1mCpResource[0m GGIT/Resources/icons/icon-small.png build/emulator/GGIT.app/icon-small.pngc9e9fba02012b941^2786fca02012b941^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-small.png0034bcb5dcffdf42^799"[1mCpResource[0m GGIT/Resources/icons/icon-small.png build/emulator/GGIT.app/icon-small.png    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-small.png /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app36"FCDC7F8C-FCBB-4957-B530-1E231E595CA2-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCpResource GGIT/Resources/icons/icon-small@2x.png build/emulator/GGIT.app/icon-small@2x.png
+s420618401.002363
+e420618401.004389
+r1
+xCpResource
+xGGIT/Resources/icons/icon-small@2x.png
+xbuild/emulator/GGIT.app/icon-small@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection46"Copy build/emulator/GGIT.app/icon-small@2x.png99"[1mCpResource[0m GGIT/Resources/icons/icon-small@2x.png build/emulator/GGIT.app/icon-small@2x.png2bbf00a12012b941^0f2601a12012b941^---0#0#1#-19%DVTDocumentLocation2@93"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon-small@2x.png0034bcb5dcffdf42^808"[1mCpResource[0m GGIT/Resources/icons/icon-small@2x.png build/emulator/GGIT.app/icon-small@2x.png    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon-small@2x.png /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app36"08210464-17EB-4E2E-80C4-6A64C361980A-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCpResource GGIT/Resources/icons/icon.png build/emulator/GGIT.app/icon.png
+s420618400.960523
+e420618400.963463
+r1
+xCpResource
+xGGIT/Resources/icons/icon.png
+xbuild/emulator/GGIT.app/icon.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Copy build/emulator/GGIT.app/icon.png81"[1mCpResource[0m GGIT/Resources/icons/icon.png build/emulator/GGIT.app/icon.pngf60bf6a02012b941^1ea9f6a02012b941^---0#0#1#-19%DVTDocumentLocation2@84"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon.png0034bcb5dcffdf42^781"[1mCpResource[0m GGIT/Resources/icons/icon.png build/emulator/GGIT.app/icon.png    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon.png /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app36"8EBC28DE-7EF1-4A6E-A9A4-7206BA0F672D-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCpResource GGIT/Resources/icons/icon@2x.png build/emulator/GGIT.app/icon@2x.png
+s420618400.962988
+e420618400.965455
+r1
+xCpResource
+xGGIT/Resources/icons/icon@2x.png
+xbuild/emulator/GGIT.app/icon@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Copy build/emulator/GGIT.app/icon@2x.png87"[1mCpResource[0m GGIT/Resources/icons/icon@2x.png build/emulator/GGIT.app/icon@2x.pngcfbef6a02012b941^fa28f7a02012b941^---0#0#1#-19%DVTDocumentLocation2@87"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/icon@2x.png0034bcb5dcffdf42^790"[1mCpResource[0m GGIT/Resources/icons/icon@2x.png build/emulator/GGIT.app/icon@2x.png    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/icons/icon@2x.png /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app36"B4D35395-4772-4B80-999A-486786E20F42-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCpResource GGIT/Resources/splash/Default-568h@2x~iphone.png build/emulator/GGIT.app/Default-568h@2x~iphone.png
+s420618401.060711
+e420618401.066517
+r1
+xCpResource
+xGGIT/Resources/splash/Default-568h@2x~iphone.png
+xbuild/emulator/GGIT.app/Default-568h@2x~iphone.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Copy build/emulator/GGIT.app/Default-568h@2x~iphone.png118"[1mCpResource[0m GGIT/Resources/splash/Default-568h@2x~iphone.png build/emulator/GGIT.app/Default-568h@2x~iphone.png36ae0fa12012b941^505313a12012b941^---0#0#1#-19%DVTDocumentLocation2@102"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/Default-568h@2x~iphone.png0034bcb5dcffdf42^837"[1mCpResource[0m GGIT/Resources/splash/Default-568h@2x~iphone.png build/emulator/GGIT.app/Default-568h@2x~iphone.png    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/splash/Default-568h@2x~iphone.png /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app36"2377687C-D30E-4143-8436-AB126A406EAD-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCpResource GGIT/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/GGIT.app/Default-Landscape@2x~ipad.png
+s420618400.985676
+e420618400.988243
+r1
+xCpResource
+xGGIT/Resources/splash/Default-Landscape@2x~ipad.png
+xbuild/emulator/GGIT.app/Default-Landscape@2x~ipad.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Copy build/emulator/GGIT.app/Default-Landscape@2x~ipad.png124"[1mCpResource[0m GGIT/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/GGIT.app/Default-Landscape@2x~ipad.png8578fca02012b941^f510fda02012b941^---0#0#1#-19%DVTDocumentLocation2@105"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/Default-Landscape@2x~ipad.png0034bcb5dcffdf42^846"[1mCpResource[0m GGIT/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/GGIT.app/Default-Landscape@2x~ipad.png    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/splash/Default-Landscape@2x~ipad.png /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app36"FFF96967-60F6-4CB7-9F26-BA61305C48A7-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCpResource GGIT/Resources/splash/Default-Landscape~ipad.png build/emulator/GGIT.app/Default-Landscape~ipad.png
+s420618400.990082
+e420618400.992294
+r1
+xCpResource
+xGGIT/Resources/splash/Default-Landscape~ipad.png
+xbuild/emulator/GGIT.app/Default-Landscape~ipad.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Copy build/emulator/GGIT.app/Default-Landscape~ipad.png118"[1mCpResource[0m GGIT/Resources/splash/Default-Landscape~ipad.png build/emulator/GGIT.app/Default-Landscape~ipad.png9a99fda02012b941^3315fea02012b941^---0#0#1#-19%DVTDocumentLocation2@102"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/Default-Landscape~ipad.png0034bcb5dcffdf42^837"[1mCpResource[0m GGIT/Resources/splash/Default-Landscape~ipad.png build/emulator/GGIT.app/Default-Landscape~ipad.png    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/splash/Default-Landscape~ipad.png /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app36"B3C12BB0-6CE3-4254-A783-4B61D84C0A64-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCpResource GGIT/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/GGIT.app/Default-Portrait@2x~ipad.png
+s420618400.992597
+e420618400.995137
+r1
+xCpResource
+xGGIT/Resources/splash/Default-Portrait@2x~ipad.png
+xbuild/emulator/GGIT.app/Default-Portrait@2x~ipad.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Copy build/emulator/GGIT.app/Default-Portrait@2x~ipad.png122"[1mCpResource[0m GGIT/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/GGIT.app/Default-Portrait@2x~ipad.png9f3efea02012b941^80d4fea02012b941^---0#0#1#-19%DVTDocumentLocation2@104"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/Default-Portrait@2x~ipad.png0034bcb5dcffdf42^843"[1mCpResource[0m GGIT/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/GGIT.app/Default-Portrait@2x~ipad.png    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/splash/Default-Portrait@2x~ipad.png /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app36"F479F2C2-BD93-4981-835A-BB95172D727E-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCpResource GGIT/Resources/splash/Default-Portrait~ipad.png build/emulator/GGIT.app/Default-Portrait~ipad.png
+s420618401.015314
+e420618401.018353
+r1
+xCpResource
+xGGIT/Resources/splash/Default-Portrait~ipad.png
+xbuild/emulator/GGIT.app/Default-Portrait~ipad.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection54"Copy build/emulator/GGIT.app/Default-Portrait~ipad.png116"[1mCpResource[0m GGIT/Resources/splash/Default-Portrait~ipad.png build/emulator/GGIT.app/Default-Portrait~ipad.png621004a12012b941^43c504a12012b941^---0#0#1#-19%DVTDocumentLocation2@101"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/Default-Portrait~ipad.png0034bcb5dcffdf42^834"[1mCpResource[0m GGIT/Resources/splash/Default-Portrait~ipad.png build/emulator/GGIT.app/Default-Portrait~ipad.png    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/splash/Default-Portrait~ipad.png /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app36"E954B969-7E13-4CB2-B905-0BCB6FF23AB2-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCpResource GGIT/Resources/splash/Default@2x~iphone.png build/emulator/GGIT.app/Default@2x~iphone.png
+s420618401.021452
+e420618401.024243
+r1
+xCpResource
+xGGIT/Resources/splash/Default@2x~iphone.png
+xbuild/emulator/GGIT.app/Default@2x~iphone.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection50"Copy build/emulator/GGIT.app/Default@2x~iphone.png108"[1mCpResource[0m GGIT/Resources/splash/Default@2x~iphone.png build/emulator/GGIT.app/Default@2x~iphone.png419e05a12012b941^375206a12012b941^---0#0#1#-19%DVTDocumentLocation2@97"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/Default@2x~iphone.png0034bcb5dcffdf42^822"[1mCpResource[0m GGIT/Resources/splash/Default@2x~iphone.png build/emulator/GGIT.app/Default@2x~iphone.png    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/splash/Default@2x~iphone.png /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app36"CAA61C4D-8159-41A8-8CA1-6040F13F12FD-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CCpResource GGIT/Resources/splash/Default~iphone.png build/emulator/GGIT.app/Default~iphone.png
+s420618401.048001
+e420618401.051598
+r1
+xCpResource
+xGGIT/Resources/splash/Default~iphone.png
+xbuild/emulator/GGIT.app/Default~iphone.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection47"Copy build/emulator/GGIT.app/Default~iphone.png102"[1mCpResource[0m GGIT/Resources/splash/Default~iphone.png build/emulator/GGIT.app/Default~iphone.png66830ca12012b941^3a3f0da12012b941^---0#0#1#-19%DVTDocumentLocation2@94"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/Default~iphone.png0034bcb5dcffdf42^813"[1mCpResource[0m GGIT/Resources/splash/Default~iphone.png build/emulator/GGIT.app/Default~iphone.png    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/Resources/splash/Default~iphone.png /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app36"A5F9AD45-31A5-47CE-A4BD-B3504A7E071A-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CGenerateDSYMFile /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app.dSYM /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/GGIT
+s420618406.160413
+e420618406.330083
+r1
+xGenerateDSYMFile
+x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app.dSYM
+x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/GGIT
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Generate /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app.dSYM90"[1mGenerateDSYMFile[0m [1mbuild/emulator/GGIT.app.dSYM[0m build/emulator/GGIT.app/GGITd63629a62012b941^a68054a62012b941^---0#0#1#-19%DVTDocumentLocation2@80"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app.dSYM0034bcb5dcffdf42^785"[1mGenerateDSYMFile[0m [1mbuild/emulator/GGIT.app.dSYM[0m build/emulator/GGIT.app/GGIT    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/GGIT -o /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app.dSYM36"F91920D1-1B15-4853-B603-586078B8D303-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CLd /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/GGIT normal i386
+s420618405.782428
+e420618406.158569
+r1
+xLd
+x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/GGIT
+xnormal
+xi386
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/GGIT.LinkFileList
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/libCordova.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/crt1.o
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/main.o
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/AppDelegate.o
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/MainViewController.o
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVLogger.o
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVM7StepCounter.o
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CDVBLEManager.o
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/BLECentral.o
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/BLEPeripheral.o
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/CBPeripheral+Extensions.o
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreMedia.framework/CoreMedia
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AssetsLibrary.framework/AssetsLibrary
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreMotion.framework/CoreMotion
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreBluetooth.framework/CoreBluetooth
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/arc/libarclite_iphonesimulator.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libobjc.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.ios.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AVFoundation.framework/libAVFAudio.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_override.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcache_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcommonCrypto_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcorecrypto_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcompiler_rt_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcopyfile_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libdyld_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libmacho_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libnotify_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libremovefile_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_m.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libunwind_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libxpc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_configuration.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_asl.dylib
+d/usr/lib/libSystem.B.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/host/libdyld.dylib
+d/usr/lib/system/libcache.dylib
+d/usr/lib/system/libcommonCrypto.dylib
+d/usr/lib/system/libcompiler_rt.dylib
+d/usr/lib/system/libcopyfile.dylib
+d/usr/lib/system/libcorecrypto.dylib
+d/usr/lib/system/libkeymgr.dylib
+d/usr/lib/system/liblaunch.dylib
+d/usr/lib/system/libmacho.dylib
+d/usr/lib/system/libquarantine.dylib
+d/usr/lib/system/libremovefile.dylib
+d/usr/lib/system/libsystem_asl.dylib
+d/usr/lib/system/libsystem_blocks.dylib
+d/usr/lib/system/libsystem_c.dylib
+d/usr/lib/system/libsystem_configuration.dylib
+d/usr/lib/system/libsystem_dnssd.dylib
+d/usr/lib/system/libsystem_info.dylib
+d/usr/lib/system/libsystem_kernel.dylib
+d/usr/lib/system/libsystem_m.dylib
+d/usr/lib/system/libsystem_malloc.dylib
+d/usr/lib/system/libsystem_notify.dylib
+d/usr/lib/system/libsystem_platform.dylib
+d/usr/lib/system/libsystem_pthread.dylib
+d/usr/lib/system/libsystem_sandbox.dylib
+d/usr/lib/system/libunc.dylib
+d/usr/lib/system/libunwind.dylib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Link /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/GGIT51"[1mLd[0m build/emulator/GGIT.app/GGIT normal i3868d7ac8a52012b941^9e9928a62012b941^---0#0#1#--1856"[1mLd[0m build/emulator/GGIT.app/GGIT normal i386    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export IPHONEOS_DEPLOYMENT_TARGET=5.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator -F/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator -filelist /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/GGIT.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -force_load /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/libCordova.a -ObjC -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=5.0 -framework AssetsLibrary /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/libCordova.a -framework CoreGraphics -framework MobileCoreServices -framework CoreLocation -framework CoreMotion -framework CoreBluetooth -Xlinker -dependency_info -Xlinker /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Objects-normal/i386/GGIT_dependency_info.dat -o /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/GGIT36"FAE291B6-05F5-4D2C-A571-4F07032DC2E8-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CPhaseScriptExecution Copy\ www\ directory /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Script-304B58A110DAC018002A0835.sh
+s420618400.733333
+e420618400.955263
+r1
+xPhaseScriptExecution
+xCopy www directory
+x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Script-304B58A110DAC018002A0835.sh
+o
+oreal	0m0.144s
+ouser	0m0.049s
+osys	0m0.086s
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Run custom shell script 'Copy www directory'134"[1mPhaseScriptExecution[0m Copy\ www\ directory build/GGIT.build/Debug-iphonesimulator/GGIT.build/Script-304B58A110DAC018002A0835.shcb83bca02012b941^3999f4a02012b941^-42"real	0m0.144suser	0m0.049ssys	0m0.086s3(21%IDEActivityLogMessage2@14"real	0m0.144s-420618400#1#14#-0#-----2@14"user	0m0.049s-420618400#15#14#-0#-----2@13"sys	0m0.086s-420618400#29#13#-0#-----0#0#1#--332"[1mPhaseScriptExecution[0m Copy\ www\ directory build/GGIT.build/Debug-iphonesimulator/GGIT.build/Script-304B58A110DAC018002A0835.sh    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    /bin/sh -c /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/Script-304B58A110DAC018002A0835.sh36"C7D236F4-D416-4868-A8D9-7AF3A4431570-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CProcessInfoPlistFile /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/Info.plist /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/GGIT-Info.plist
+s420618400.726262
+e420618400.730963
+r1
+xProcessInfoPlistFile
+x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/Info.plist
+x/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/GGIT-Info.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Process /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/GGIT-Info.plist92"[1mProcessInfoPlistFile[0m build/emulator/GGIT.app/Info.plist [1mGGIT/GGIT-Info.plist[0mca15baa02012b941^a837bba02012b941^---0#0#1#-19%DVTDocumentLocation2@72"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/GGIT-Info.plist0000000000000000^865"[1mProcessInfoPlistFile[0m build/emulator/GGIT.app/Info.plist [1mGGIT/GGIT-Info.plist[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-infoPlistUtility /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/GGIT-Info.plist -genpkginfo /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app/Info.plist36"C3807A37-E02D-49AB-A936-180DE41DFCF0-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CProcessPCH /var/folders/_b/f3hpk0190cjf9dspb_2tykdh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/GGIT-Prefix-glpmvzfdllyizxaauibdyvecnnvl/GGIT-Prefix.pch.pch GGIT/GGIT-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s420618404.144315
+e420618404.971811
+r1
+xProcessPCH
+x/var/folders/_b/f3hpk0190cjf9dspb_2tykdh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/GGIT-Prefix-glpmvzfdllyizxaauibdyvecnnvl/GGIT-Prefix.pch.pch
+xGGIT/GGIT-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/GGIT-Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection31"Precompile GGIT/GGIT-Prefix.pch286"[1mProcessPCH[0m /var/folders/_b/f3hpk0190cjf9dspb_2tykdh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/GGIT-Prefix-glpmvzfdllyizxaauibdyvecnnvl/GGIT-Prefix.pch.pch GGIT/GGIT-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler383025a42012b941^92caf8a42012b941^---0#0#1#-19%DVTDocumentLocation2@72"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/GGIT-Prefix.pch0000000000000000^3760"[1mProcessPCH[0m /var/folders/_b/f3hpk0190cjf9dspb_2tykdh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/GGIT-Prefix-glpmvzfdllyizxaauibdyvecnnvl/GGIT-Prefix.pch.pch GGIT/GGIT-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=150 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-generated-files.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-own-target-headers.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-all-target-headers.hmap -iquote /Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/GGIT-project-headers.hmap -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/usr/local/lib/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/UninstalledProducts/include -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/DerivedSources/i386 -I/Users/ez/Documents/itp/t/ggit/platforms/ios/build/GGIT.build/Debug-iphonesimulator/GGIT.build/DerivedSources -F/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator --serialize-diagnostics /var/folders/_b/f3hpk0190cjf9dspb_2tykdh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/GGIT-Prefix-glpmvzfdllyizxaauibdyvecnnvl/GGIT-Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/_b/f3hpk0190cjf9dspb_2tykdh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/GGIT-Prefix-glpmvzfdllyizxaauibdyvecnnvl/GGIT-Prefix.pch.d -c /Users/ez/Documents/itp/t/ggit/platforms/ios/GGIT/GGIT-Prefix.pch -o /var/folders/_b/f3hpk0190cjf9dspb_2tykdh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/GGIT-Prefix-glpmvzfdllyizxaauibdyvecnnvl/GGIT-Prefix.pch.pch36"8F595F97-3D85-4619-8E79-A287270B4F99-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+
+CTouch /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app
+s420618406.332958
+e420618406.343664
+r1
+xTouch
+x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Touch /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app37"[1mTouch[0m build/emulator/GGIT.app5f6155a62012b941^65fc57a62012b941^---0#0#1#--572"[1mTouch[0m build/emulator/GGIT.app    cd /Users/ez/Documents/itp/t/ggit/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    /usr/bin/touch -c /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/GGIT.app36"994A8A46-5F42-4E08-92EA-3EADB7294CD1-
+bEDC0BC02-9945-4AC0-B87D-22AAD25EB53D
+

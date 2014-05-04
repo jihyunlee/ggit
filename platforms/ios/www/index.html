@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Go! Get It!</title>
+    </head>
+    <body>
+        <div class="app">
+          <!--  <h1>GGIT</h1> -->
+          <img id = "logo" src = "img/logo_.png" />
+            <div id="deviceready" class="blink">
+                <p class="event listening">LOADING..</p>
+                <p class="event received">Box is Ready</p>
+            </div>
+        </div>
+
+        </div>
+        <div data-role="page" id="page1">
+          <div data-role="header">
+
+          </div><!-- /header -->
+
+          <!-- auto load next screen somehow -->
+          <div id="scan-animation">
+            <div id ="scan-background" class = "image"></div>
+            <div id ="scan-mask" class = "image"></div>
+          </div>
+
+          <div id="message">
+            <h2>
+              Hold your phone
+            </br>
+              near the GGIT box
+            </br>
+              to connect
+            </h2>
+          </div>
+          <div class="blink">
+          <p class="event searching"> Looking for a GGIT box </p>
+          </div>
+          <div data-role="footer">
+          </div>
+        </div>
+          <!--/page -->
+
+        <div data-role="page" id="page2">
+            <div data-role="header">
+<!--                 <h1>
+                    GGIT Connection
+                </h1> -->
+            </div><!-- /header -->
+
+            <div data-role="content">
+            <!--     Box connection status here
+                <a id="changePageButton" data-role="button">Change Page!</a>
+             -->
+            </div><!-- /content -->
+
+            <div data-role="footer">
+            </div>
+        </div><!-- /page -->
+
+        <div data-role="page" id="page3">
+          <div data-role="header">
+
+          </div><!-- /header -->
+
+          <!-- auto load next screen somehow -->
+
+          <div id="messageDiv">
+            <h2>
+              Box is empty. 
+            </br>
+              Put a treat in the box!
+            </br>
+            </h2>
+          </div>
+
+          <div id = "boxAnimation" class = "originalImage"></div>
+          <input type="submit" data-inline="true" value="I did it!" id ="fillboxsubmit">
+            <div data-role="footer">
+            </div>
+        </div><!-- /page -->
+
+        <div data-role="page" id="page4">
+            <div data-role="header">
+            </div><!-- /header -->
+
+              <div id="messageDiv">
+                <h2>
+                  Now you can set up a goal 
+                </br>
+                  to get thing in a box!
+                </br> 
+                </h2>
+              </div>
+              <form action="" id="form-set-goal" class="" style="">
+                </br>
+                <input id="form-steps" name="steps" type="number" placeholder="5000" /></br>
+                <label for="form-steps">steps</label>
+                </br>
+                
+                <input id="form-freq" name="freq" min="1" max="7" type="number" placeholder="1" /></br>
+                <label for="form-freq">days / a week</label>
+                <input id="form-activity" type="hidden" />
+                </br>
+                <input type="submit" data-inline="true" value="SAVE GOAL" id ="goalsubmit"> 
+              </form>
+
+
+              </div>
+            </div><!-- /content -->
+
+            <div data-role="footer">
+            </div><!-- /footer -->
+
+        </div><!-- /page -->
+
+       <div data-role="page" id="page5">
+            <div data-role="header">
+<!--                 <h1>
+                   Welcome!
+                </h1> -->
+            </div><!-- /header -->
+
+              <div id="messageDiv">
+                <h2>
+                  Now you set up a goal 
+                </br>
+                  You pick a goal : blabla. 
+                </br> 
+                </h2>
+                    
+
+              </div>
+                <input type="submit" data-inline="true" value="CONFIRM" id ="goNext" class="buttonPair"> 
+                 <input type="submit" data-inline="true" class="buttonPair" value="RESET GOAL" id ="resetGoal"> 
+
+            <div data-role="footer">
+            </div>
+        </div><!-- /page -->
+
+      <div data-role="page" id="page6">
+            <div data-role="header">
+            </div><!-- /header -->
+
+            <div data-role="main" class="ui-content">
+               <div id = "lockillust" class = "lockImage"></div> 
+                <div id="messageDiv">
+                <h2></h2>
+                    
+
+              </div>
+
+                <input type="submit" data-inline="true" value="Yes" id ="join" class="buttonPair"> 
+                 <input type="submit" data-inline="true" class="buttonPair" value="No" id ="notJoin"> 
+   
+            </div>
+            <div data-role="footer">
+            </div><!-- /footer -->
+
+      </div><!-- /page -->
+
+        <div data-role="page" id="page7">
+            <div data-role="header">
+               <h1>
+                  Fill the GGIT box
+                </h1>
+            </div><!-- /header -->
+            <div data-role="content">
+
+                Now put something in GGIT for your friend to unlock!
+
+                <a href="page8" data-role="button">NEXT</a>
+            </div><!-- /content -->
+
+
+            <div data-role="footer">
+            </div><!-- /footer -->
+
+        </div><!-- /page -->
+
+        <div data-role="page" id="page8">
+            <div data-role="header">
+               <h1>
+                  Set Up Complete
+                </h1>
+            </div><!-- /header -->
+            <div data-role="content">
+
+                GGIT is locked! Now send the box to "RECIPIENT"! We have sent them an email telling them to expect to receive the box from you.
+
+                <a href="page9" data-role="button">LOCK</a>
+            </div><!-- /content -->
+
+
+            <div data-role="footer">
+            </div><!-- /footer -->
+
+        </div><!-- /page -->
+
+         <div data-role="page" id="page9">
+            <div data-role="header">
+               <h1>
+                  GGIT Status
+                </h1>
+            </div><!-- /header -->
+            <div data-role="content">
+
+                Recipient connected? Y/N
+                Goal reached? Y/N
+
+                <a href="page10" data-role="button">OVER-RIDE</a>
+            </div><!-- /content -->
+
+
+            <div data-role="footer">
+            </div><!-- /footer -->
+
+        </div><!-- /page -->
+
+         <div data-role="page" id="page10">
+            <div data-role="header">
+               <h1>
+                  GGIT Over-ride
+                </h1>
+            </div><!-- /header -->
+            <div data-role="content">
+
+                Need to unlock the box for whatever reason? That’s okay :)
+
+                <a id="changePageButton" data-role="button">UNLOCK</a>
+            </div><!-- /content -->
+
+
+            <div data-role="footer">
+            </div><!-- /footer -->
+
+        </div><!-- /page -->
+
+        <div id="status" style="position:absolute;top:50px;left:50px;width:100px;height:100px;"></div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/jquery.mobile-1.3.1.min.js"></script>
+        <script type="text/javascript" src="js/ViewController.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+          app.initialize();
+          $.mobile.loadingMessage = false;
+        </script>
+    </body>
+</html>

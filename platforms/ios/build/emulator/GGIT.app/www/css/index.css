@@ -1,0 +1,359 @@
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+
+@font-face {
+    font-family: 'quicksandbold';
+    src: url('quicksand-bold-webfont.eot');
+    src: url('quicksand-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('quicksand-bold-webfont.woff') format('woff'),
+         url('quicksand-bold-webfont.ttf') format('truetype'),
+         url('quicksand-bold-webfont.svg#quicksandbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'quicksandlight';
+    src: url('quicksand-light-webfont.eot');
+    src: url('quicksand-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('quicksand-light-webfont.woff') format('woff'),
+         url('quicksand-light-webfont.ttf') format('truetype'),
+         url('quicksand-light-webfont.svg#quicksandlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'quicksandregular';
+    src: url('quicksand-regular-webfont.eot');
+    src: url('quicksand-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('quicksand-regular-webfont.woff') format('woff'),
+         url('quicksand-regular-webfont.ttf') format('truetype'),
+         url('quicksand-regular-webfont.svg#quicksandregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#0b5b67;
+   /* background: url("../img/page2.png") no-repeat; */
+
+    /*
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+*/
+    background-attachment:fixed;
+    font-family:'quicksandbold', 'quicksandlight', 'quicksandregular';
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+
+
+    /*background:no-repeat left top; /* 170px x 200px */
+    /*position:absolute;             /* position in the center of the screen */
+    /*left:50%;
+    top:50%;
+    height:100%;                   /* text area height */
+    /*width:100%;                   /* text area width */
+    text-align:center;
+    font-family: 'quicksandregular';
+    /*padding:152px 0px 0px 0px;*/     /* image height is 200px (bottom 20px are overlapped with text) */
+    /*margin:-115px 0px 0px -280px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+    padding: 220px 30px 30px 30px;
+
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 70px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px 0px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    color:#FFFFFF;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+    font-family: 'quicksandregular';
+}
+
+h2 {
+    font-size:14px;
+    font-weight:normal;
+    color:#FFFFFF;
+    margin:0px;
+    overflow:visible;
+    padding:10px;
+    text-align:center;
+    font-family: 'quicksandregular';
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+.event.searching{
+    position: absolute;
+    background-color:#4B946A;
+    display:block;
+    top: 400px;
+    width: 80%;
+    left: 0;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+.test {
+    dispay:none;
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+
+}
+
+
+#page1, #page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9, #page10{
+
+  display:none;
+}
+
+#page1{
+
+  text-align:center;
+  font-family: 'quicksandregular';
+
+  padding: 220px 30px 30px 30px;
+
+
+}
+
+#page3, #page4, #page5, #page6{
+
+  text-align:center;
+  font-family: 'quicksandregular';
+
+  padding: 150px 30px 30px 30px;
+
+}
+form {
+    line-height: 24px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+input {
+    width:70%;
+    /*display: block;*/
+    border: 1px solid #999;
+    height: 25px;
+    margin-top: 10px;
+    -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+#selectOne{
+    height: 500px;
+    text-align: center;
+}
+
+
+div.user-role{
+    vertical-align:middle;
+    display:inline-block;
+
+}
+
+.myButton {
+    background-color:#81B497;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:arial;
+    font-size:17px;
+    padding:12px 31px;
+    text-decoration:none;
+    width: 100px;
+}
+.myButton:hover {
+    background-color:#66E0C2;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+#scan-animation {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#scan-mask {
+content:url(../img/scan.png);
+position: absolute;
+left: -80px;
+top: 50px;
+
+-webkit-animation:movemask 7s; /* Chrome, Safari, Opera */
+-webkit-animation-iteration-count:infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes movemask
+{
+0%   {left: -80px; top: 50px;}
+25%  {left: 20px; top: 50px;}
+50%  {left: 20px; top: 120px;}
+75%  {left: -80px; top: 120px;}
+100% {left: -80px; top: 50px;}
+}
+
+
+#scan-background {
+content:url(../img/icon-alpha.png);
+width:120px;
+margin-left:auto;
+margin-right:auto;
+position: relative;
+
+}
+
+#message {
+    position: absolute;
+    top: 100px;
+    left: 80px;
+}
+.scanfailed {
+    content:url(../img/page2.png);
+    width: 100%;
+
+}
+
+.scansucceed {
+    content:url(../img/page3.png);
+    width: 100%;
+
+}
+#boxAnimation {
+    width: 120px;
+    margin-left:auto;
+    margin-right:auto;
+    position: relative;
+}
+
+.originalImage {
+    content:url(../img/box1.jpg);
+
+}
+
+.changeImage{
+    content:url(../img/box2.jpg);
+
+}
+.buttonPair{
+    width: 40%;
+}
+
+#lockillust{
+    
+    width: 120px;
+    margin-left:auto;
+    margin-right:auto;
+    position: relative;
+
+}
+.lockImage{
+    content:url(../img/lock.png);
+}
+
+.runImage{
+    content:url(../img/run.png);
+}
