@@ -17,12 +17,11 @@
  * under the License.
  */
 
-var tScan, tConnect, tGoal;
-
 var stepCounter;
 var bleManager;
 var view;
 var locker;
+var tScan, tConnect, tGoal;
 
 var app = {
     
@@ -38,9 +37,6 @@ var app = {
 
   initialize: function() {
     this.bindEvents();
-
-
-
   //    $('.app').css('display','none');
   //    app.fillBox();
   },
@@ -51,11 +47,8 @@ var app = {
     if(window.cordova.logger) window.cordova.logger.__onDeviceReady();
 
     stepCounter = new M7StepCounter();
-    console.log('stepCounter');
     bleManager = new BLEManager();
-    console.log('bleManager');
     view = new ViewController(app);
-    console.log('ViewController');
     locker = new Locker(bleManager);
 
     console.log('plugins initialized');
