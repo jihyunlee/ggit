@@ -19,7 +19,10 @@
 
 var tScan, tConnect, tGoal;
 
+var stepCounter;
+var bleManager;
 var view;
+var locker;
 
 var app = {
     
@@ -34,9 +37,10 @@ var app = {
   //GGIT_CHARACTERISTIC_GOAL: '713D0001-503E-4C75-BA94-3148F18D941E', // Liz's Biscuit
 
   initialize: function() {
-      this.bindEvents();
+    this.bindEvents();
 
-      view = new ViewController();
+
+
   //    $('.app').css('display','none');
   //    app.fillBox();
   },
@@ -45,11 +49,16 @@ var app = {
   },
   onDeviceReady: function() {
     if(window.cordova.logger) window.cordova.logger.__onDeviceReady();
-    
-    app.sc = new M7StepCounter();
-    app.bm = new BLEManager();
-    
-    console.log('\n\n--- plugins initialized ----\n\n');
+
+    stepCounter = new M7StepCounter();
+    console.log('stepCounter');
+    bleManager = new BLEManager();
+    console.log('bleManager');
+    view = new ViewController(app);
+    console.log('ViewController');
+    locker = new Locker(bleManager);
+
+    console.log('plugins initialized');
 
     view.welcome('deviceready');
     app.list();   
@@ -68,7 +77,7 @@ var app = {
     console.log('[index.js] list --- ' + tScan);
 
     view.scan();
-    app.bm.list(app.didDiscover, function(err){console.log('list Failed');});
+    bleManager.list(app.didDiscover, function(err){console.log('list Failed');});
     setTimeout(app.scanTimeout, 4000);
   },
   scanTimeout: function() {
@@ -94,7 +103,7 @@ var app = {
                     
       if(deviceId == app.GGIT_BOX_UUID) {
         console.log('\n\nggit box found\n\n');
-        app.bm.connect(app.GGIT_BOX_UUID, app.didConnect, function(err){console.log('connect Failed',uuid);});
+        bleManager.connect(app.GGIT_BOX_UUID, app.didConnect, function(err){console.log('connect Failed',uuid);});
       }
     });
   },
@@ -104,7 +113,7 @@ var app = {
     console.log('[index.js] didConnect --- ' + (tConnect-tScan), res.name, res.uuid);
     if(res.uuid == app.GGIT_BOX_UUID) {
         console.log('\n\nbox is connected\n\n');
-        app.bm.discoverServicesByUUID(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_GOAL_UUID, app.didDiscoverService, function(err){console.log('discoverServicesByUUID Failed');});
+        bleManager.discoverServicesByUUID(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_GOAL_UUID, app.didDiscoverService, function(err){console.log('discoverServicesByUUID Failed');});
     }
   },
   didDiscoverService: function(res) {
@@ -123,16 +132,29 @@ var app = {
     } else {
       console.log('fail to read goal', res);
     }  
-  }
+  },
 //,
     //findPeripheralByUUID: function(uuid) {
     //    console.log('[index.js] findPeripheralByUUID', uuid);
-    //    app.bm.findPeripheralByUUID(uuid, app.didFindPeripheralByUUID, function(err){console.log('findPeripheralByUUID Failed',uuid);});
+    //    bleManager.findPeripheralByUUID(uuid, app.didFindPeripheralByUUID, function(err){console.log('findPeripheralByUUID Failed',uuid);});
     //},
     //didFindPeripheralByUUID: function(peripheral) {
     //    console.log('[index.js] didGetPeripheralByUUID', peripheral.uuid, peripheral.name);
     //    
     //    // connect to the box
-    //    app.bm.connect(peripheral.uuid, app.didConnect, function(err){console.log('connect Failed',uuid);});
+    //    bleManager.connect(peripheral.uuid, app.didConnect, function(err){console.log('connect Failed',uuid);});
     //}
+
+    
+/**
+    Locker
+
+  */
+  lock: function() {
+    locker.lock();
+  },
+  unlock: function() {
+    locker.unlock();
+  }
+
 };

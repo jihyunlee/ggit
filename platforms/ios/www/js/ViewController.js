@@ -1,6 +1,8 @@
 
-function ViewController() {
-  this.goal = 'this is the goal';
+function ViewController(app) {
+  console.log('ViewController');
+  this.app = app;
+  this.goal = '';
   this.goalString = '';
   this.boxUUID = '';
   this.status = '';
@@ -178,6 +180,7 @@ ViewController.prototype.confirmGoal = function() {
   $('#goNext').click(function() {
     console.log("clicked");
     //Lock the box!!!!!!!!
+    that.app.lock();
     that.checkToJoin();
   });
   
