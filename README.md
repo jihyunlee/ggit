@@ -1,4 +1,4 @@
-Go! Get it!
+Go Get it!
 ====
 
 instructor: Tom Igoe<br/>
