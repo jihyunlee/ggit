@@ -17,7 +17,7 @@
     specific language governing permissions and limitations
     under the License.
 -->
-<!-- github collaborating trial -->
+<!--   github collaborating trial -->
 <html>
     <head>
         <meta charset="utf-8" />
@@ -258,6 +258,89 @@
 
             <div data-role="footer">
             </div><!-- /footer -->
+
+        </div><!-- /page -->
+
+        <div data-role="page" id="dashboard">
+           <div data-role="header">
+        <!--           <h1>
+                 GGIT dashboard
+               </h1> -->
+           </div><!-- /header -->
+
+<!--                Here is for displaying a dashboard from M7 data of the device. -->
+           <section class="section-title">
+             <h2>TODAY</h2>
+          </section>
+           <section class="today-section">
+
+             <section class="todayRing">
+             <svg id="todaysRing">
+                 <path id="ring" fill="#66FFCC"/>
+                 <circle cx="80" cy="90" r="58" fill="#0b5b67"/>
+                 <circle cx="80" cy="90" r="50" fill="none" stroke="#66FFCC" stroke-width="3" opacity=".5"/>
+                 <text x="80" y="69" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-size="11" font-weight="light">TODAY</text>
+                 <text x="80" y="90" text-anchor="middle" dominant-baseline="central" fill="#66FFCC" font-size="32" font-weight="bold">64</text>
+                 <text x="80" y="112" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-size="11" font-weight="light">STEPS</text>
+             </svg>
+             </section>
+             <section class="dateStatus">
+                <span class="bigDate" id="dateGap">9</span>
+                <span class="middleDate">days</span>
+                <span class="smallDate">since you</span>
+                <span class="smallDate">have joined</span>
+                <span class="smallDate">on <span id="startingDate">2014/4/30</span></span>
+             </section>
+           </section>
+           <section class="goal-section">
+             <section class="goal-statement">
+               <h2>Your goal is to have
+               </br>5000 steps for 3 days a week</h2>
+             </section>
+             <section class="goal-progressbar">
+                <p style="width: 80%; text-align: left; margin: 5px;" data-value="80">until open GGIT box</p>
+             		<progress max="100" value="80" class="goal-progress">
+              			<!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
+              			<div class="progress-bar">
+              				<span style="width: 80%">80%</span>
+              			</div>
+              	 </progress>
+             </section>
+           </section>
+          <section class="section-title">
+             <h2>THIS WEEK</h2>
+          </section>
+           <section class="week-section">
+             <ul class="sub-section">
+                <li class="weeksRing">
+                <div class="date-disc">4/19</div>
+                <div class="circle color-1 color1-box-shadow">Good</div>
+                </li>
+                <li class="weeksRing">
+                <div class="date-disc">4/20</div>
+                <div class="circle color-2 color2-box-shadow"></div>
+                </li>
+                <li class="weeksRing">
+                <div class="date-disc">4/21</div>
+                <div class="circle color-2 color2-box-shadow"></div>
+                </li>
+                <li class="weeksRing">
+                <div class="date-disc">4/22</div>
+                <div class="circle color-2 color2-box-shadow"></div>
+                </li>
+                <li class="weeksRing">
+                <div class="date-disc">4/23</div>
+                <div class="circle color-1 color1-box-shadow">Good</div>
+                </li>
+                <li class="weeksRing">
+                <div class="date-disc">4/24</div>
+                <div class="circle color-2 color2-box-shadow"></div>
+                </li>
+             </ul>
+           </section>
+
+           <div data-role="footer">
+           </div><!-- /footer -->
 
         </div><!-- /page -->
 
