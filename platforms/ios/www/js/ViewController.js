@@ -1,9 +1,15 @@
+function strcmp(str1, str2) {
+  return ((str1 == str2) ? 0 : ((str1 > str2) ? 1 : -1));
+}
+
 
 function ViewController(app) {
   console.log('ViewController');
   this.app = app;
-  this.goal = '';
+  this.goalStatus = false;
   this.goalString = '';
+  this.goalSteps = '';
+  this.goalPeriod = '';
   this.boxUUID = '';
   this.status = '';
 
@@ -25,7 +31,10 @@ ViewController.prototype.welcome = function(id) {
     this.status = 'welcome';
     document.getElementById('status').innerHTML = this.status;
   }
-    
+
+  this.clear();
+  $('h2').html("Hold your phone</br>near the GGIT box</br>to connect");
+//  $('h2').css('display','none');
   var parentElement = document.getElementById(id);
   var listeningElement = parentElement.querySelector('.listening');
   var receivedElement = parentElement.querySelector('.received');
@@ -48,7 +57,8 @@ ViewController.prototype.scan = function() {
     this.status = 'scanning';
     document.getElementById('status').innerHTML = this.status;
   }
-    
+
+  this.clear();  
   $('#page1').css('display','block');
 }
 
@@ -61,17 +71,13 @@ ViewController.prototype.didConnect = function() {
 
   console.log("\n\nViewController::didConnect\n\n");
   
-  if(this.debug) {
-    this.status = 'connected';
-    document.getElementById('status').innerHTML = this.status;
-  }
+  // if(this.debug) {
+  //   this.status = 'connected';
+  //   document.getElementById('status').innerHTML = this.status;
+  // }
 
-  $('#page1').css('display','none');
-  $('#page2').css('display','block');
-  $('#page2').toggleClass("scansucceed");
-  
-  var that = this;
-  setTimeout(function(){ that.hasGoal(); }, 2000);
+  this.clear();
+  this.hasGoal();  
 }
 
 
@@ -88,9 +94,10 @@ ViewController.prototype.didFailToConnect = function() {
     document.getElementById('status').innerHTML = this.status;
   }
     
-  $('#page1').css('display','none');
+  this.clear();
   $('#page2').css('display','block');
-  $('#page2').toggleClass("scanfailed");
+  if(!$('#page2').hasClass('scanfailed'))
+    $('#page2').toggleClass("scanfailed");
 
   if(this.test) {
     var that = this;
@@ -104,11 +111,9 @@ ViewController.prototype.didFailToConnect = function() {
   */
 
 ViewController.prototype.hasGoal = function() {
-
-  console.log("\n\nViewController::hasGoal \n\n");
-  
-  if(this.goal == '') this.fillBox();
-  else this.dashBoard();
+  console.log("\n\nViewController::hasGoal " + this.goalStatus.toString() +"\n\n");
+  if(!strcmp(this.goalStatus.toString(), 'true')) this.dashBoard();
+  else this.fillBox();
 }
 
 
@@ -121,7 +126,7 @@ ViewController.prototype.fillBox = function() {
 
   console.log("\n\nViewController::fillBox\n\n");
 
-  $('#page2').css('display','none');
+  this.clear();
   $('#page3').css('display','block');
 
   function animation(){
@@ -147,7 +152,7 @@ ViewController.prototype.setupGoal = function() {
     
   console.log("\n\nViewController::setupGoal\n\n");
 
-  $('#page3').css('display','none');
+  this.clear();
   $('#page4').css('display','block');
   
   var that = this;
@@ -167,19 +172,16 @@ ViewController.prototype.confirmGoal = function() {
 
   var steps = $('#form-steps').val();
   var period = $('#form-freq').val();
-  //console.log(steps + ","+ period);
-  
   this.goalString = +steps+" steps for "+period+" days a week";
-  console.log(this.goalString);
-  
+
   var that = this;
-  $('#page4').css('display','none');
+  this.clear();
   $('#page5').css('display','block');
   $('h2').html("You set up a goal: </br>"+this.goalString+ ".</br></br> If you press 'confirm', </br>the box will be locked.");
   
   $('#goNext').click(function() {
-    console.log("clicked");
-    //Lock the box!!!!!!!!
+    console.log('lock the box');
+    that.app.setupGoal(steps, period);
     that.app.lock();
     that.checkToJoin();
   });
@@ -200,7 +202,7 @@ ViewController.prototype.checkToJoin = function() {
 
   console.log('\n\nViewController::checkToJoin\n\n');
 
-  $('#page5').css('display','none');
+  this.clear();
   $('#page6').css('display','block');
   $('h2').html(" Successfully locked!</br>Now, you are the owner of the BOX! </br></br>Do you want to be a challenger to win the box too?</br>");
   
@@ -212,6 +214,7 @@ ViewController.prototype.checkToJoin = function() {
     $('#lockillust').toggleClass('lockImage');
     $('#lockillust').toggleClass('runImage');
     $('.buttonPair').css('display','none');
+    that.dashBoard();
   });
   
   $('#notJoin').click(function() {
@@ -236,18 +239,51 @@ ViewController.prototype.dashBoard = function() {
     this.status = 'dashboard';
     document.getElementById('status').innerHTML = this.status;
   }
+  this.app.getGoal();
+  console.log('dashBoard end----');
 }
 
 
+/**
+    Clear display
+  */
 
-ViewController.prototype.getGoal = function() {
-  return this.goal;
+ViewController.prototype.clear = function() {    
+  $('#page1').css('display','none');
+  $('#page2').css('display','none');
+  $('#page3').css('display','none');
+  $('#page4').css('display','none');
+  $('#page5').css('display','none');
+  $('#page6').css('display','none');
+//  $('h2').css('display','block');
 }
 
-ViewController.prototype.setGoal = function(goal) {
-  this.goal = goal;
+
+ViewController.prototype.getGoalStatus = function() {
+  return this.goalStatus;
 }
 
+ViewController.prototype.setGoalStatus = function(goalStatus) {
+  this.goalStatus = goalStatus;
+}
+
+ViewController.prototype.getGoalSteps = function() {
+  return this.goalSteps;
+}
+
+ViewController.prototype.setGoalSteps = function(steps) {
+  console.log('ViewController::setGoalSteps', steps);
+  this.goalSteps = steps;
+}
+
+ViewController.prototype.getGoalPeriod = function() {
+  return this.goalPeriod;
+}
+
+ViewController.prototype.setGoalPeriod = function(period) {
+  console.log('ViewController::setGoalPeriod', period);
+  this.goalPeriod = period;
+}
 
 
 /**
