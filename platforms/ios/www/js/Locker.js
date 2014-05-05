@@ -1,6 +1,6 @@
 function Locker(bm) {
-	console.log('Locker');
 	this.bleManager = bm;
+	this.lockStatus = false;
 }
 
 
@@ -9,7 +9,7 @@ function Locker(bm) {
   */
 
 Locker.prototype.lock = function() {
-	console.log('Locker::lock');
+	this.setLockStatus(true);
 	this.bleManager.write("l"+"\n");
 }
 
@@ -19,6 +19,15 @@ Locker.prototype.lock = function() {
   */
 
 Locker.prototype.unlock = function() {
-	console.log('Locker::unlock');
+	this.setLockStatus(false);
 	this.bleManager.write("u"+"\n");
+}
+
+
+Locker.prototype.setLockStatus = function(lockStatus) {
+	this.lockStatus = lockStatus;
+}
+
+Locker.prototype.getLockStatus = function() {
+	return this.lockStatus;
 }
