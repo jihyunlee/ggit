@@ -76,6 +76,10 @@ BLEManager.prototype.read = function(successCallback, failureCallback)
 	exec(successCallback, failureCallback, this.serviceName, "read", []);
 }
 
+BLEManager.prototype.readValueForCharacteristic = function(serviceUUID, characteristicUUID, successCallback, failureCallback) {
+	exec(successCallback, failureCallback, this.serviceName, "readValueForCharacteristic", [serviceUUID, characteristicUUID]);	
+}
+
 BLEManager.prototype.readUntil = function(delimiter, successCallback, failureCallback)
 {
 	exec(successCallback, failureCallback, this.serviceName, "readUntil", [delimiter]);
@@ -84,6 +88,11 @@ BLEManager.prototype.readUntil = function(delimiter, successCallback, failureCal
 BLEManager.prototype.write = function(data, successCallback, failureCallback)
 {
 	exec(successCallback, failureCallback, this.serviceName, "write", [data]);
+}
+
+BLEManager.prototype.writeValueForCharacteristic = function(serviceUUID, characteristicUUID, data, successCallback, failureCallback)
+{
+    exec(successCallback, failureCallback, this.serviceName, "writeValueForCharacteristic", [serviceUUID,characteristicUUID,data]);
 }
 
 BLEManager.prototype.subscribe = function(delimiter, successCallback, failureCallback)

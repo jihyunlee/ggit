@@ -250,6 +250,16 @@ static int state = -1;
     NSLog(@"[BLECentral] didFailToConnectPeripheral -- %@", peripheral.name);
 }
 
+- (void)disconnect {
+    NSLog(@"[BLECentral] disconnect ----------");
+    [self.centralManager cancelPeripheralConnection:activePeripheral];
+    self.activePeripheral = nil;
+}
+
+- (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
+    NSLog(@"[BLECentral] didDisconnectPeripheral");
+    [[self delegate] bleDidDisconnect];
+}
 
 #pragma mark - Peripheral Methods
 
@@ -389,6 +399,17 @@ static int state = -1;
 
 /** Reads the characteristic value for characteristic
  */
+-(void) doReadValueForCharacteristic:(NSString *)serviceUUID characteristicUUID:(NSString *)characteristicUUID {
+    
+    CBService *service = [self doDiscoverServices:activePeripheral UUID:serviceUUID];
+    if (!service) return;
+    
+    CBCharacteristic *characteristic = [self doDiscoverCharacteristic:service UUID:characteristicUUID];
+    if (!characteristic) return;
+    
+    [activePeripheral readValueForCharacteristic:characteristic];
+}
+
 - (void)doReadValueForCharacteristic:(CBPeripheral *)peripheral characteristic:(CBCharacteristic *)characteristic {
     
     [peripheral readValueForCharacteristic:characteristic];
@@ -416,14 +437,23 @@ static int state = -1;
         // and disconnect from the peripehral
         [self.centralManager cancelPeripheralConnection:peripheral];
     } else {
-        NSDictionary* dic = [NSDictionary dictionaryWithObjectsAndKeys: stringFromData, @"goal", nil];
-        [[self delegate] bleDidDiscoverCharacteristic:dic];
+        NSDictionary* dic = [NSDictionary dictionaryWithObjectsAndKeys: stringFromData, @"data", nil];
+        [[self delegate] bleDidReadValueForCharacteristic:dic];
     }
 }
 
+-(void) doWriteValueForCharacteristic:(NSString *)serviceUUID characteristicUUID:(NSString *)characteristicUUID data:(NSData *)d {
+    
+    CBService *service = [self doDiscoverServices:activePeripheral UUID:serviceUUID];
+    if (!service) return;
+    
+    CBCharacteristic *characteristic = [self doDiscoverCharacteristic:service UUID:characteristicUUID];
+    if (!characteristic) return;
+    
+    [activePeripheral writeValue:d forCharacteristic:characteristic type:CBCharacteristicWriteWithResponse];
+}
 
-
--(void) doWriteValue:(CBUUID *)serviceUUID characteristicUUID:(CBUUID *)characteristicUUID p:(CBPeripheral *)p data:(NSData *)d {
+-(void) doWriteValueForCharacteristic:(CBUUID *)serviceUUID characteristicUUID:(CBUUID *)characteristicUUID p:(CBPeripheral *)p data:(NSData *)d {
     
     CBService *service = [self doDiscoverServices:p UUID:[self CBUUIDToString:serviceUUID]];
     if (!service) return;
@@ -445,6 +475,7 @@ static int state = -1;
     }
     
     NSLog(@"didWriteValueForCharacteristic");
+    [[self delegate] bleDidWriteValueForCharacteristic];
 }
 
 /** The peripheral letting us know whether our subscribe/unsubscribe happened or not

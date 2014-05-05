@@ -54,6 +54,10 @@ static bool isConnected = false;
 
 #pragma mark - Cordova Plugin Methods
 
+- (void)cleanup:(CDVInvokedUrlCommand *)command {
+    
+}
+
 - (void)connect:(CDVInvokedUrlCommand *)command {
     
     NSString *uuid = [command.arguments objectAtIndex:0];
@@ -83,13 +87,15 @@ static bool isConnected = false;
     
     NSLog(@"CDVBLEManager::disconnect");
     
-    CDVPluginResult *pluginResult = nil;
-    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+    _connectCallbackId = [command.callbackId copy];
+//    
+//    CDVPluginResult *pluginResult = nil;
+//    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
 
     [self.CM disconnect];
-        
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-    _connectCallbackId = nil;
+//        
+//    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+//    _connectCallbackId = nil;
 }
 
 - (void)discoverServicesByUUID:(CDVInvokedUrlCommand*)command {
@@ -97,22 +103,40 @@ static bool isConnected = false;
     NSString *uuid = [command.arguments objectAtIndex:0];
     NSString *chUUID = [command.arguments objectAtIndex:1];
     
-    _serviceCallbackId = [command.callbackId copy];
-    NSLog(@"CDVBLEManager::discoverServicesByUUID -- %@ -- cbId(%@)", uuid, _serviceCallbackId);
-    
-//    CDVPluginResult *pluginResult = nil;
-//    
-//    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_NO_RESULT];
-//    [pluginResult setKeepCallbackAsBool:TRUE];
+    NSLog(@"CDVBLEManager::discoverServicesByUUID -- %@", uuid);
+
+    _readCallbackId = [command.callbackId copy];
     
     [self.CM doDiscoverServiceByUUID:uuid chUUID:chUUID];
-    
-//    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
+- (void)writeValueForCharacteristic:(CDVInvokedUrlCommand*)command {
 
+    NSString *uuid = [command.arguments objectAtIndex:0];
+    NSString *chUUID = [command.arguments objectAtIndex:1];
+    NSString *value = [command.arguments objectAtIndex:2];
+    
+    NSLog(@"CDVBLEManager::writeValueForCharacteristic -- service(%@) characteristic(%@) -- %@", uuid, chUUID, value);
 
+    _writeCallbackId = [command.callbackId copy];
+    
+    NSData* data = [value dataUsingEncoding:NSUTF8StringEncoding];
+//    NSData *data = [[NSData alloc] initWithBase64EncodedString:value options:0];
 
+    [self.CM doWriteValueForCharacteristic:uuid characteristicUUID:chUUID data:data];
+}
+
+- (void)readValueForCharacteristic:(CDVInvokedUrlCommand*)command {
+    
+    NSString *uuid = [command.arguments objectAtIndex:0];
+    NSString *chUUID = [command.arguments objectAtIndex:1];
+    
+    NSLog(@"CDVBLEManager::readValueForCharacteristic -- service(%@) characteristic(%@)", uuid, chUUID);
+    
+    _readCallbackId = [command.callbackId copy];
+    
+    [self.CM doReadValueForCharacteristic:uuid characteristicUUID:chUUID];
+}
 
 
 
@@ -333,7 +357,7 @@ static bool isConnected = false;
     NSLog(@"bleDidDisconnect");
     
     CDVPluginResult *pluginResult = nil;
-    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Disconnected"];
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:_connectCallbackId];
 
     _connectCallbackId = nil;
@@ -368,6 +392,31 @@ static bool isConnected = false;
     }
 }
 
+-(void) bleDidReadValueForCharacteristic:(NSDictionary *)dic {
+
+    NSLog(@"bleDidReadValueForCharacteristic");
+    CDVPluginResult *pluginResult = nil;
+    
+    if (_readCallbackId) {
+        NSString *data = [dic objectForKey:@"data"];
+        NSLog(@"data -- %@", data);
+        
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:dic];
+        [pluginResult setKeepCallbackAsBool:TRUE];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:_readCallbackId];
+    }
+}
+
+-(void) bleDidWriteValueForCharacteristic {
+    NSLog(@"bleDidWriteValueForCharacteristic");
+    CDVPluginResult *pluginResult = nil;
+    
+    if (_writeCallbackId) {
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+        [pluginResult setKeepCallbackAsBool:TRUE];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:_writeCallbackId];
+    }
+}
 
 - (void)bleDidReceiveData:(unsigned char *)data length:(int)length {
     NSLog(@"bleDidReceiveData");

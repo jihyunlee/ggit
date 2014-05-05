@@ -27,6 +27,8 @@
     NSString* _connectCallbackId;
     NSString* _serviceCallbackId;
     NSString* _subscribeCallbackId;
+    NSString* _readCallbackId;
+    NSString* _writeCallbackId;
     NSString* _rssiCallbackId;
     NSMutableString *_buffer;
     NSString *_delimiter;
@@ -44,6 +46,9 @@
 - (void)disconnect:(CDVInvokedUrlCommand *)command;
 
 - (void)discoverServicesByUUID:(CDVInvokedUrlCommand*)command;
+
+- (void)readValueForCharacteristic:(CDVInvokedUrlCommand*)command;
+- (void)writeValueForCharacteristic:(CDVInvokedUrlCommand*)command;
 
 - (void)subscribe:(CDVInvokedUrlCommand *)command;
 - (void)write:(CDVInvokedUrlCommand *)command;

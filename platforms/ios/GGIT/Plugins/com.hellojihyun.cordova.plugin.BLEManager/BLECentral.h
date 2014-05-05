@@ -15,6 +15,8 @@
 -(void) bleDidDisconnect;
 -(void) bleDidDiscoverServices;
 -(void) bleDidDiscoverCharacteristic:(NSDictionary *)dic;
+-(void) bleDidReadValueForCharacteristic:(NSDictionary *)dic;
+-(void) bleDidWriteValueForCharacteristic;
 @required
 @end
 
@@ -71,8 +73,12 @@
 -(CBCharacteristic *) doDiscoverCharacteristic:(CBService*)service UUID:(NSString *)UUID;
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error;
 
+- (void) doReadValueForCharacteristic:(NSString *)serviceUUID characteristicUUID:(NSString *)characteristicUUID;
 - (void)doReadValueForCharacteristic:(CBPeripheral *)peripheral characteristic:(CBCharacteristic *)characteristic;
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error;
+
+-(void) doWriteValueForCharacteristic:(NSString *)serviceUUID characteristicUUID:(NSString *)characteristicUUID data:(NSData *)d;
+-(void) doWriteValueForCharacteristic:(CBUUID *)serviceUUID characteristicUUID:(CBUUID *)characteristicUUID p:(CBPeripheral *)p data:(NSData *)d;
 
 
 // activePeripheral
