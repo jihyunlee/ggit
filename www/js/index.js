@@ -28,6 +28,9 @@ var app = {
   GGIT_BOX_UUID: '6001DB1A-1B07-DA19-DC6C-108BAC1FB457',// Production7 // 'ECEB35D1-9CB0-2BEA-2FF9-9882958C7373', // Jess's BLE dongle
   GGIT_SERVICE_UUID: '474f',
   GGIT_CHARACTERISTIC_GOAL_UUID: '4954',
+  GGIT_CHARACTERISTIC_LOCK_STATUS_UUID: '4c6b',
+  GGIT_CHARACTERISTIC_STEPS_UUID: '5374',
+  GGIT_CHARACTERISTIC_PERIOD_UUID: '5072',
 
   isSuccess: false,
 
@@ -42,6 +45,7 @@ var app = {
   },
   bindEvents: function() {
     document.addEventListener('deviceready', this.onDeviceReady, false);
+    document.addEventListener('resume', this.onResume, false);
   },
   onDeviceReady: function() {
     if(window.cordova.logger) window.cordova.logger.__onDeviceReady();
@@ -55,6 +59,14 @@ var app = {
 
     view.welcome('deviceready');
     app.list();   
+  },
+  onResume: function() {
+    app.isSuccess = false;
+    view.welcome('deviceready');
+    bleManager.disconnect(app.didResume, function(err){console.log('resume Failed');});
+  },
+  didResume: function(res) {
+    app.list();    
   },
         
     
@@ -83,7 +95,7 @@ var app = {
       view.didFailToConnect();
       setTimeout(app.list, 2000);
     }
-    app.isSuccess = !app.isSuccess;
+    // app.isSuccess = !app.isSuccess; // test
   },
   didDiscover: function(devices) {
     console.log('[index.js] didDiscover', devices.length);
@@ -112,21 +124,58 @@ var app = {
   didDiscoverService: function(res) {
     var d = new Date();
     tGoal = d.getTime();
-    console.log('[index.js] didDiscoverService --- ' + (tGoal-tConnect));
+    console.log('[index.js] didDiscoverService --- ');
     
-    if (res.hasOwnProperty("goal")) {
+    if (res.hasOwnProperty("data")) {
       if(res.goal == '') console.log('goal is empty');
-      else console.log('goal', res.goal);
+      else console.log('goal', res.data);
 
       app.isSuccess = true;
-      document.getElementById('status').innerHTML = "goal: "+res.goal;
+      document.getElementById('status').innerHTML = "goal: "+res.data;
       // view.didConnect();
-      view.setGoal(res.goal);
+      view.setGoalStatus(res.data);
     } else {
       console.log('fail to read goal', res);
     }  
   },
-//,
+  setupGoal: function(steps, period) {
+    console.log('[index.js] setupGoal', steps, period);   
+    app.goalSteps = steps;
+    app.goalPeriod = period;
+    bleManager.writeValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_GOAL_UUID, 'true', app.didSetupGoals, function(err){console.log('writeValueForCharacteristic Failed');});
+  },
+  didSetupGoals: function(res) {
+    console.log('[index.js] didSetupGoals', res);
+    bleManager.writeValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_STEPS_UUID, app.goalSteps, app.didWriteSteps, function(err){console.log('writeValueForCharacteristic Failed');});
+  },
+  didWriteSteps: function(res) {
+    console.log('[index.js] didWriteSteps', res);
+    console.log('goalPeriod', app.goalPeriod);
+    bleManager.writeValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_PERIOD_UUID, app.goalPeriod, app.didWritePeriod, function(err){console.log('writeValueForCharacteristic Failed');});
+  },
+  didWritePeriod: function(res) {
+    console.log('[index.js] didWritePeriod', res);
+  },
+  getGoal: function() {
+    console.log('[index.js] getGoal');
+    bleManager.readValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_STEPS_UUID, app.didReadSteps, function(err){console.log('readValueForCharacteristic Failed');});
+  },
+  didReadSteps: function(res) {
+    console.log('[index.js] didReadSteps');
+    if (res.hasOwnProperty('data')) {
+      console.log('steps', res.data);
+      view.setGoalSteps(res.data);
+    }
+    bleManager.readValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_PERIOD_UUID, app.didReadPeriod, function(err){console.log('readValueForCharacteristic Failed');});
+  },
+  didReadPeriod: function(res) {
+    console.log('[index.js] didReadPeriod');
+    if (res.hasOwnProperty('data')) {
+      console.log('period', res.data);
+      view.setGoalPeriod(res.data);
+      document.getElementById('status').innerHTML = 'Goal: ' + app.goalSteps +' steps '+ app.goalPeriod + ' days a week';
+    }
+  },
     //findPeripheralByUUID: function(uuid) {
     //    console.log('[index.js] findPeripheralByUUID', uuid);
     //    bleManager.findPeripheralByUUID(uuid, app.didFindPeripheralByUUID, function(err){console.log('findPeripheralByUUID Failed',uuid);});
