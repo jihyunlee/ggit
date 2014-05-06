@@ -67,7 +67,7 @@
 
 - (void) getSteps:(CDVInvokedUrlCommand*)command
 {   
-    NSLog(@"CDVM7StepCounter -- getSteps");
+    // NSLog(@"CDVM7StepCounter -- getSteps");
 
     NSInteger day = [[command.arguments objectAtIndex:0] intValue];
     
