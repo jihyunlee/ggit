@@ -22,6 +22,9 @@
     <feature name="Console">
         <param name="ios-package" value="CDVLogger" />
     </feature>
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
+    </feature>
     <feature name="M7StepCounter">
         <param name="ios-package" value="CDVM7StepCounter" />
     </feature>
