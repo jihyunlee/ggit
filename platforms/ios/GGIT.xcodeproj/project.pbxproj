@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		18C180649AFF412895A73B8A /* BLEPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C8DC9720904E4B817B6DBB /* BLEPeripheral.m */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
@@ -47,6 +46,9 @@
 		C464F8D66E3A49BF9FDA7535 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC69ABF1C8854E719212F13A /* CoreBluetooth.framework */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		DAF3FAA1B031423E9DD3EB97 /* CDVM7StepCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 661C40D5823647969CE0BDB0 /* CDVM7StepCounter.m */; };
+		C280B6AFC2A14B5D9762FAA0 /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 663766F8A44B43F6BB98A047 /* CDVNotification.m */; };
+		92CE763A42C64B6CACDB4FF0 /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 82D412DDEF3144DEAC920BA4 /* CDVNotification.bundle */; };
+		7AB87589445F407B86EDAE6D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36EB380CD0914DE39F6C66EE /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +128,10 @@
 		EC69ABF1C8854E719212F13A /* CoreBluetooth.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		F16582A97EE34277B2DB57AC /* CoreMotion.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = GGIT/config.xml; sourceTree = "<group>"; };
+		663766F8A44B43F6BB98A047 /* CDVNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVNotification.m"; path = "org.apache.cordova.dialogs/CDVNotification.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		4FEE1A1AF9E34C4C9AF2F0F7 /* CDVNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVNotification.h"; path = "org.apache.cordova.dialogs/CDVNotification.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		82D412DDEF3144DEAC920BA4 /* CDVNotification.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = "CDVNotification.bundle"; path = "CDVNotification.bundle"; sourceTree = "<group>"; };
+		36EB380CD0914DE39F6C66EE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +146,7 @@
 				5AEE5B35173C68D80009041E /* CoreLocation.framework in Frameworks */,
 				46DD9BAE963B47FFB5BF1D39 /* CoreMotion.framework in Frameworks */,
 				C464F8D66E3A49BF9FDA7535 /* CoreBluetooth.framework in Frameworks */,
+				7AB87589445F407B86EDAE6D /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +228,7 @@
 				308D052D1370CCF300D202BF /* icons */,
 				308D05311370CCF300D202BF /* splash */,
 				8D1107310486CEB800E47090 /* GGIT-Info.plist */,
+				82D412DDEF3144DEAC920BA4 /* CDVNotification.bundle */,
 			);
 			name = Resources;
 			path = GGIT/Resources;
@@ -235,6 +243,7 @@
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
 				F16582A97EE34277B2DB57AC /* CoreMotion.framework */,
 				EC69ABF1C8854E719212F13A /* CoreBluetooth.framework */,
+				36EB380CD0914DE39F6C66EE /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -263,6 +272,8 @@
 				95B057B6F01F47629F71C4EA /* BLEDefines.h */,
 				07E5642BC2844959ABC8FB6B /* BLEPeripheral.h */,
 				9C3E17B3F2F9456CA3B0081B /* CBPeripheral+Extensions.h */,
+				663766F8A44B43F6BB98A047 /* CDVNotification.m */,
+				4FEE1A1AF9E34C4C9AF2F0F7 /* CDVNotification.h */,
 			);
 			name = Plugins;
 			path = GGIT/Plugins;
@@ -426,6 +437,7 @@
 				7E7966E11810823500FA85AD /* icon-50@2x.png in Resources */,
 				7E7966E51810823500FA85AD /* icon-76@2x.png in Resources */,
 				30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */,
+				92CE763A42C64B6CACDB4FF0 /* CDVNotification.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +475,7 @@
 				32AAA443461F45749DFF64D6 /* BLECentral.m in Sources */,
 				18C180649AFF412895A73B8A /* BLEPeripheral.m in Sources */,
 				436143C4A94D4E7C92C7F756 /* CBPeripheral+Extensions.m in Sources */,
+				C280B6AFC2A14B5D9762FAA0 /* CDVNotification.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +530,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -542,6 +557,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = GGIT;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s";
 			};
@@ -552,6 +568,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GGIT/GGIT-Prefix.pch";
@@ -575,6 +593,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = GGIT;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s";
 			};

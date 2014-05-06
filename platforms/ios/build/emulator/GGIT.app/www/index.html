@@ -17,6 +17,7 @@
     specific language governing permissions and limitations
     under the License.
 -->
+<!--   github collaborating trial -->
 <html>
     <head>
         <meta charset="utf-8" />
@@ -24,7 +25,7 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>GGIT</title>
+        <title>Go! Get It!</title>
     </head>
     <body>
         <div class="app">
@@ -91,11 +92,10 @@
 
           <div id="messageDiv">
             <h2>
-              Box is empty. 
+              Box is empty.
             </br>
-              Put something sweet 
+              Put a treat in the box!
             </br>
-              in the box!  
             </h2>
           </div>
 
@@ -111,10 +111,10 @@
 
               <div id="messageDiv">
                 <h2>
-                  Now you can set up a goal 
+                  Now you can set up a goal
                 </br>
                   to get thing in a box!
-                </br> 
+                </br>
                 </h2>
               </div>
               <form action="" id="form-set-goal" class="" style="">
@@ -122,12 +122,12 @@
                 <input id="form-steps" name="steps" type="number" placeholder="5000" /></br>
                 <label for="form-steps">steps</label>
                 </br>
-                
+
                 <input id="form-freq" name="freq" min="1" max="7" type="number" placeholder="1" /></br>
                 <label for="form-freq">days / a week</label>
                 <input id="form-activity" type="hidden" />
                 </br>
-                <input type="submit" data-inline="true" value="SAVE GOAL" id ="goalsubmit"> 
+                <input type="submit" data-inline="true" value="SAVE GOAL" id ="goalsubmit">
               </form>
 
 
@@ -148,16 +148,16 @@
 
               <div id="messageDiv">
                 <h2>
-                  Now you set up a goal 
+                  Now you set up a goal
                 </br>
-                  You pick a goal : blabla. 
-                </br> 
+                  You pick a goal : blabla.
+                </br>
                 </h2>
-                    
+
 
               </div>
-                <input type="submit" data-inline="true" value="CONFIRM" id ="goNext" class="buttonPair"> 
-                 <input type="submit" data-inline="true" class="buttonPair" value="RESET GOAL" id ="resetGoal"> 
+                <input type="submit" data-inline="true" value="CONFIRM" id ="goNext" class="buttonPair">
+                 <input type="submit" data-inline="true" class="buttonPair" value="RESET GOAL" id ="resetGoal">
 
             <div data-role="footer">
             </div>
@@ -168,16 +168,16 @@
             </div><!-- /header -->
 
             <div data-role="main" class="ui-content">
-               <div id = "lockillust" class = "lockImage"></div> 
+               <div id = "lockillust" class = "lockImage"></div>
                 <div id="messageDiv">
                 <h2></h2>
-                    
+
 
               </div>
 
-                <input type="submit" data-inline="true" value="Yes" id ="join" class="buttonPair"> 
-                 <input type="submit" data-inline="true" class="buttonPair" value="No" id ="notJoin"> 
-   
+                <input type="submit" data-inline="true" value="Yes" id ="join" class="buttonPair">
+                 <input type="submit" data-inline="true" class="buttonPair" value="No" id ="notJoin">
+
             </div>
             <div data-role="footer">
             </div><!-- /footer -->
@@ -261,17 +261,100 @@
 
         </div><!-- /page -->
 
+        <div data-role="page" id="dashboard">
+           <div data-role="header">
+        <!--           <h1>
+                 GGIT dashboard
+               </h1> -->
+           </div><!-- /header -->
+
+<!--                Here is for displaying a dashboard from M7 data of the device. -->
+           <section class="section-title">
+             <h2 id="title-today">TODAY</h2>
+          </section>
+           <section class="today-section">
+
+             <section class="todayRing">
+             <svg id="todaysRing">
+                 <path id="ring" fill="#66FFCC"/>
+                 <circle cx="80" cy="90" r="58" fill="#0b5b67"/>
+                 <circle cx="80" cy="90" r="50" fill="none" stroke="#66FFCC" stroke-width="3" opacity=".5"/>
+                 <text x="80" y="69" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-size="11" font-weight="light">TODAY</text>
+                 <text x="80" y="90" text-anchor="middle" dominant-baseline="central" fill="#66FFCC" font-size="32" font-weight="bold">64</text>
+                 <text x="80" y="112" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-size="11" font-weight="light">STEPS</text>
+             </svg>
+             </section>
+             <section class="dateStatus">
+                <span class="bigDate" id="dateGap">9</span>
+                <span class="middleDate">days</span>
+                <span class="smallDate">since you</span>
+                <span class="smallDate">have joined</span>
+                <span class="smallDate">on <span id="startingDate">2014/4/30</span></span>
+             </section>
+           </section>
+           <section class="goal-section">
+             <section class="goal-statement">
+               <h2 id='title-goalstatement'>Your goal is to have
+               </br>5000 steps for 3 days a week</h2>
+             </section>
+             <section class="goal-progressbar">
+                <p id='goal-progress-text' style="width: 80%; text-align: left; margin: 5px;">until open GGIT box</p>
+                <progress max="100" value="50" class="goal-progress"></progress>
+             </section>
+           </section>
+          <section class="section-title">
+             <h2 id='title-thisweek'>THIS WEEK</h2>
+          </section>
+           <section class="week-section">
+             <ul class="sub-section">
+                <li class="weeksRing">
+                <div class="date-disc">4/19</div>
+                <div class="circle color-1 color1-box-shadow">Good</div>
+                </li>
+                <li class="weeksRing">
+                <div class="date-disc">4/20</div>
+                <div class="circle color-2 color2-box-shadow"></div>
+                </li>
+                <li class="weeksRing">
+                <div class="date-disc">4/21</div>
+                <div class="circle color-2 color2-box-shadow"></div>
+                </li>
+                <li class="weeksRing">
+                <div class="date-disc">4/22</div>
+                <div class="circle color-2 color2-box-shadow"></div>
+                </li>
+                <li class="weeksRing">
+                <div class="date-disc">4/23</div>
+                <div class="circle color-1 color1-box-shadow">Good</div>
+                </li>
+                <li class="weeksRing">
+                <div class="date-disc">4/24</div>
+                <div class="circle color-2 color2-box-shadow"></div>
+                </li>
+             </ul>
+           </section>
+
+           <div data-role="footer">
+           </div><!-- /footer -->
+
+        </div><!-- /page -->
+
+        <div id="status" style="position:absolute;top:50px;left:10px;width:500px;height:100px;"></div>
+        <div id="today-steps" style="position:absolute;top:80px;left:10px;width:500px;height:100px;"></div>
+        <div id="weekly-steps" style="position:absolute;top:110px;left:10px;width:500px;height:100px;"></div>
 
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script src="js/apigee.js"></script>
         <script src="js/jquery-1.9.1.min.js"></script>
         <script src="js/jquery.mobile-1.3.1.min.js"></script>
-
+        <script type="text/javascript" src="js/Locker.js"></script>
+        <script type="text/javascript" src="js/ViewController.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
-            app.initialize();
-            $.mobile.loadingMessage = false;
+          app.initialize();
+          $.mobile.loadingMessage = false;
         </script>
-
     </body>
 </html>
+
+
+

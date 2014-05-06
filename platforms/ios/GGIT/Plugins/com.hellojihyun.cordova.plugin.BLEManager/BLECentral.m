@@ -12,10 +12,8 @@
 @synthesize centralManager;
 @synthesize peripherals;
 @synthesize activePeripheral;
-//@synthesize data;
 
 static bool ready = false;
-static bool done = false;
 static int state = -1;
 
 #pragma mark - init
@@ -197,7 +195,12 @@ static int state = -1;
         return;
     }
     
-    NSLog(@"[BLECentral] didDiscoverPeripheral -- %@ (%ld)", peripheral.name, (long)RSSI.integerValue);
+    NSLog(@"[BLECentral] didDiscoverPeripheral -- %@ -- %@ -- (%ld)", peripheral.name, [peripheral.identifier UUIDString], (long)RSSI.integerValue);
+    
+    NSString* localName = [advertisementData objectForKey:@"kCBAdvDataLocalName"];
+
+    NSDictionary* dic = [NSDictionary dictionaryWithObjectsAndKeys: peripheral.name, @"name", [peripheral.identifier UUIDString], @"uuid", localName, @"localname", nil];
+    [[self delegate] didDiscoverPeripheral:dic];
     
     [peripheral setAdvertisementData:advertisementData RSSI:RSSI];
 
@@ -229,27 +232,36 @@ static int state = -1;
 // get Peripheral local name
 // [advertisementData objectForKey:CBAdvertisementDataLocalNameKey]
 
-- (void)connect:(CBPeripheral *)peripheral id:(NSString *)id{
+- (void)connect:(CBPeripheral *)peripheral {
     
-    NSLog(@"[BLECentral] connect ---------- %@", id);
-    connectCallback = id;
+    NSLog(@"[BLECentral] connect ----------");
     [self.centralManager connectPeripheral:peripheral options:nil];
 }
 
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
-    NSLog(@"[BLECentral] didConnectPeripheral -- %@ -- %@", peripheral.name, connectCallback);
+    NSLog(@"[BLECentral] didConnectPeripheral -- %@", peripheral.name);
     
     self.activePeripheral = peripheral;
     [self.activePeripheral setDelegate:self];
     
     NSDictionary* dic = [NSDictionary dictionaryWithObjectsAndKeys: peripheral.name, @"name", [peripheral.identifier UUIDString], @"uuid", nil];
-    [[self delegate] bleDidConnect:dic];
+    [[self delegate] didConnect:dic];
 }
 
 - (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
     NSLog(@"[BLECentral] didFailToConnectPeripheral -- %@", peripheral.name);
 }
 
+- (void)disconnect {
+    NSLog(@"[BLECentral] disconnect ----------");
+    [self.centralManager cancelPeripheralConnection:activePeripheral];
+    self.activePeripheral = nil;
+}
+
+- (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
+    NSLog(@"[BLECentral] didDisconnectPeripheral");
+    [[self delegate] didDisconnect];
+}
 
 #pragma mark - Peripheral Methods
 
@@ -389,6 +401,17 @@ static int state = -1;
 
 /** Reads the characteristic value for characteristic
  */
+-(void) doReadValueForCharacteristic:(NSString *)serviceUUID characteristicUUID:(NSString *)characteristicUUID {
+    
+    CBService *service = [self doDiscoverServices:activePeripheral UUID:serviceUUID];
+    if (!service) return;
+    
+    CBCharacteristic *characteristic = [self doDiscoverCharacteristic:service UUID:characteristicUUID];
+    if (!characteristic) return;
+    
+    [activePeripheral readValueForCharacteristic:characteristic];
+}
+
 - (void)doReadValueForCharacteristic:(CBPeripheral *)peripheral characteristic:(CBCharacteristic *)characteristic {
     
     [peripheral readValueForCharacteristic:characteristic];
@@ -416,14 +439,23 @@ static int state = -1;
         // and disconnect from the peripehral
         [self.centralManager cancelPeripheralConnection:peripheral];
     } else {
-        NSDictionary* dic = [NSDictionary dictionaryWithObjectsAndKeys: stringFromData, @"goal", nil];
-        [[self delegate] bleDidDiscoverCharacteristic:dic];
+        NSDictionary* dic = [NSDictionary dictionaryWithObjectsAndKeys: stringFromData, @"data", nil];
+        [[self delegate] bleDidReadValueForCharacteristic:dic];
     }
 }
 
+-(void) doWriteValueForCharacteristic:(NSString *)serviceUUID characteristicUUID:(NSString *)characteristicUUID data:(NSData *)d {
+    
+    CBService *service = [self doDiscoverServices:activePeripheral UUID:serviceUUID];
+    if (!service) return;
+    
+    CBCharacteristic *characteristic = [self doDiscoverCharacteristic:service UUID:characteristicUUID];
+    if (!characteristic) return;
+    
+    [activePeripheral writeValue:d forCharacteristic:characteristic type:CBCharacteristicWriteWithResponse];
+}
 
-
--(void) doWriteValue:(CBUUID *)serviceUUID characteristicUUID:(CBUUID *)characteristicUUID p:(CBPeripheral *)p data:(NSData *)d {
+-(void) doWriteValueForCharacteristic:(CBUUID *)serviceUUID characteristicUUID:(CBUUID *)characteristicUUID p:(CBPeripheral *)p data:(NSData *)d {
     
     CBService *service = [self doDiscoverServices:p UUID:[self CBUUIDToString:serviceUUID]];
     if (!service) return;
@@ -445,6 +477,7 @@ static int state = -1;
     }
     
     NSLog(@"didWriteValueForCharacteristic");
+    [[self delegate] bleDidWriteValueForCharacteristic];
 }
 
 /** The peripheral letting us know whether our subscribe/unsubscribe happened or not
@@ -479,7 +512,9 @@ static int state = -1;
     }
 }
 
-
+- (void)readActiveRSSI {
+    
+}
 
 -(NSString *) CBUUIDToString:(CBUUID *) cbuuid;
 {

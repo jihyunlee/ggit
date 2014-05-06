@@ -16,572 +16,280 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var dataModule = {
-    "serialNum":"1234",
-    "sender":"example@ggit.com",
-    "recipient":"example@ggit.com",
-    "goal":[
-            {
-            "dataType":"steps"
-            },
-            {
-            "frequency-days":"7"
-            },
-            {
-            "amount":10000
-            }
-            ],
-    "isSucceed":false,
-    "command":"lock"
-}
 
-
-var boxUUID;
-
-var appUser;
-
-var goal;
-var goalString;
+var stepCounter;
+var bleManager;
+var view;
+var locker;
+var tScan, tConnect, tGoal;
 
 var app = {
-    
-//GGIT_BOX_UUID: '6001DB1A-1B07-DA19-DC6C-108BAC1FB457', // 'ECEB35D1-9CB0-2BEA-2FF9-9882958C7373', // Jess's BLE dongle
-GGIT_BOX_UUID: '00415CB5-D8FE-A85A-C9BB-603F9FF97D7D',
-GGIT_SERVICE_UUID: 'ffd4', //'474f',
-GGIT_CHARACTERISTIC_GOAL: '4954',
-initialize: function() {
-//    this.bindEvents();
-    $('.app').css('display','none');
-    app.fillBox();
+  
+  GGIT_BOX_NAME: 'GoGetIt',
+  device_uuid: '',
+  GGIT_SERVICE_UUID: '474f',
+  GGIT_CHARACTERISTIC_GOAL_UUID: '4954',
+  GGIT_CHARACTERISTIC_LOCK_STATUS_UUID: '4c6b',
+  GGIT_CHARACTERISTIC_STEPS_UUID: '5374',
+  GGIT_CHARACTERISTIC_PERIOD_UUID: '5072',
 
-},
-bindEvents: function() {
+  isSuccess: false,
+
+  //GGIT_BOX_UUID: 'CAA089E5-7152-14B3-8EF5-173CAB557676', // Liz's Biscuit
+  //GGIT_SERVICE_UUID: '713D0000-503E-4C75-BA94-3148F18D941E', // Liz's Biscuit
+  //GGIT_CHARACTERISTIC_GOAL: '713D0001-503E-4C75-BA94-3148F18D941E', // Liz's Biscuit
+
+  initialize: function() {
+    this.bindEvents();
+  },
+  bindEvents: function() {
     document.addEventListener('deviceready', this.onDeviceReady, false);
-},
-onDeviceReady: function() {
-    if(window.cordova.logger) {
-        window.cordova.logger.__onDeviceReady();
-    }
-    app.sc = new M7StepCounter();
-    app.bm = new BLEManager();
-    
-    console.log('[index.js] plugins initialized');
-    
-    // find the box
-//    app.list();
+    document.addEventListener("pause", this.onPause, false);
+    document.addEventListener('resume', this.onResume, false);
+  },
+  onDeviceReady: function() {
+    if(window.cordova.logger) window.cordova.logger.__onDeviceReady();
 
-    
-    app.welcome('deviceready');
-},
-    
-    
-    /*
-     
-        User Interface
-     
-     */
-    
-    
-    // Update DOM on a Received Event
-    //**********p1: Welcome screen**********//
-welcome: function(id) {
-    var parentElement = document.getElementById(id);
-    var listeningElement = parentElement.querySelector('.listening');
-    var receivedElement = parentElement.querySelector('.received');
-    
-    listeningElement.setAttribute('style', 'display:none;');
-    receivedElement.setAttribute('style', 'display:block;');
-    $('.app').css('display','none');
-    
-    
-    console.log('Received Event: ' + id);
-    app.bleSetup();
-    
-},
-    
-    //**********p2: GGIT Connection / Box connection status here Change Page! **********//
-bleSetup: function(){
-    
-    $('#page1').css('display','block');
-    
-    // scan BLE devices & get connection
-    
-    // bLEcallback(param,function(err){
-    //   if(err){
-    //
-    //   }else{
-    //     app.selectOne();
-    //   }
-    // });
-    setTimeout(failedConnecetion, 7000); ////temporary function for next page
-    
-    // display BLE connection results in html
-    function displayConnection(){
-        $('#page1').css('display','none');
-        $('#page2').css('display','block');
-        $('#page2').toggleClass("scansucceed");
+    stepCounter = new M7StepCounter();
+    stepCounter.isAvailable(app.onAvailable, function(err){ console.log('isAvailable Failed'); });
+    bleManager = new BLEManager();
+    view = new ViewController(app);
+    locker = new Locker(bleManager);
+
+    console.log('plugins initialized');
+
+    view.welcome('deviceready');
+    app.startStepCounter();
+    app.startScan();   
+  },
+  onAvailable: function(res) {
+    console.log('app.onAvailable', res);
+    if(!res) console.log('M7 not available');
+  },
+  onPause: function() {
+    console.log('[index.js] onPause');
+    app.isSuccess = false;
+    bleManager.disconnect(function(){}, function(err){console.log('pause Failed');});
+    app.stopStepCounter();
+  },
+  onResume: function() {
+    console.log('\n\n\n[index.js] onResume\n\n');
+    view.welcome('deviceready');
+  },
+  didResume: function(res) {
+    console.log('[index.js] didResume');
+    app.startStepCounter();
+    app.startScan();
+  },
         
-        //setTimeout(app.selectOne, 1000); ////temporary function for next page
-        if(goal != null) setTimeout(app.goalCheck, 2000);
-        else setTimeout(app.fillBox, 2000);
+    
+/**
+
+    Bluetooth LE
+
+  */
+
+  startScan: function() {
+    var d = new Date();
+    tScan = d.getTime();
+    console.log('[index.js] startScan --- ' + tScan);
+
+    view.scan();
+    bleManager.startScan(app.didDiscover, function(err){console.log('startScan Failed');});
+    setTimeout(app.scanTimeout, 4000);
+  },
+  stopScan: function() {
+    console.log('[index.js] stopScan');
+    bleManager.stopScan(function(res){}, function(err){console.log('stopScan Failed');});
+  },
+  didDiscover: function(peripheral) {
+    console.log('[index.js] didDiscover');
+    var name;
+    if(peripheral.hasOwnProperty('localname')) name = peripheral.localname;
+    if(peripheral.hasOwnProperty('uuid')) app.device_uuid = peripheral.uuid;
+
+    if(name == app.GGIT_BOX_NAME) {
+      console.log('\n\nggit box found\n\n');
+      app.isSuccess = true;
+      app.stopScan();
+      bleManager.connect(app.device_uuid, app.didConnect, function(err){console.log('connect Failed',app.device_uuid);});      
     }
+  },    
+  scanTimeout: function() {
+    var d = new Date();
+    console.log('[index.js] scanTimeout --- ', d.getTime());
     
-    function failedConnecetion(){
-        $('#page1').css('display','none');
-        $('#page2').css('display','block');
-        $('#page2').toggleClass("scanfailed");
-        setTimeout(setupBleAgain, 7000); ////temporary function for next page
-        
+    if(app.isSuccess) {
+      view.didConnect();
+    } else {
+      view.didFailToConnect();
+      app.stopScan();
+      setTimeout(app.startScan, 2000);
     }
-    
-    //temporary
-    function setupBleAgain(){
-        $('#page2').css('display','none');
-        $('#page1').css('display','block');
-        $('#page2').toggleClass("scanfailed");
-        //console.log("setup Ble again!");
-        setTimeout(displayConnection, 5000); ////temporary function for next page
+  },
+  didConnect: function(peripheral) {
+    var d = new Date();
+    tConnect = d.getTime();
+    console.log('[index.js] didConnect --- ' + (tConnect-tScan), peripheral.name, peripheral.uuid);
+    if(peripheral.uuid == app.device_uuid) {
+      console.log('\n\nbox is connected\n\n');
+      bleManager.discoverServicesByUUID(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_GOAL_UUID, app.didDiscoverService, function(err){console.log('discoverServicesByUUID Failed');});
     }
-},
+  },
+  didDiscoverService: function(res) {
+    var d = new Date();
+    tGoal = d.getTime();
+    console.log('[index.js] didDiscoverService --- ');
     
-    //if box has no goal, ask a user to set up one----------//
-fillBox: function(){
+    if (res.hasOwnProperty("data")) {
+      if(res.goal == '') console.log('goal is empty');
+      else console.log('goal', res.data);
+
+      app.isSuccess = true;
+      view.setGoalStatus(res.data);
+    } else {
+      console.log('fail to read goal', res);
+    }  
+  },
+  setupGoal: function(steps, period) {
+    console.log('[index.js] setupGoal', steps, period);   
+    app.goalSteps = steps;
+    app.goalPeriod = period;
     
-    //console.log("A goal needs to be set up");
-    $('#page2').css('display','none');
-    $('#page3').css('display','block');
+    // app.startStepCounter();
+
+    var didWritePeriod = function(res) {
+      console.log('[index.js] didWritePeriod', res);
+    };
+
+    var didWriteSteps = function(res) {
+      console.log('[index.js] didWriteSteps', res);
+      bleManager.writeValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_PERIOD_UUID, app.goalPeriod, didWritePeriod, function(err){console.log('writeValueForCharacteristic Failed');});
+    };
     
-    function animation(){
-        $('#boxAnimation').toggleClass('changeImage');
-        $('#boxAnimation').toggleClass('originalImage');
-    }
-    
-    setInterval(animation, 1000);
-    $('#fillboxsubmit').click(function() {
-                              //console.log("clicked");
-                              clearInterval(animation);
-                              app.goalSetup();
-                              
-                              });
-},
-goalSetup: function(){
-    
-    $('#page3').css('display','none');
-    $('#page4').css('display','block');
-    
-    $('#goalsubmit').click(function() {
-                           //console.log("clicked");
-                           goalConfirm();
-                           
-                           });
-    
-    function goalConfirm(){
-        var steps = $('#form-steps').val();
-        var period = $('#form-freq').val();
-        //console.log(steps + ","+ period);
+    var didSetupGoals = function(res) {
+      console.log('[index.js] didSetupGoals', res);
+      bleManager.writeValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_STEPS_UUID, app.goalSteps, didWriteSteps, function(err){console.log('writeValueForCharacteristic Failed');});
+    }; 
+
+    bleManager.writeValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_GOAL_UUID, 'true', didSetupGoals, function(err){console.log('writeValueForCharacteristic Failed');});
+  },
+  fetch: function() {
+    console.log('[index.js] fetch');
+    var didGetGoal = function() {
+      view.dashBoard();
+    };
+    var didGetWeeklySteps = function() {
+
+      app.getGoal(didGetGoal);
+    };
+    app.getWeeklySteps(didGetWeeklySteps);
+  },
+  getGoal: function(callback) {
+    console.log('[index.js] getGoal');
+
+    var didReadPeriod = function(res) {
+      console.log('[index.js] didReadPeriod');
+      if (res.hasOwnProperty('data')) {
+        console.log('period', res.data);
+        app.goalPeriod = res.data;
+        view.setGoalPeriod(res.data);
+      }
+      callback();
+      // view.dashBoard();
+    };
+
+    var didReadSteps = function(res) {
+      console.log('[index.js] didReadSteps');
+      if (res.hasOwnProperty('data')) {
+        console.log('steps', res.data);
+        app.goalSteps = res.data;
+        view.setGoalSteps(res.data);
+      }
+      bleManager.readValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_PERIOD_UUID, didReadPeriod, function(err){console.log('readValueForCharacteristic Failed');});
+    };
+
+    bleManager.readValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_STEPS_UUID, didReadSteps, function(err){console.log('readValueForCharacteristic Failed');});
+  },
+
+
+/**
+
+    Step Counter
+
+  */
+
+  startStepCounter: function() {
+    console.log('[index.js] startStepCounter');
+    stepCounter.start(app.onStartStepCounter, function(err){console.log('startStepCounter Failed');});
+  },
+  onStartStepCounter: function() {
+    console.log('[index.js] onStartStepCounter');
+    app.getWeeklySteps(function(){});
+  },
+  stopStepCounter: function() {
+    console.log('[index.js] stopStepCounter');
+    stepCounter.stop(app.onStopStepCounter, function(err){console.log('stopStepCounter Failed');});
+  },
+  onStopStepCounter: function() {
+    console.log('[index.js] onStopStepCounter');
+  },
+  getSteps: function() {
+    // console.log('[index.js] getSteps');
+    stepCounter.getSteps(0, app.gotSteps, function(err){console.log('getTodaySteps Failed');});
+  },
+  gotSteps: function(steps) {
+    // console.log('[index.js] app.gotSteps', steps);
+    view.setTodaySteps(steps);
+  },
+  getWeeklySteps: function(callback) {
+    console.log('[index.js] getWeeklySteps');
         
-        goalString = +steps+" steps for "+period+" days a week";
-        console.log(goalString);
-        
-        $('#page4').css('display','none');
-        $('#page5').css('display','block');
-        $('h2').html("You set up a goal: </br>"+goalString+ ".</br></br> If you press 'confirm', </br>the box will be locked.");
-        
-        $('#goNext').click(function() {
-                           
-                           console.log("clicked");
-                           //Lock the box!!!!!!!!
-                           app.checkToJoin();
-                           
-                           });
-        
-        $('#resetGoal').click(function() {
-                              
-                              $('#page4').css('display','block');
-                              $('#page5').css('display','none');
-                              $('h2').html("What's your goal?");
-                              });
-    }
+    var weeklySteps = [];
     
+    var getDaySix = function(steps) {
+      weeklySteps.push(steps);
+      console.log('weeklySteps',weeklySteps);
+      view.setWeeklySteps(weeklySteps);
+      setInterval(function(){app.getSteps();},1000);
+      callback();
+    };
+    var getDayFive = function(steps) {
+      weeklySteps.push(steps);
+      stepCounter.getSteps(6, function(steps){ getDaySix(steps) }, function(err){console.log('getDayFive Failed');});
+    };
+    var getDayFour = function(steps) {
+      weeklySteps.push(steps);
+      stepCounter.getSteps(5, function(steps){ getDayFive(steps) }, function(err){console.log('getDayFive Failed');});
+    };
+    var getDayThree = function(steps) {
+      weeklySteps.push(steps);
+      stepCounter.getSteps(4, function(steps){ getDayFour(steps) }, function(err){console.log('getDayFour Failed');});
+    };
+    var getDayTwo = function(steps) {
+      weeklySteps.push(steps);
+      stepCounter.getSteps(3, function(steps){ getDayThree(steps) }, function(err){console.log('getDayThree Failed');});
+    };
+    var getDayOne = function(steps) {
+      weeklySteps.push(steps);
+      stepCounter.getSteps(2, function(steps){ getDayTwo(steps) }, function(err){console.log('getDayTwo Failed');});
+    };
     
-},
-    
-checkToJoin: function(){
-    $('#page5').css('display','none');
-    $('#page6').css('display','block');
-    $('h2').html(" Successfully locked!</br>Now, you are the owner of the BOX! </br></br>Do you want to be a challenger to win the box too?</br>");
-    
-    $('#join').click(function() {
-                     
-                     //console.log("clicked");
-                     //Lock the box!!!!!!!!
-                     $('h2').html("Great! Go out to run! </br>You need "+goalString+" to win the box.");
-                     $('#lockillust').toggleClass('lockImage');
-                     $('#lockillust').toggleClass('runImage');
-                     $('.buttonPair').css('display','none');
-                     
-                     setTimeout(app.getM7data,3000);
-                     
-                     });
-    
-    $('#notJoin').click(function() {
-                        
-                        $('#lockillust').toggleClass('lockImage');
-                        $('#lockillust').toggleClass('sendImage');
-                        
-                        $('.buttonPair').css('display','none');
-                        $('h2').html("Send this box </br>to your friends </br>and motivate them!");
-                        });
-    
-    
-    
-},
-    //if box has a goal, get goal data and display them-----//
-goalCheck: function(){
-    
-    //console.log("A goal is already set up");
-    
-    
-    
-},
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    //**********p3: choose status-Sender or Recipient **********//
-selectOne: function(){
-    console.log('selectOne');
-    
-    //button display in html
-    $('#page2').css('display','none');
-    $('#page3').css('display','block');
-    
-    //if a user chooses 'sender,'
-    $('#page3').on('click', '#sender', app.senderConfig);
-    //if a user chooses 'recipient,'
-    $('#page3').on('click', '#recipient', app.recipientConfig);
-},
-    
-    //**********p4-1: sender configuration- Set up your GGIT box **********//
-senderConfig: function() {
-    
-    var client = new Apigee.Client({
-                                   orgName: 'JessJJ', // Your Apigee.com username for App Services
-                                   appName: 'sandbox' // Your Apigee App Services app name
-                                   });
-    
-    console.log('Apigee client connected');
-    
-    var boxes = new Apigee.Collection({
-                                      'client': client,
-                                      'type': 'devices'
-                                      });
-    
-    //console.log('senderConfig');
-    $('#page3').css('display','none');
-    $('#page4').css('display','block');
-    
-    client.getLoggedInUser(function(err, data, user) {
-                           if (err) {
-                           //error - could not get logged in user
-                           window.location = "#";
-                           } else {
-                           if (client.isLoggedIn()) {
-                           appUser = user;
-                           //loadItems(myList);
-                           console.log(user);
-                           }
-                           }
-                           });
-    
-    function login(username, password) {
-        
-        if (username && password) {
-            var username = username;
-            var password = password;
-        } else {
-            // var username = $("#form-username").val();
-            // var password = $("#form-password").val();
-            console.log("no username && password");
-        }
-        
-        client.login(username, password,
-                     function(err) {
-                     if (err) {
-                     console.log(err)
-                     } else {
-                     //login succeeded
-                     client.getLoggedInUser(function(err, data, user) {
-                                            if (err) {
-                                            //error - could not get logged in user
-                                            } else {
-                                            if (client.isLoggedIn()) {
-                                            appUser = user;
-                                            console.log("you're logged in!");
-                                            }
-                                            }
-                                            });
-                     }
-                     }
-                     );
-    }
-    
-    $('#form-sender-config').on('click', '#btn-submit', function() {
-                                console.log("sending addBoxRequest..");
-                                if ($('#form-serial').val() !== '') {
-                                var newBox = {
-                                'serialNum': $('#form-serial').val(),
-                                'sender': $('#form-sender-email').val(),
-                                'recipient': $('#form-recipient-email').val(),
-                                }
-                                var account = $('#form-sender-email').val();
-                                var password = $('#form-serial').val();
-                                var role = "sender";
-                                
-                                boxes.addEntity(newBox, function(error, response) {
-                                                if (error) {
-                                                alert("write failed");
-                                                } else {
-                                                alert("You create a new box!");
-                                                
-                                                boxUUID = response._data.uuid;
-                                                /*
-                                                 var options = {
-                                                 "type": "devices",
-                                                 "uuid": response._data.uuid
-                                                 }
-                                                 client.getEntity(options, function(error, response) {
-                                                 if (error) {
-                                                 alert("error!");
-                                                 } else {
-                                                 console.log(options.uuid);
-                                                 }
-                                                 });
-                                                 */
-                                                app.senderInit();
-                                                }
-                                                });
-                                
-                                // client.signup(account,password,role, function(err, data) {
-                                //   if (err) {
-                                //       console.log('FAIL')
-                                //   } else {
-                                //       console.log('SUCCESS');
-                                //       login(account, password);
-                                //   }
-                                // });
-                                }
-                                $("#form-sender-email").val('');
-                                $("#form-recipient-email").val('');
-                                $("#form-serial").val('');
-                                
-                                });
-    
-    
-},
-    
-    //**********p4-2: welcome sender **********//
-senderInit: function() {
-    
-    //button display in html
-    $('#page4').css('display','none');
-    $('#page5').css('display','block');
-    
-    $('#page5').on('click', '#next', function() {
-                   
-                   app.setGoal();
-                   
-                   });
-},
-    
-    //**********p4-3: set up a goal for the recipient **********//
-setGoal: function() {
-    
-    var client = new Apigee.Client({
-                                   orgName: 'JessJJ', // Your Apigee.com username for App Services
-                                   appName: 'sandbox' // Your Apigee App Services app name
-                                   });
-    
-    console.log('Apigee client connected');
-    
-    var boxes = new Apigee.Collection({
-                                      'client': client,
-                                      'type': 'devices'
-                                      });
-    
-    //button display in html
-    $('#page5').css('display','none');
-    $('#page6').css('display','block');
-    
-    $('#form-set-goal').on('click', '#btn-submit', function() {
-                           console.log("sending goalSetupRequest..");
-                           if ($('#form-steps').val() !== '' && $('#form-freq').val() !== '') {
-                           
-                           var amount = $('#form-steps').val();
-                           var frequency = $('#form-freq').val();
-                           
-                           var options = {
-                           "type": "devices",
-                           "uuid": boxUUID
-                           }
-                           client.getEntity(options, function(error, response) {
-                                            if (error) {
-                                            alert("error!");
-                                            } else {
-                                            //console.log("Success to retrieve entity!");
-                                            var properties = {
-                                            'client':client, //Required
-                                            'data':{'type':'devices',
-                                            'uuid':boxUUID, //UUID of the entity to be updated is required
-                                            'goal':{
-                                            'frequency':frequency,
-                                            'amount':amount,
-                                            'dataType':'steps'
-                                            }
-                                            }
-                                            };
-                                            
-                                            //Create a new entity object that contains the updated properties
-                                            var entity = new Apigee.Entity(properties);
-                                            
-                                            //Call Entity.save() to initiate the API PUT request
-                                            entity.save(function (error, result) {
-                                                        
-                                                        if (error) {
-                                                        //error
-                                                        alert("error!");
-                                                        } else {
-                                                        //success
-                                                        alert("You set up a new goal!");
-                                                        app.confirmGoal();
-                                                        }
-                                                        
-                                                        });
-                                            }
-                                            });
-                           }
-                           });
-},
-confirmGoal: function() {
-    
-    var dataclient = new Apigee.Client({
-                                       orgName: 'JessJJ', // Your Apigee.com username for App Services
-                                       appName: 'sandbox' // Your Apigee App Services app name
-                                       });
-    
-    console.log('Apigee client connected');
-    
-    var box = new Apigee.Collection({
-                                    'client': dataclient,
-                                    'type': 'devices',
-                                    });
-    
-    
-    function loadItems(collection) {
-        collection.fetch(
-                         function(err, data) { // Success
-                         if (err) {
-                         alert("Read failed - loading offline data");
-                         collection = client.restoreCollection(localStorage.getItem(collection));
-                         collection.resetEntityPointer();
-                         displayData(collection);
-                         } else {
-                         displayData(collection);
-                         localStorage.setItem(collection, collection.serialize());
-                         }
-                         }
-                         );
-    }
-    
-    function displayData(collection) {
-        
-        $('h1').html("");
-        $('form').html("");
-        while (collection.hasNextEntity()) {
-            var item = collection.getNextEntity();
-            var goalobj = item.get('goal');
-            var goalStatement = goalobj.amount;
-            goalStatement += " ";
-            goalStatement += goalobj.dataType;
-            goalStatement += " for ";
-            goalStatement += goalobj.frequency;
-            goalStatement += "days";
-            
-            $('h1').html(goalStatement);
-            // console.log(goalobj.amount);
-            // console.log(item.get('goal'));
-        }
-        
-    }
-    loadItems(box);
-},
-    
-    
-/*
- 
- Bluetooth LE
- 
- */
-    
-    
-    
-list: function() {
-    console.log('[index.js] list');
-    app.bm.list(app.onDeviceList, function(err){console.log('list Failed');});
-},
-onDeviceList: function(devices) {
-    console.log('[index.js] ondeviceList', devices.length);
-    var boxFound = false;
-    devices.forEach(function(device) {
-                    var deviceId = undefined;
-                    
-                    if (device.hasOwnProperty("uuid")) {
-                    deviceId = device.uuid;
-                    } else if (device.hasOwnProperty("address")) {
-                    deviceId = device.address;
-                    }
-                    
-                    if(deviceId == app.GGIT_BOX_UUID) {
-                    console.log('\n\nggit box found\n\n');
-                    boxFound = true;
-                    app.bm.connect(app.GGIT_BOX_UUID, app.didConnect, function(err){console.log('connect Failed',uuid);});
-                    //            break;
-                    }
-                    });
-    
-    if(!boxFound)
-        app.list();
-},
-didConnect: function(res) {
-    console.log('[index.js] didConnect', res.name, res.address);
-    if(res.address == app.GGIT_BOX_UUID) {
-        console.log('\n\nbox is connected\n\n');
-        app.bm.discoverServicesByUUID(app.GGIT_SERVICE_UUID, app.didDiscoverService, function(err){console.log('discoverServicesByUUID Failed');});
-    }
-},
-didDiscoverService: function(res) {
-    console.log('[index.js] didDiscoverService');
-} //,
-    //
-    //
-    //findPeripheralByUUID: function(uuid) {
-    //    console.log('[index.js] findPeripheralByUUID', uuid);
-    //    app.bm.findPeripheralByUUID(uuid, app.didFindPeripheralByUUID, function(err){console.log('findPeripheralByUUID Failed',uuid);});
-    //},
-    //didFindPeripheralByUUID: function(peripheral) {
-    //    console.log('[index.js] didGetPeripheralByUUID', peripheral.uuid, peripheral.name);
-    //    
-    //    // connect to the box
-    //    app.bm.connect(peripheral.uuid, app.didConnect, function(err){console.log('connect Failed',uuid);});
-    //}
+    stepCounter.getSteps(1, function(steps) { getDayOne(steps) }, function(err){console.log('getDayOne Failed');});
+  },
+
+
+/**
+
+    Locker
+
+  */
+  
+  lock: function() {
+    locker.lock();
+  },
+  unlock: function() {
+    locker.unlock();
+  }
+
 };

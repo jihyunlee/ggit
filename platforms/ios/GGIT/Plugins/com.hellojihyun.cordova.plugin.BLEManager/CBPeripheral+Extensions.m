@@ -51,13 +51,13 @@ static char ADVERTISEMENT_RSSI_IDENTIFER;
 // AdvertisementData is from didDiscoverPeripheral. RFduino advertises a service name in the Mfg Data Field.
 -(void)setAdvertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)rssi{
 
-    NSLog(@"setAdvertisementData: %@", advertisementData);
+//    NSLog(@"setAdvertisementData: %@", advertisementData);
 
     if (advertisementData) {
         id manufacturerData = [advertisementData objectForKey:CBAdvertisementDataManufacturerDataKey];
         if (manufacturerData) {
-            const uint8_t *bytes = [manufacturerData bytes];
-            int len = [manufacturerData length];
+//            const uint8_t *bytes = [manufacturerData bytes];
+//            int len = [manufacturerData length];
 
             // todo: error!!!
             // skip manufacturer uuid

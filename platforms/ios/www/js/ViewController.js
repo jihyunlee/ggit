@@ -1,12 +1,22 @@
+function strcmp(str1, str2) {
+  return ((str1 == str2) ? 0 : ((str1 > str2) ? 1 : -1));
+}
 
-function ViewController() {
-  this.goal = 'this is the goal';
+
+function ViewController(app) {
+  this.app = app;
+  this.goalStatus = false;
   this.goalString = '';
+  this.goalSteps = '';
+  this.goalPeriod = '';
   this.boxUUID = '';
   this.status = '';
 
+  this.todaySteps = '';
+  this.weeklySteps = [];
+
   this.test = false;
-  this.debug = true;
+  this.debug = false;
   return this;
 }
 
@@ -23,7 +33,9 @@ ViewController.prototype.welcome = function(id) {
     this.status = 'welcome';
     document.getElementById('status').innerHTML = this.status;
   }
-    
+
+  this.clear();
+  $('h2').html("Hold your phone</br>near the GGIT box</br>to connect");
   var parentElement = document.getElementById(id);
   var listeningElement = parentElement.querySelector('.listening');
   var receivedElement = parentElement.querySelector('.received');
@@ -46,7 +58,8 @@ ViewController.prototype.scan = function() {
     this.status = 'scanning';
     document.getElementById('status').innerHTML = this.status;
   }
-    
+
+  this.clear();  
   $('#page1').css('display','block');
 }
 
@@ -59,17 +72,8 @@ ViewController.prototype.didConnect = function() {
 
   console.log("\n\nViewController::didConnect\n\n");
   
-  if(this.debug) {
-    this.status = 'connected';
-    document.getElementById('status').innerHTML = this.status;
-  }
-
-  $('#page1').css('display','none');
-  $('#page2').css('display','block');
-  $('#page2').toggleClass("scansucceed");
-  
-  var that = this;
-  setTimeout(function(){ that.hasGoal(); }, 2000);
+  this.clear();
+  this.hasGoal();  
 }
 
 
@@ -86,27 +90,21 @@ ViewController.prototype.didFailToConnect = function() {
     document.getElementById('status').innerHTML = this.status;
   }
     
-  $('#page1').css('display','none');
+  this.clear();
   $('#page2').css('display','block');
-  $('#page2').toggleClass("scanfailed");
-
-  if(this.test) {
-    var that = this;
-    setTimeout(function(){ that.setupBleAgain(); }, 7000);
-  }
+  if(!$('#page2').hasClass('scanfailed'))
+    $('#page2').toggleClass("scanfailed");
 }
 
 
 /**
-
+    Check if a goal has been set up
   */
 
 ViewController.prototype.hasGoal = function() {
-
-  console.log("\n\nViewController::hasGoal \n\n");
-  
-  if(this.goal == '') this.fillBox();
-  else this.dashBoard();
+  console.log("\n\nViewController::hasGoal " + this.goalStatus.toString() +"\n\n");
+  if(!strcmp(this.goalStatus.toString(), 'true')) this.app.fetch();
+  else this.fillBox();
 }
 
 
@@ -119,7 +117,7 @@ ViewController.prototype.fillBox = function() {
 
   console.log("\n\nViewController::fillBox\n\n");
 
-  $('#page2').css('display','none');
+  this.clear();
   $('#page3').css('display','block');
 
   function animation(){
@@ -145,12 +143,22 @@ ViewController.prototype.setupGoal = function() {
     
   console.log("\n\nViewController::setupGoal\n\n");
 
-  $('#page3').css('display','none');
+  this.clear();
   $('#page4').css('display','block');
   
   var that = this;
   $('#goalsubmit').click(function() {
-    that.confirmGoal();
+    var steps = $('#form-steps').val();
+    var period = $('#form-freq').val();
+    if(!steps) {
+      navigator.notification.alert('How steps a day?', null, 'Go Get It!', 'Ok');
+    } else if(!period) {
+      navigator.notification.alert('How many days a week?', null, 'Go Get It!', 'Ok');
+    } else {
+      this.goalSteps = steps;
+      this.goalPeriod = period;
+      that.confirmGoal();  
+    }
   });
 }
 
@@ -165,19 +173,17 @@ ViewController.prototype.confirmGoal = function() {
 
   var steps = $('#form-steps').val();
   var period = $('#form-freq').val();
-  //console.log(steps + ","+ period);
-  
   this.goalString = +steps+" steps for "+period+" days a week";
-  console.log(this.goalString);
-  
+
   var that = this;
-  $('#page4').css('display','none');
+  this.clear();
   $('#page5').css('display','block');
   $('h2').html("You set up a goal: </br>"+this.goalString+ ".</br></br> If you press 'confirm', </br>the box will be locked.");
   
   $('#goNext').click(function() {
-    console.log("clicked");
-    //Lock the box!!!!!!!!
+    // console.log('lock the box');
+    that.app.setupGoal(steps, period);
+    that.app.lock();
     that.checkToJoin();
   });
   
@@ -190,25 +196,24 @@ ViewController.prototype.confirmGoal = function() {
 
 
 /**
-
+    Ask the user if want to join this goal
   */
 
 ViewController.prototype.checkToJoin = function() {
 
   console.log('\n\nViewController::checkToJoin\n\n');
 
-  $('#page5').css('display','none');
+  this.clear();
   $('#page6').css('display','block');
   $('h2').html(" Successfully locked!</br>Now, you are the owner of the BOX! </br></br>Do you want to be a challenger to win the box too?</br>");
   
   var that = this;
-  $('#join').click(function() {   
-    //console.log("clicked");
-    //Lock the box!!!!!!!!
+  $('#join').click(function() {
     $('h2').html("Great! Go out to run! </br>You need "+that.goalString+" to win the box.");
     $('#lockillust').toggleClass('lockImage');
     $('#lockillust').toggleClass('runImage');
     $('.buttonPair').css('display','none');
+    that.app.fetch();
   });
   
   $('#notJoin').click(function() {
@@ -222,6 +227,18 @@ ViewController.prototype.checkToJoin = function() {
 
 
 /**
+    Fetch data
+  */
+
+// ViewController.prototype.fetch = function() {
+
+//   console.log('\n\nViewController::fetch\n\n');
+
+//   app.getWeeklySteps();
+//   this.app.getGoal(this.dashBoard);
+// }
+
+/**
     Dashboard -- M7StepCounter
   */
 
@@ -232,33 +249,191 @@ ViewController.prototype.dashBoard = function() {
   if(this.debug) {
     this.status = 'dashboard';
     document.getElementById('status').innerHTML = this.status;
+    document.getElementById('today-steps').innerHTML = this.todaySteps;
+    document.getElementById('weekly-steps').innerHTML = this.weeklySteps;
   }
+
+  this.clear();
+  $('#dashboard').css('display','block');
+  $('#title-today').html('TODAY');
+  $('#title-goalstatement').html('Your goal is to have</br>'+this.goalSteps+' steps for '+this.goalPeriod+' days a week');
+  $('#title-thisweek').html('THIS WEEK');
+
+  this.drawTodayRing();
+  this.setDateGap();
+  this.weekStatusDot();
 }
-
-
-
-ViewController.prototype.getGoal = function() {
-  return this.goal;
-}
-
-ViewController.prototype.setGoal = function(goal) {
-  this.goal = goal;
-}
-
 
 
 /**
-    temporary function
+    drawTodayRing
   */
 
-ViewController.prototype.setupBleAgain = function() {
-  
-  console.log("\n\nViewController::setupBleAgain\n\n");
+ViewController.prototype.drawTodayRing = function() {
 
+  console.log('ViewController::drawTodayRing');
+
+  // Update the wheel giving to it a value in degrees,
+  // getted from the percentage of the input value
+  // a.k.a. (value * 360) / 100
+  //current steps / goal steps *360;
+
+  var degrees;
+  var document = window.document,
+      ring = document.getElementsByTagName('path')[0],
+      text = document.getElementsByTagName('text')[1],
+      Math = window.Math,
+      toRadians = Math.PI / 180,
+      r = 79;
+
+  // Translate the center axis to a half of total size
+  ring.setAttribute('transform', 'translate(' + r + ', ' + (r+10) + ')');
+
+  console.log('todaySteps', this.todaySteps, parseInt(this.todaySteps));
+  console.log('goalSteps', this.goalSteps, parseInt(this.goalSteps));
+
+  var todaySteps = parseInt(this.todaySteps);
+  var goalSteps = parseInt(this.goalSteps);
+  if(todaySteps >= goalSteps){
+    degrees = 359.98;
+    ring.setAttribute('fill','#f06060');
+    text.setAttribute('fill','#f06060');
+  }else{
+    degrees = ( todaySteps * 360 ) / goalSteps;
+  }
+
+  console.log("degrees: "+degrees);
+      // Convert the degrees value to radians
+  var rad = degrees * toRadians,
+      // Determine X and cut to 2 decimals
+      x = (Math.sin(rad) * r).toFixed(2),
+      // Determine Y and cut to 2 decimals
+      y = -(Math.cos(rad) * r).toFixed(2),
+      // The another half ring. Same as (deg > 180) ? 1 : 0
+      lenghty = window.Number(degrees > 180),
+      // Moveto + Arcto
+      descriptions = ['M', 0, 0, 'v', -r, 'A', r, r, 1, lenghty, 1, x, y, 'z'];
+  // Apply changes to the path
+  ring.setAttribute('d', descriptions.join(' '));
+  // Update the numeric display
+  text.textContent = todaySteps.toString();
+}
+
+
+/**
+    setDateGap
+  */
+
+ViewController.prototype.setDateGap = function() {
+
+  console.log('ViewController::setDateGap');
+
+  var passedDays = 24;  // fake data for data gap
+  var startingDate = "04/30/2014"; // fake data for starting date
+
+  $('#dateGap').html(passedDays);
+  $('#startingDate').html(startingDate);
+}
+
+
+/**
+    weekStatusDot
+  */
+
+ViewController.prototype.weekStatusDot = function() {
+
+  console.log('ViewController::weekStatusDot');
+
+  var successDays = 0;
+
+  var document = window.document;
+  for(var i = 0; i < this.weeklySteps.length; i++){
+    var weekStatus = document.getElementsByTagName('li')[i];
+        weekStatus.innerHTML = "";
+    var dot = document.createElement("div");
+    if(parseInt(this.weeklySteps[i]) >= parseInt(this.goalSteps)){
+      successDays++;
+      dot.setAttribute("class","circle color-1 color1-box-shadow");
+    }else{
+      dot.setAttribute("class","circle color-2 color2-box-shadow");
+    }
+    weekStatus.appendChild(dot);
+  }
+
+  var goalPeriod = parseInt(this.goalPeriod);
+  $('.goal-progress').val(Math.floor(successDays/goalPeriod*100));
+
+  if(goalPeriod-successDays == 1)
+    $('#goal-progress-text').html(goalPeriod-successDays+' more day to go!');
+  else
+    $('#goal-progress-text').html(goalPeriod-successDays+' more days to go!');
+}
+
+
+/**
+    Clear display
+  */
+
+ViewController.prototype.clear = function() {    
+  $('#page1').css('display','none');
   $('#page2').css('display','none');
-  $('#page1').css('display','block');
-  $('#page2').toggleClass("scanfailed");
-  //console.log("setup Ble again!");
-  var that = this;
-  setTimeout(function(){ that.didConnect(); }, 5000);
+  $('#page3').css('display','none');
+  $('#page4').css('display','none');
+  $('#page5').css('display','none');
+  $('#page6').css('display','none');
+}
+
+
+ViewController.prototype.getGoalStatus = function() {
+  return this.goalStatus;
+}
+
+ViewController.prototype.setGoalStatus = function(goalStatus) {
+  this.goalStatus = goalStatus;
+}
+
+ViewController.prototype.getGoalSteps = function() {
+  return this.goalSteps;
+}
+
+ViewController.prototype.setGoalSteps = function(steps) {
+  console.log('ViewController::setGoalSteps', steps);
+  this.goalSteps = steps;
+}
+
+ViewController.prototype.getGoalPeriod = function() {
+  return this.goalPeriod;
+}
+
+ViewController.prototype.setGoalPeriod = function(period) {
+  console.log('ViewController::setGoalPeriod', period);
+  this.goalPeriod = period;
+}
+
+ViewController.prototype.getTodaySteps = function() {
+  return this.todaySteps;
+}
+
+ViewController.prototype.setTodaySteps = function(steps) {
+  this.todaySteps = steps;
+}
+
+ViewController.prototype.getWeeklySteps = function() {
+  return this.weeklySteps;
+}
+
+ViewController.prototype.setWeeklySteps = function(steps) {
+  this.weeklySteps = steps;
+}
+
+ViewController.prototype.getDate = function(dayBefore) {
+  var date = new Date();
+  date.setDate(date.getDate() - dayBefore);
+      
+  var dd = date.getDate();
+  var mm = date.getMonth()+1;
+      
+  if(dd < 10) dd='0'+dd;
+  if(mm < 10) mm='0'+mm;
+  return mm+'/'+dd;
 }

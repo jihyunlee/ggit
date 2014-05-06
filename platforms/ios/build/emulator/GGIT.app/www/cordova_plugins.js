@@ -27,6 +27,13 @@ module.exports = [
         "clobbers": [
             "window.BLEManager"
         ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.dialogs/www/notification.js",
+        "id": "org.apache.cordova.dialogs.notification",
+        "merges": [
+            "navigator.notification"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -34,7 +41,8 @@ module.exports.metadata =
 {
     "org.apache.cordova.console": "0.2.9-dev",
     "com.hellojihyun.cordova.plugin.M7StepCounter": "1.0.0",
-    "com.hellojihyun.cordova.plugin.BLEManager": "1.0.0"
+    "com.hellojihyun.cordova.plugin.BLEManager": "1.0.0",
+    "org.apache.cordova.dialogs": "0.2.7"
 }
 // BOTTOM OF METADATA
 });

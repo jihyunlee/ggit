@@ -11,15 +11,17 @@
 
 @protocol BLECentralDelegate
 @optional
--(void) bleDidConnect:(NSDictionary *)dic;
--(void) bleDidDisconnect;
--(void) bleDidDiscoverServices;
--(void) bleDidDiscoverCharacteristic:(NSDictionary *)dic;
+- (void)didDiscoverPeripheral:(NSDictionary *)dic;
+- (void)didConnect:(NSDictionary *)dic;
+- (void)didDisconnect;
+- (void)bleDidDiscoverServices;
+- (void)bleDidDiscoverCharacteristic:(NSDictionary *)dic;
+- (void)bleDidReadValueForCharacteristic:(NSDictionary *)dic;
+- (void)bleDidWriteValueForCharacteristic;
 @required
 @end
 
 @interface BLECentral : NSObject <CBCentralManagerDelegate, CBPeripheralDelegate> {
-	NSString* connectCallback;
     NSString* _serviceUUID;
     NSString* _characteristicUUID;
 }
@@ -28,7 +30,6 @@
 @property (strong, nonatomic) CBCentralManager      *centralManager;
 @property (strong, nonatomic) NSMutableArray        *peripherals;
 @property (strong, nonatomic) CBPeripheral          *activePeripheral;
-//@property (strong, nonatomic) NSMutableData         *data;
 
 - (void)initCentral;
 - (void)deinitCentral;
@@ -51,7 +52,7 @@
 
 
 // connect
-- (void)connect:(CBPeripheral *)peripheral id:(NSString *)id;
+- (void)connect:(CBPeripheral *)peripheral;
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral;
 - (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error;
 
@@ -71,22 +72,26 @@
 -(CBCharacteristic *) doDiscoverCharacteristic:(CBService*)service UUID:(NSString *)UUID;
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error;
 
+- (void)doReadValueForCharacteristic:(NSString *)serviceUUID characteristicUUID:(NSString *)characteristicUUID;
 - (void)doReadValueForCharacteristic:(CBPeripheral *)peripheral characteristic:(CBCharacteristic *)characteristic;
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error;
 
+- (void)doWriteValueForCharacteristic:(NSString *)serviceUUID characteristicUUID:(NSString *)characteristicUUID data:(NSData *)d;
+- (void)doWriteValueForCharacteristic:(CBUUID *)serviceUUID characteristicUUID:(CBUUID *)characteristicUUID p:(CBPeripheral *)p data:(NSData *)d;
+
 
 // activePeripheral
--(void) readActiveRSSI;
+- (void)readActiveRSSI;
 
 //-(void) writeValue:(CBUUID *)serviceUUID characteristicUUID:(CBUUID *)characteristicUUID p:(CBPeripheral *)p data:(NSData *)data;
 //-(void) write:(NSData *)d;
 
 - (void)cleanup;
 
--(UInt16) swap:(UInt16) s;
--(int) compareCBUUID:(CBUUID *) UUID1 UUID2:(CBUUID *)UUID2;
--(int) compareCBUUIDToInt:(CBUUID *) UUID1 UUID2:(UInt16)UUID2;
--(UInt16) CBUUIDToInt:(CBUUID *) UUID;
--(BOOL) UUIDSAreEqual:(NSUUID *)UUID1 UUID2:(NSUUID *)UUID2;
+- (UInt16)swap:(UInt16) s;
+- (int)compareCBUUID:(CBUUID *) UUID1 UUID2:(CBUUID *)UUID2;
+- (int)compareCBUUIDToInt:(CBUUID *) UUID1 UUID2:(UInt16)UUID2;
+- (UInt16)CBUUIDToInt:(CBUUID *) UUID;
+- (BOOL)UUIDSAreEqual:(NSUUID *)UUID1 UUID2:(NSUUID *)UUID2;
 
 @end
