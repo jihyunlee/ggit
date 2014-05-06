@@ -12,10 +12,8 @@
 @synthesize centralManager;
 @synthesize peripherals;
 @synthesize activePeripheral;
-//@synthesize data;
 
 static bool ready = false;
-static bool done = false;
 static int state = -1;
 
 #pragma mark - init
@@ -197,7 +195,12 @@ static int state = -1;
         return;
     }
     
-    NSLog(@"[BLECentral] didDiscoverPeripheral -- %@ (%ld)", peripheral.name, (long)RSSI.integerValue);
+    NSLog(@"[BLECentral] didDiscoverPeripheral -- %@ -- %@ -- (%ld)", peripheral.name, [peripheral.identifier UUIDString], (long)RSSI.integerValue);
+    
+    NSString* localName = [advertisementData objectForKey:@"kCBAdvDataLocalName"];
+
+    NSDictionary* dic = [NSDictionary dictionaryWithObjectsAndKeys: peripheral.name, @"name", [peripheral.identifier UUIDString], @"uuid", localName, @"localname", nil];
+    [[self delegate] didDiscoverPeripheral:dic];
     
     [peripheral setAdvertisementData:advertisementData RSSI:RSSI];
 
@@ -229,21 +232,20 @@ static int state = -1;
 // get Peripheral local name
 // [advertisementData objectForKey:CBAdvertisementDataLocalNameKey]
 
-- (void)connect:(CBPeripheral *)peripheral id:(NSString *)id{
+- (void)connect:(CBPeripheral *)peripheral {
     
-    NSLog(@"[BLECentral] connect ---------- %@", id);
-    connectCallback = id;
+    NSLog(@"[BLECentral] connect ----------");
     [self.centralManager connectPeripheral:peripheral options:nil];
 }
 
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
-    NSLog(@"[BLECentral] didConnectPeripheral -- %@ -- %@", peripheral.name, connectCallback);
+    NSLog(@"[BLECentral] didConnectPeripheral -- %@", peripheral.name);
     
     self.activePeripheral = peripheral;
     [self.activePeripheral setDelegate:self];
     
     NSDictionary* dic = [NSDictionary dictionaryWithObjectsAndKeys: peripheral.name, @"name", [peripheral.identifier UUIDString], @"uuid", nil];
-    [[self delegate] bleDidConnect:dic];
+    [[self delegate] didConnect:dic];
 }
 
 - (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
@@ -258,7 +260,7 @@ static int state = -1;
 
 - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
     NSLog(@"[BLECentral] didDisconnectPeripheral");
-    [[self delegate] bleDidDisconnect];
+    [[self delegate] didDisconnect];
 }
 
 #pragma mark - Peripheral Methods
@@ -510,7 +512,9 @@ static int state = -1;
     }
 }
 
-
+- (void)readActiveRSSI {
+    
+}
 
 -(NSString *) CBUUIDToString:(CBUUID *) cbuuid;
 {

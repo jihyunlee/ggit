@@ -24,8 +24,9 @@ var locker;
 var tScan, tConnect, tGoal;
 
 var app = {
-    
-  GGIT_BOX_UUID: '6001DB1A-1B07-DA19-DC6C-108BAC1FB457',// Production7 // 'ECEB35D1-9CB0-2BEA-2FF9-9882958C7373', // Jess's BLE dongle
+  
+  GGIT_BOX_NAME: 'GoGetIt',
+  device_uuid: '',
   GGIT_SERVICE_UUID: '474f',
   GGIT_CHARACTERISTIC_GOAL_UUID: '4954',
   GGIT_CHARACTERISTIC_LOCK_STATUS_UUID: '4c6b',
@@ -40,17 +41,17 @@ var app = {
 
   initialize: function() {
     this.bindEvents();
-  //    $('.app').css('display','none');
-  //    app.fillBox();
   },
   bindEvents: function() {
     document.addEventListener('deviceready', this.onDeviceReady, false);
+    document.addEventListener("pause", this.onPause, false);
     document.addEventListener('resume', this.onResume, false);
   },
   onDeviceReady: function() {
     if(window.cordova.logger) window.cordova.logger.__onDeviceReady();
 
     stepCounter = new M7StepCounter();
+    stepCounter.isAvailable(app.onAvailable, function(err){ console.log('isAvailable Failed'); });
     bleManager = new BLEManager();
     view = new ViewController(app);
     locker = new Locker(bleManager);
@@ -58,33 +59,59 @@ var app = {
     console.log('plugins initialized');
 
     view.welcome('deviceready');
-    app.list();   
+    app.startStepCounter();
+    app.startScan();   
+  },
+  onAvailable: function(res) {
+    console.log('app.onAvailable', res);
+    if(!res) console.log('M7 not available');
+  },
+  onPause: function() {
+    console.log('[index.js] onPause');
+    app.isSuccess = false;
+    bleManager.disconnect(function(){}, function(err){console.log('pause Failed');});
+    app.stopStepCounter();
   },
   onResume: function() {
-    app.isSuccess = false;
+    console.log('\n\n\n[index.js] onResume\n\n');
     view.welcome('deviceready');
-    bleManager.disconnect(app.didResume, function(err){console.log('resume Failed');});
-  },
-  didResume: function(res) {
-    app.list();    
+    app.startStepCounter();
+    app.startScan();
   },
         
     
 /**
+
     Bluetooth LE
 
   */
 
-    
-  list: function() {
+  startScan: function() {
     var d = new Date();
     tScan = d.getTime();
-    console.log('[index.js] list --- ' + tScan);
+    console.log('[index.js] startScan --- ' + tScan);
 
     view.scan();
-    bleManager.list(app.didDiscover, function(err){console.log('list Failed');});
+    bleManager.startScan(app.didDiscover, function(err){console.log('startScan Failed');});
     setTimeout(app.scanTimeout, 4000);
   },
+  stopScan: function() {
+    console.log('[index.js] stopScan');
+    bleManager.stopScan(function(res){}, function(err){console.log('stopScan Failed');});
+  },
+  didDiscover: function(peripheral) {
+    console.log('[index.js] didDiscover');
+    var name;
+    if(peripheral.hasOwnProperty('localname')) name = peripheral.localname;
+    if(peripheral.hasOwnProperty('uuid')) app.device_uuid = peripheral.uuid;
+
+    if(name == app.GGIT_BOX_NAME) {
+      console.log('\n\nggit box found\n\n');
+      app.isSuccess = true;
+      app.stopScan();
+      bleManager.connect(app.device_uuid, app.didConnect, function(err){console.log('connect Failed',app.device_uuid);});      
+    }
+  },    
   scanTimeout: function() {
     var d = new Date();
     console.log('[index.js] scanTimeout --- ', d.getTime());
@@ -93,32 +120,17 @@ var app = {
       view.didConnect();
     } else {
       view.didFailToConnect();
-      setTimeout(app.list, 2000);
+      app.stopScan();
+      setTimeout(app.startScan, 2000);
     }
-    // app.isSuccess = !app.isSuccess; // test
   },
-  didDiscover: function(devices) {
-    console.log('[index.js] didDiscover', devices.length);
-
-    devices.forEach(function(device) {
-      var deviceId = undefined;             
-      if (device.hasOwnProperty("uuid")) {
-        deviceId = device.uuid;
-      }
-                    
-      if(deviceId == app.GGIT_BOX_UUID) {
-        console.log('\n\nggit box found\n\n');
-        bleManager.connect(app.GGIT_BOX_UUID, app.didConnect, function(err){console.log('connect Failed',uuid);});
-      }
-    });
-  },
-  didConnect: function(res) {
+  didConnect: function(peripheral) {
     var d = new Date();
     tConnect = d.getTime();
-    console.log('[index.js] didConnect --- ' + (tConnect-tScan), res.name, res.uuid);
-    if(res.uuid == app.GGIT_BOX_UUID) {
-        console.log('\n\nbox is connected\n\n');
-        bleManager.discoverServicesByUUID(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_GOAL_UUID, app.didDiscoverService, function(err){console.log('discoverServicesByUUID Failed');});
+    console.log('[index.js] didConnect --- ' + (tConnect-tScan), peripheral.name, peripheral.uuid);
+    if(peripheral.uuid == app.device_uuid) {
+      console.log('\n\nbox is connected\n\n');
+      bleManager.discoverServicesByUUID(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_GOAL_UUID, app.didDiscoverService, function(err){console.log('discoverServicesByUUID Failed');});
     }
   },
   didDiscoverService: function(res) {
@@ -131,8 +143,6 @@ var app = {
       else console.log('goal', res.data);
 
       app.isSuccess = true;
-      document.getElementById('status').innerHTML = "goal: "+res.data;
-      // view.didConnect();
       view.setGoalStatus(res.data);
     } else {
       console.log('fail to read goal', res);
@@ -142,56 +152,132 @@ var app = {
     console.log('[index.js] setupGoal', steps, period);   
     app.goalSteps = steps;
     app.goalPeriod = period;
-    bleManager.writeValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_GOAL_UUID, 'true', app.didSetupGoals, function(err){console.log('writeValueForCharacteristic Failed');});
-  },
-  didSetupGoals: function(res) {
-    console.log('[index.js] didSetupGoals', res);
-    bleManager.writeValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_STEPS_UUID, app.goalSteps, app.didWriteSteps, function(err){console.log('writeValueForCharacteristic Failed');});
-  },
-  didWriteSteps: function(res) {
-    console.log('[index.js] didWriteSteps', res);
-    console.log('goalPeriod', app.goalPeriod);
-    bleManager.writeValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_PERIOD_UUID, app.goalPeriod, app.didWritePeriod, function(err){console.log('writeValueForCharacteristic Failed');});
-  },
-  didWritePeriod: function(res) {
-    console.log('[index.js] didWritePeriod', res);
-  },
-  getGoal: function() {
-    console.log('[index.js] getGoal');
-    bleManager.readValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_STEPS_UUID, app.didReadSteps, function(err){console.log('readValueForCharacteristic Failed');});
-  },
-  didReadSteps: function(res) {
-    console.log('[index.js] didReadSteps');
-    if (res.hasOwnProperty('data')) {
-      console.log('steps', res.data);
-      view.setGoalSteps(res.data);
-    }
-    bleManager.readValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_PERIOD_UUID, app.didReadPeriod, function(err){console.log('readValueForCharacteristic Failed');});
-  },
-  didReadPeriod: function(res) {
-    console.log('[index.js] didReadPeriod');
-    if (res.hasOwnProperty('data')) {
-      console.log('period', res.data);
-      view.setGoalPeriod(res.data);
-      document.getElementById('status').innerHTML = 'Goal: ' + app.goalSteps +' steps '+ app.goalPeriod + ' days a week';
-    }
-  },
-    //findPeripheralByUUID: function(uuid) {
-    //    console.log('[index.js] findPeripheralByUUID', uuid);
-    //    bleManager.findPeripheralByUUID(uuid, app.didFindPeripheralByUUID, function(err){console.log('findPeripheralByUUID Failed',uuid);});
-    //},
-    //didFindPeripheralByUUID: function(peripheral) {
-    //    console.log('[index.js] didGetPeripheralByUUID', peripheral.uuid, peripheral.name);
-    //    
-    //    // connect to the box
-    //    bleManager.connect(peripheral.uuid, app.didConnect, function(err){console.log('connect Failed',uuid);});
-    //}
-
     
+    var didWritePeriod = function(res) {
+      console.log('[index.js] didWritePeriod', res);
+    };
+
+    var didWriteSteps = function(res) {
+      console.log('[index.js] didWriteSteps', res);
+      bleManager.writeValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_PERIOD_UUID, app.goalPeriod, didWritePeriod, function(err){console.log('writeValueForCharacteristic Failed');});
+    };
+    
+    var didSetupGoals = function(res) {
+      console.log('[index.js] didSetupGoals', res);
+      bleManager.writeValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_STEPS_UUID, app.goalSteps, didWriteSteps, function(err){console.log('writeValueForCharacteristic Failed');});
+    }; 
+
+    bleManager.writeValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_GOAL_UUID, 'true', didSetupGoals, function(err){console.log('writeValueForCharacteristic Failed');});
+  },
+  fetch: function() {
+    console.log('[index.js] fetch');
+    var didGetGoal = function() {
+      view.dashBoard();
+    };
+    var didGetWeeklySteps = function() {
+      app.getGoal(didGetGoal);
+    };
+    app.getWeeklySteps(didGetWeeklySteps);
+  },
+  getGoal: function(callback) {
+    console.log('[index.js] getGoal');
+
+    var didReadPeriod = function(res) {
+      console.log('[index.js] didReadPeriod');
+      if (res.hasOwnProperty('data')) {
+        console.log('period', res.data);
+        app.goalPeriod = res.data;
+        view.setGoalPeriod(res.data);
+      }
+      callback();
+    };
+
+    var didReadSteps = function(res) {
+      console.log('[index.js] didReadSteps');
+      if (res.hasOwnProperty('data')) {
+        console.log('steps', res.data);
+        app.goalSteps = res.data;
+        view.setGoalSteps(res.data);
+      }
+      bleManager.readValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_PERIOD_UUID, didReadPeriod, function(err){console.log('readValueForCharacteristic Failed');});
+    };
+
+    bleManager.readValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_STEPS_UUID, didReadSteps, function(err){console.log('readValueForCharacteristic Failed');});
+  },
+
+
 /**
+
+    Step Counter
+
+  */
+
+  startStepCounter: function() {
+    console.log('[index.js] startStepCounter');
+    stepCounter.start(app.onStartStepCounter, function(err){console.log('startStepCounter Failed');});
+  },
+  onStartStepCounter: function() {
+    console.log('[index.js] onStartStepCounter');
+    app.getWeeklySteps(function(){});
+  },
+  stopStepCounter: function() {
+    console.log('[index.js] stopStepCounter');
+    stepCounter.stop(app.onStopStepCounter, function(err){console.log('stopStepCounter Failed');});
+  },
+  onStopStepCounter: function() {
+    console.log('[index.js] onStopStepCounter');
+  },
+  getSteps: function() {
+    // console.log('[index.js] getSteps');
+    stepCounter.getSteps(0, app.gotSteps, function(err){console.log('getTodaySteps Failed');});
+  },
+  gotSteps: function(steps) {
+    // console.log('[index.js] app.gotSteps', steps);
+    view.setTodaySteps(steps);
+  },
+  getWeeklySteps: function(callback) {
+    console.log('[index.js] getWeeklySteps');
+        
+    var weeklySteps = [];
+    
+    var getDaySix = function(steps) {
+      weeklySteps.push(steps);
+      console.log('weeklySteps',weeklySteps);
+      view.setWeeklySteps(weeklySteps);
+      setInterval(function(){app.getSteps();},1000);
+      callback();
+    };
+    var getDayFive = function(steps) {
+      weeklySteps.push(steps);
+      stepCounter.getSteps(6, function(steps){ getDaySix(steps) }, function(err){console.log('getDayFive Failed');});
+    };
+    var getDayFour = function(steps) {
+      weeklySteps.push(steps);
+      stepCounter.getSteps(5, function(steps){ getDayFive(steps) }, function(err){console.log('getDayFive Failed');});
+    };
+    var getDayThree = function(steps) {
+      weeklySteps.push(steps);
+      stepCounter.getSteps(4, function(steps){ getDayFour(steps) }, function(err){console.log('getDayFour Failed');});
+    };
+    var getDayTwo = function(steps) {
+      weeklySteps.push(steps);
+      stepCounter.getSteps(3, function(steps){ getDayThree(steps) }, function(err){console.log('getDayThree Failed');});
+    };
+    var getDayOne = function(steps) {
+      weeklySteps.push(steps);
+      stepCounter.getSteps(2, function(steps){ getDayTwo(steps) }, function(err){console.log('getDayTwo Failed');});
+    };
+    
+    stepCounter.getSteps(1, function(steps) { getDayOne(steps) }, function(err){console.log('getDayOne Failed');});
+  },
+
+
+/**
+
     Locker
 
   */
+  
   lock: function() {
     locker.lock();
   },

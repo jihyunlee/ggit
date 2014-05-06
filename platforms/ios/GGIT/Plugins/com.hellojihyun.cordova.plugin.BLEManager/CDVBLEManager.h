@@ -24,11 +24,12 @@
 @end
 
 @interface CDVBLEManager : CDVPlugin <BLECentralDelegate, BLEPeripheralDelegate> {
+    NSString* _scanCallbackId;
     NSString* _connectCallbackId;
     NSString* _serviceCallbackId;
-    NSString* _subscribeCallbackId;
     NSString* _readCallbackId;
     NSString* _writeCallbackId;
+    NSString* _subscribeCallbackId;
     NSString* _rssiCallbackId;
     NSMutableString *_buffer;
     NSString *_delimiter;
@@ -38,9 +39,8 @@
 @property (strong, nonatomic) BLECentral *CM;
 @property (strong, nonatomic) BLEPeripheral *PM;
 
--(void) scanTimer:(NSTimer *)timer;
--(void) printKnownPeripherals;
--(void) printPeripheralInfo:(CBPeripheral*)peripheral;
+- (void)startScan:(CDVInvokedUrlCommand*)command;
+- (void)stopScan:(CDVInvokedUrlCommand*)command;
 
 - (void)connect:(CDVInvokedUrlCommand *)command;
 - (void)disconnect:(CDVInvokedUrlCommand *)command;
@@ -52,6 +52,15 @@
 
 - (void)subscribe:(CDVInvokedUrlCommand *)command;
 - (void)write:(CDVInvokedUrlCommand *)command;
+
+
+
+
+- (void)scanTimer:(NSTimer *)timer;
+- (void)printKnownPeripherals;
+- (void)printPeripheralInfo:(CBPeripheral*)peripheral;
+
+
 
 - (void)list:(CDVInvokedUrlCommand *)command;
 - (void)findPeripheralByUUID:(CDVInvokedUrlCommand *)command;
