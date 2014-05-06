@@ -25,6 +25,16 @@ var BLEManager = function() {
 	this.serviceName = "BLEManager";
 };
 
+BLEManager.prototype.startScan = function(successCallback, failureCallback)
+{
+	exec(successCallback, failureCallback, this.serviceName, "startScan", []);
+}
+
+BLEManager.prototype.stopScan = function(successCallback, failureCallback)
+{
+	exec(successCallback, failureCallback, this.serviceName, "stopScan", []);
+}
+
 BLEManager.prototype.connect = function(macAddress, successCallback, failureCallback)
 {
 	exec(successCallback, failureCallback, this.serviceName, "connect", [macAddress]);
@@ -92,7 +102,7 @@ BLEManager.prototype.write = function(data, successCallback, failureCallback)
 
 BLEManager.prototype.writeValueForCharacteristic = function(serviceUUID, characteristicUUID, data, successCallback, failureCallback)
 {
-    exec(successCallback, failureCallback, this.serviceName, "writeValueForCharacteristic", [serviceUUID, characteristicUUID, data]);
+    exec(successCallback, failureCallback, this.serviceName, "writeValueForCharacteristic", [serviceUUID,characteristicUUID,data]);
 }
 
 BLEManager.prototype.subscribe = function(delimiter, successCallback, failureCallback)
