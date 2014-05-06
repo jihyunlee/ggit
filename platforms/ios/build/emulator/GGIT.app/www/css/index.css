@@ -185,7 +185,7 @@ h2 {
 }
 
 
-#page1, #page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9, #page10{
+#page1, #page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9, #page10, #dashboard{
 
   display:none;
 }
@@ -208,6 +208,15 @@ h2 {
   padding: 150px 30px 30px 30px;
 
 }
+
+#dashboard{
+
+  text-align:center;
+  font-family: 'helvetica',Sans-serif;
+
+  padding: 50px 30px 30px 30px;
+}
+
 form {
     line-height: 24px;
     color: white;
@@ -282,7 +291,7 @@ position: absolute;
 left: -80px;
 top: 50px;
 
--webkit-animation:movemask 7s; /* Chrome, Safari, Opera */
+-webkit-animation:movemask 3.5s; /* Chrome, Safari, Opera */
 -webkit-animation-iteration-count:infinite;
 }
 
@@ -343,7 +352,7 @@ position: relative;
 }
 
 #lockillust{
-    
+
     width: 120px;
     margin-left:auto;
     margin-right:auto;
@@ -357,3 +366,317 @@ position: relative;
 .runImage{
     content:url(../img/run.png);
 }
+
+.section-title{
+  width: 100%;
+  border-style:solid;
+  border-color:#66FFCC;
+  border-width:1px 0px 1px 0px;
+
+}
+.today-section{
+  width: 100%;
+  height: 180px;
+/*  margin: 40px 0px 0px 0px;*/
+/*  border-style:solid;
+  border-color:#66FFCC;
+  border-width:1px;*/
+
+}
+.todayRing{
+  width: 62%;
+  height: 180px;
+/*  border-style:solid;
+  border-color:#66FFCC;
+  border-width:1px;*/
+/*  background-color:white;*/
+  float:left;
+}
+.dateStatus{
+  width: 33%;
+  height: 180px;
+  border-style:solid;
+  border-color:#66FFCC;
+  border-width:0px 0px 0px 1px;
+  float:right;
+  text-align: left;
+
+}
+
+.bigDate{
+  padding: 20px 10px;
+  color:#66FFCC;
+  font-size:48px;
+  font-weight:lighter;
+  margin:0px;
+  display: inline-block;
+  padding-bottom: 0px;
+}
+.middleDate{
+  width: 100%;
+  padding: 10px 10px;
+  color:#66FFCC;
+  font-size:18px;
+  font-weight:lighter;
+}
+.smallDate{
+  width: 100%;
+  font-size:11px;
+  font-weight:lighter;
+  text-align: left;
+  padding: 0px 0px 0px 10px;
+  color:#ffffff;
+}
+.goal-section{
+  width: 100%;
+  height: 120px;
+  border-style:solid;
+  border-color:#66FFCC;
+  border-width:1px 0px 0px 0px;
+
+}
+.goal-statement{
+  height: 50%;
+/*  padding: 10px 0px 0px 0px;*/
+/*  border-style:solid;
+  border-color:#66FFCC;*/
+/*  border-width:1px;*/
+/*  background-color:#66FFCC;*/
+  vertical-align: top;
+
+}
+.goal-progressbar{
+  height: 30%;
+  border-style:solid;
+  border-color:#66FFCC;
+  border-width:0px 0px 1px 0px;
+  vertical-align: bottom;
+  color: #ffffff;
+
+}
+
+.week-section{
+  width: 100%;
+  height: 100px;
+/*  border-style:solid;
+  border-color:#66FFCC;
+  border-width:1px 0px 0px 0px;*/
+  margin-top: 10px;
+  position: relative;
+
+}
+
+
+.weeksRing {
+    width: 15%;
+    height: 100px;
+/*    background-color:white;*/
+    float: left;
+    margin: 2px;
+}
+
+.goalRing {
+/*  position: fixed;*/
+	/* width and height can be anything, as long as they're equal */
+}
+
+.sub-section{
+    width: 100%;
+    height: 100%;
+
+}
+
+ul{
+  list-style-type: none;
+  padding: 0px;
+}
+
+li{
+  display: inline-block;
+}
+
+
+
+progress:not(value) {
+	/* Add your styles here. As part of this walkthrough we will focus only on determinate progress bars. */
+}
+
+/* Styling the determinate progress element */
+
+progress[value] {
+	/* Get rid of the default appearance */
+	appearance: none;
+
+	/* This unfortunately leaves a trail of border behind in Firefox and Opera. We can remove that by setting the border to none. */
+	border: none;
+
+	/* Add dimensions */
+	width: 100%; height: 20px;
+
+	/* Although firefox doesn't provide any additional pseudo class to style the progress element container, any style applied here works on the container. */
+	  background-color: whiteSmoke;
+	  border-radius: 3px;
+	  box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+
+	/* Of all IE, only IE10 supports progress element that too partially. It only allows to change the background-color of the progress value using the 'color' attribute. */
+	color: royalblue;
+
+	position: relative;
+	margin: 0 0 1.5em;
+}
+
+/*
+Webkit browsers provide two pseudo classes that can be use to style HTML5 progress element.
+-webkit-progress-bar -> To style the progress element container
+-webkit-progress-value -> To style the progress element value.
+*/
+
+progress[value]::-webkit-progress-bar {
+	background-color: whiteSmoke;
+	border-radius: 3px;
+	box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+}
+
+progress[value]::-webkit-progress-value {
+	position: relative;
+
+	background-size: 35px 20px, 100% 100%, 100% 100%;
+	border-radius:3px;
+
+	/* Let's animate this */
+	animation: animate-stripes 5s linear infinite;
+}
+
+@keyframes animate-stripes { 100% { background-position: -100px 0; } }
+
+/* Let's spice up things little bit by using pseudo elements. */
+
+progress[value]::-webkit-progress-value:after {
+	/* Only webkit/blink browsers understand pseudo elements on pseudo classes. A rare phenomenon! */
+	content: '';
+	position: absolute;
+
+	width:5px; height:5px;
+	top:7px; right:7px;
+
+	background-color: white;
+	border-radius: 100%;
+}
+
+/* Firefox provides a single pseudo class to style the progress element value and not for container. -moz-progress-bar */
+
+progress[value]::-moz-progress-bar {
+	/* Gradient background with Stripes */
+	background-image:
+	-moz-linear-gradient( 135deg,
+													 transparent,
+													 transparent 33%,
+													 rgba(0,0,0,.1) 33%,
+													 rgba(0,0,0,.1) 66%,
+													 transparent 66%),
+    -moz-linear-gradient( top,
+														rgba(255, 255, 255, .25),
+														rgba(0,0,0,.2)),
+     -moz-linear-gradient( left, #09c, #690);
+
+	background-size: 35px 20px, 100% 100%, 100% 100%;
+	border-radius:3px;
+
+	/* Firefox doesn't support CSS3 keyframe animations on progress element. Hence, we did not include animate-stripes in this code block */
+}
+
+/* Fallback technique styles */
+.progress-bar {
+	background-color: whiteSmoke;
+	border-radius: 3px;
+	box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+
+	/* Dimensions should be similar to the parent progress element. */
+	width: 100%; height:20px;
+}
+
+.progress-bar span {
+	background-color: royalblue;
+	border-radius: 3px;
+
+	display: block;
+	text-indent: -9999px;
+}
+
+p[data-value] {
+
+  position: relative;
+}
+
+/* The percentage will automatically fall in place as soon as we make the width fluid. Now making widths fluid. */
+
+p[data-value]:after {
+	content: attr(data-value) '%';
+	position: absolute; right:0;
+}
+
+
+
+
+
+.goal-progress::-webkit-progress-value {
+	/* Gradient background with Stripes */
+	background-image:
+	-webkit-linear-gradient( 135deg,
+													 transparent,
+													 transparent 33%,
+													 rgba(0,0,0,.1) 33%,
+													 rgba(0,0,0,.1) 66%,
+													 transparent 66%),
+    -webkit-linear-gradient( top,
+														rgba(255, 255, 255, .25),
+														rgba(0,0,0,.2)),
+     -webkit-linear-gradient( left,#09c, #66FFCC);
+}
+
+/* Similarly, for Mozillaa. Unfortunately combining the styles for different browsers will break every other browser. Hence, we need a separate block. */
+
+.goal-progress::-webkit-progress-value {
+	/* Gradient background with Stripes */
+	background-image:
+	-moz-linear-gradient( 135deg,
+													 transparent,
+													 transparent 33%,
+													 rgba(0,0,0,.1) 33%,
+													 rgba(0,0,0,.1) 66%,
+													 transparent 66%),
+    -moz-linear-gradient( top,
+														rgba(255, 255, 255, .25),
+														rgba(0,0,0,.2)),
+     -moz-linear-gradient( left, #09c, #f44);
+}
+
+.date-disc {
+    vertical-align: top;
+    color: #FFF;
+    margin-bottom: 5px;
+
+}
+.circle {
+    vertical-align: bottom;
+    border-radius: 50%;
+    float: left;
+    display: inline-block;
+/*    margin-right: 20px;*/
+    /* text styling */
+    font-size: 8px;
+    width: 32px;
+    height: 32px;
+    color: #FFF;  border: 1px solid #fff;
+    line-height: 32px;
+    text-align: center;
+    font-family: Arial;
+    margin: auto;
+}
+.color-1 { background: #f06060;}
+.color-2 { background: #0b5b67; }
+.color-3 { background: #5E2750; }
+.color1-box-shadow { box-shadow: 0px 0px 1px 1px #f06060 }
+.color2-box-shadow { box-shadow: 0px 0px 1px 1px #0b5b67 }
+.color3-box-shadow { box-shadow: 0px 0px 1px 1px #5E2750 }
+.text { line-height: 45px; padding-top: 50px; height: 200px }
