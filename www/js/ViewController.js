@@ -15,6 +15,8 @@ function ViewController(app) {
   this.todaySteps = '';
   this.weeklySteps = [];
 
+  this.congratsAnimationId = '';
+
   this.test = false;
   this.debug = false;
   return this;
@@ -118,6 +120,7 @@ ViewController.prototype.fillBox = function() {
   console.log("\n\nViewController::fillBox\n\n");
 
   this.clear();
+  $('h2').html('Box is empty.</br>Put a treat in the box!</br>');
   $('#page3').css('display','block');
 
   function animation(){
@@ -144,6 +147,7 @@ ViewController.prototype.setupGoal = function() {
   console.log("\n\nViewController::setupGoal\n\n");
 
   this.clear();
+  $('h2').html('Now you can set up a goal</br>to get thing in a box!</br>');
   $('#page4').css('display','block');
   
   var that = this;
@@ -363,10 +367,39 @@ ViewController.prototype.weekStatusDot = function() {
   var goalPeriod = parseInt(this.goalPeriod);
   $('.goal-progress').val(Math.floor(successDays/goalPeriod*100));
 
-  if(goalPeriod-successDays == 1)
-    $('#goal-progress-text').html(goalPeriod-successDays+' more day to go!');
+  if(goalPeriod-successDays == 0) {
+    // goal achieved!!
+    this.congrats();
+    return;
+  }
+  if(goalPeriod-successDays == 1) {
+    var needSteps = parseInt(this.goalSteps) - parseInt(this.todaySteps);
+    $('#goal-progress-text').html('You will get it if you have '+needSteps+' more steps today!');
+  }
   else
     $('#goal-progress-text').html(goalPeriod-successDays+' more days to go!');
+}
+
+
+/**
+    achievedGoal
+  */
+
+ViewController.prototype.congrats = function() {
+
+  console.log('ViewController::congrats');
+
+  this.clear();
+  $('#page-congrats').css('display','block');
+
+  var counter = 0;
+  function animation() {
+    counter %= 3; 
+    $("#congratAnimation").removeClass('congrat'+counter++);
+    $("#congratAnimation").addClass('congrat'+counter%3);
+  }
+
+  this.congratsAnimationId = setInterval(animation, 700);
 }
 
 
@@ -381,6 +414,9 @@ ViewController.prototype.clear = function() {
   $('#page4').css('display','none');
   $('#page5').css('display','none');
   $('#page6').css('display','none');
+  $('#dashboard').css('display','none');
+  $('#page-congrats').css('display','none');
+  clearInterval(this.congratsAnimationId);
 }
 
 
