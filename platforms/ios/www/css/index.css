@@ -185,7 +185,7 @@ h2 {
 }
 
 
-#page1, #page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9, #page10, #dashboard{
+#page1, #page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9, #page10, #dashboard, #page-congrats{
 
   display:none;
 }
@@ -680,3 +680,7 @@ p[data-value]:after {
 .color2-box-shadow { box-shadow: 0px 0px 1px 1px #0b5b67 }
 .color3-box-shadow { box-shadow: 0px 0px 1px 1px #5E2750 }
 .text { line-height: 45px; padding-top: 50px; height: 200px }
+
+.congrat0{ content:url(../img/congrat1.jpg); width: 100%; }
+.congrat1{ content:url(../img/congrat2.jpg); width: 100%; }
+.congrat2{ content:url(../img/congrat3.jpg); width: 100%; }
