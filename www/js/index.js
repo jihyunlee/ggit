@@ -25,7 +25,7 @@ var tScan, tConnect, tGoal;
 
 var app = {
   
-  GGIT_BOX_NAME: 'GoGetIt',
+  GGIT_BOX_NAME: 'GoGetIt',//,'LightBlue'
   device_uuid: '',
   GGIT_SERVICE_UUID: '474f',
   GGIT_CHARACTERISTIC_GOAL_UUID: '4954',
@@ -102,8 +102,14 @@ var app = {
   didDiscover: function(peripheral) {
     console.log('[index.js] didDiscover');
     var name;
-    if(peripheral.hasOwnProperty('localname')) name = peripheral.localname;
-    if(peripheral.hasOwnProperty('uuid')) app.device_uuid = peripheral.uuid;
+    if(peripheral.hasOwnProperty('localname')) {
+      name = peripheral.localname;
+      console.log('localname',name);
+    }
+    if(peripheral.hasOwnProperty('uuid')) {
+      app.device_uuid = peripheral.uuid;
+      console.log('uuid',app.device_uuid);
+    }
 
     if(name == app.GGIT_BOX_NAME) {
       console.log('\n\nggit box found\n\n');
@@ -172,6 +178,7 @@ var app = {
   fetch: function() {
     console.log('[index.js] fetch');
     var didGetGoal = function() {
+      console.log('[index.js] didGetGoal');
       view.dashBoard();
     };
     var didGetWeeklySteps = function() {
