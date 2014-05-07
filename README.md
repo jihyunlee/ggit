@@ -12,5 +12,5 @@ Plugins installed<br/>
 - <a href="https://github.com/apache/cordova-plugin-console">Console</a> -- cordova plugin add https://github.com/apache/cordova-plugin-console.git<br/>
 - <a href="https://github.com/apache/cordova-plugin-dialogs/blob/master/doc/index.md">Dialogs</a> -- cordova plugin add org.apache.cordova.dialogs<br/>
 - <a href="https://github.com/katzer/cordova-plugin-local-notifications">(possible)Local Notifications</a> -- cordova plugin add https://github.com/katzer/cordova-plugin-local-notifications.git<br/>
-- <a href="https://github.com/apache/cordova-plugin-device-motion">(for demo)</a> -- cordova plugin add org.apache.cordova.device-motion
+- <a href="https://github.com/apache/cordova-plugin-device-motion">(for demo)accelerometer</a> -- cordova plugin add org.apache.cordova.device-motion
 </p>
