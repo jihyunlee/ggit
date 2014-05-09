@@ -8,7 +8,6 @@ var demo = false; // use Accelerometer
 var app = {
   
   GGIT_BOX_NAME: 'GoGetIt',
-  device_uuid: '',
   GGIT_SERVICE_UUID: '474f',
   GGIT_CHARACTERISTIC_GOAL_UUID: '4954',
   GGIT_CHARACTERISTIC_LOCK_STATUS_UUID: '4c6b',
@@ -86,16 +85,21 @@ var app = {
     view.scan();
 
     var didDiscover = function(peripheral) {
-      var name = '';
+      var name = '',
+          uuid = '';
       if(peripheral.hasOwnProperty('localname')) name = peripheral.localname;
-      if(peripheral.hasOwnProperty('uuid')) app.device_uuid = peripheral.uuid;
-      console.log('GGIT::didDiscover -- ', name, app.device_uuid);
+      if(peripheral.hasOwnProperty('uuid')) uuid = peripheral.uuid;
 
-      if(name == app.GGIT_BOX_NAME) {
-        console.log('\n\nGGIT Box Found!!\n\n');
-        app.isSuccess = true;
-        app.stopScan();
-        app.connect();
+      console.log('GGIT::didDiscover -- ', name, uuid);
+      if(uuid == '') {
+        console.log('uuid not found');
+      } else {
+        if(name == app.GGIT_BOX_NAME) {
+          console.log('\n\nGGIT Box Found!!\n\n');
+          app.isSuccess = true;
+          app.stopScan();
+          app.connect(uuid);
+        }        
       }
     };
 
@@ -116,29 +120,29 @@ var app = {
       setTimeout(app.startScan, 2000);
     }
   },
-  connect: function() {
+  connect: function(uuid) {
     console.log('GGIT::connect --- ');
 
     var didConnect = function(peripheral) {
       console.log('GGIT::didConnect --- ', peripheral.name, peripheral.uuid);
-      if(peripheral.uuid == app.device_uuid) {
+      if(peripheral.uuid == uuid) {
         console.log('\n\nbox is connected\n\n');
         app.discoverService();
       }
     };
 
-    bleManager.connect(app.device_uuid, didConnect, function(err){console.log('connect Failed',app.device_uuid);});      
+    bleManager.connect(uuid, didConnect, function(err){console.log('connect Failed',uuid);});      
   },
   discoverService: function() {
-    console.log('GGIT::discoverService --- ');
-    
+    console.log('GGIT::discoverService');
+
     var didDiscoverService = function(res) {
       console.log('GGIT::didDiscoverService --- ');
       
       if (res.hasOwnProperty("data")) {
         if(!strcmp(res.data.toString(),'')) {
-          view.goalStatus = false;
           console.log('goal is empty');
+          view.goalStatus = false;
         }
         else {
           console.log('goal', res.data);
@@ -150,7 +154,7 @@ var app = {
         console.log('fail to read goal', res);
       }
     };
-    bleManager.discoverServicesByUUID(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_GOAL_UUID, app.didDiscoverService, function(err){console.log('discoverServicesByUUID Failed');});
+    bleManager.discoverServicesByUUID(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_GOAL_UUID, didDiscoverService, function(err){console.log('discoverServicesByUUID Failed');});
   },
   setupGoal: function(steps, period) {
     console.log('GGIT::setupGoal', steps, period);   
