@@ -5,46 +5,35 @@ function strcmp(str1, str2) {
 
 function ViewController(app) {
   this.app = app;
-  this.goalStatus = false;
+  this.goalStatus = '';
+  this.lockStatus = false;
   this.goalString = '';
   this.goalSteps = '';
   this.goalPeriod = '';
   this.boxUUID = '';
   this.status = '';
 
-  this.todaySteps = '';
+  this.todaySteps = 0;
   this.weeklySteps = [];
 
   this.congratsAnimationId = '';
 
-  this.test = false;
   this.debug = false;
-  return this;
 }
 
 
 /**
-    p1: Welcome screen
+    M7 not supported
   */
 
-ViewController.prototype.welcome = function(id) {
+ViewController.prototype.notSupportedDevice = function() {
 
-  console.log('\n\nwelcome\n\n');
-
-  if(this.debug) {
-    this.status = 'welcome';
-    document.getElementById('status').innerHTML = this.status;
-  }
+  console.log('\n\notSupportedDevice\n\n');
 
   this.clear();
-  $('h2').html("Hold your phone</br>near the GGIT box</br>to connect");
-  var parentElement = document.getElementById(id);
-  var listeningElement = parentElement.querySelector('.listening');
-  var receivedElement = parentElement.querySelector('.received');
-    
-  listeningElement.setAttribute('style','display:none;');
-  receivedElement.setAttribute('style','display:block;');
-  $('.app').css('display','none');
+  $('#page-notSupported').css('display','block');
+  if(!$('#page-notSupported').hasClass('notSupported'))
+    $('#page-notSupported').toggleClass('notSupported');
 }
 
 
@@ -62,7 +51,8 @@ ViewController.prototype.scan = function() {
   }
 
   this.clear();  
-  $('#page1').css('display','block');
+  $('h2').html('Hold your phone</br>near the GGIT box</br>to connect');
+  $('#page-scanning').css('display','block');
 }
 
 
@@ -93,9 +83,9 @@ ViewController.prototype.didFailToConnect = function() {
   }
     
   this.clear();
-  $('#page2').css('display','block');
-  if(!$('#page2').hasClass('scanfailed'))
-    $('#page2').toggleClass("scanfailed");
+  $('#page-failToConnect').css('display','block');
+  if(!$('#page-failToConnect').hasClass('scanfailed'))
+    $('#page-failToConnect').toggleClass("scanfailed");
 }
 
 
@@ -121,7 +111,7 @@ ViewController.prototype.fillBox = function() {
 
   this.clear();
   $('h2').html('Box is empty.</br>Put a treat in the box!</br>');
-  $('#page3').css('display','block');
+  $('#page-fillBox').css('display','block');
 
   function animation(){
     $('#boxAnimation').toggleClass('changeImage');
@@ -148,7 +138,7 @@ ViewController.prototype.setupGoal = function() {
 
   this.clear();
   $('h2').html('Now you can set up a goal</br>to get thing in a box!</br>');
-  $('#page4').css('display','block');
+  $('#page-setupGoal').css('display','block');
   
   var that = this;
   $('#goalsubmit').click(function() {
@@ -181,19 +171,18 @@ ViewController.prototype.confirmGoal = function() {
 
   var that = this;
   this.clear();
-  $('#page5').css('display','block');
+  $('#page-confirmGoal').css('display','block');
   $('h2').html("You set up a goal: </br>"+this.goalString+ ".</br></br> If you press 'confirm', </br>the box will be locked.");
   
   $('#goNext').click(function() {
-    // console.log('lock the box');
     that.app.setupGoal(steps, period);
-    that.app.lock();
+//    that.app.lock();
     that.checkToJoin();
   });
   
   $('#resetGoal').click(function() {
-    $('#page4').css('display','block');
-    $('#page5').css('display','none');
+    $('#page-setupGoal').css('display','block');
+    $('#page-confirmGoal').css('display','none');
     $('h2').html("What's your goal?");
   });
 }
@@ -208,7 +197,7 @@ ViewController.prototype.checkToJoin = function() {
   console.log('\n\nViewController::checkToJoin\n\n');
 
   this.clear();
-  $('#page6').css('display','block');
+  $('#page-checkToJoin').css('display','block');
   $('h2').html(" Successfully locked!</br>Now, you are the owner of the BOX! </br></br>Do you want to be a challenger to win the box too?</br>");
   
   var that = this;
@@ -231,24 +220,14 @@ ViewController.prototype.checkToJoin = function() {
 
 
 /**
-    Fetch data
-  */
-
-// ViewController.prototype.fetch = function() {
-
-//   console.log('\n\nViewController::fetch\n\n');
-
-//   app.getWeeklySteps();
-//   this.app.getGoal(this.dashBoard);
-// }
-
-/**
     Dashboard -- M7StepCounter
   */
 
 ViewController.prototype.dashBoard = function() {
 
   console.log('\n\nViewController::dashBoard\n\n');
+
+  // console.log('getLockstatus', this.lockStatus);
 
   if(this.debug) {
     this.status = 'dashboard';
@@ -261,7 +240,7 @@ ViewController.prototype.dashBoard = function() {
   $('#dashboard').css('display','block');
   $('#title-today').html('TODAY');
   $('#title-goalstatement').html('Your goal is to have</br>'+this.goalSteps+' steps for '+this.goalPeriod+' days a week');
-  $('#title-thisweek').html('THIS WEEK');
+  $('#title-thisweek').html('LAST WEEK');
 
   this.drawTodayRing();
   this.setDateGap();
@@ -361,23 +340,27 @@ ViewController.prototype.weekStatusDot = function() {
     }else{
       dot.setAttribute("class","circle color-2 color2-box-shadow");
     }
+    var date = document.createElement("div");
+    date.setAttribute('class','date-disc');
+    date.innerHTML = this.getDate(i+1);
+
     weekStatus.appendChild(dot);
+    weekStatus.appendChild(date);
   }
 
   var goalPeriod = parseInt(this.goalPeriod);
   $('.goal-progress').val(Math.floor(successDays/goalPeriod*100));
 
   if(goalPeriod-successDays == 0) {
-    // goal achieved!!
     this.congrats();
-    return;
+  } else {
+    if(goalPeriod-successDays == 1) {
+      var needSteps = parseInt(this.goalSteps) - parseInt(this.todaySteps);
+      $('#goal-progress-text').html('You will get it if you have '+needSteps+' more steps today!');
+    }
+    else
+      $('#goal-progress-text').html(goalPeriod-successDays+' more days to go!');    
   }
-  if(goalPeriod-successDays == 1) {
-    var needSteps = parseInt(this.goalSteps) - parseInt(this.todaySteps);
-    $('#goal-progress-text').html('You will get it if you have '+needSteps+' more steps today!');
-  }
-  else
-    $('#goal-progress-text').html(goalPeriod-successDays+' more days to go!');
 }
 
 
@@ -407,13 +390,14 @@ ViewController.prototype.congrats = function() {
     Clear display
   */
 
-ViewController.prototype.clear = function() {    
-  $('#page1').css('display','none');
-  $('#page2').css('display','none');
-  $('#page3').css('display','none');
-  $('#page4').css('display','none');
-  $('#page5').css('display','none');
-  $('#page6').css('display','none');
+ViewController.prototype.clear = function() {
+  $('#page-notSupported').css('display','none');    
+  $('#page-scanning').css('display','none');
+  $('#page-failToConnect').css('display','none');
+  $('#page-fillBox').css('display','none');
+  $('#page-setupGoal').css('display','none');
+  $('#page-confirmGoal').css('display','none');
+  $('#page-checkToJoin').css('display','none');
   $('#dashboard').css('display','none');
   $('#page-congrats').css('display','none');
   clearInterval(this.congratsAnimationId);
@@ -425,7 +409,16 @@ ViewController.prototype.getGoalStatus = function() {
 }
 
 ViewController.prototype.setGoalStatus = function(goalStatus) {
+  console.log('ViewController::setGoalStatus', goalStatus);
   this.goalStatus = goalStatus;
+}
+
+ViewController.prototype.getLockStatus = function() {
+  return this.lockStatus;
+}
+
+ViewController.prototype.setGoalStatus = function(lockStatus) {
+  this.lockStatus = lockStatus;
 }
 
 ViewController.prototype.getGoalSteps = function() {
@@ -433,7 +426,6 @@ ViewController.prototype.getGoalSteps = function() {
 }
 
 ViewController.prototype.setGoalSteps = function(steps) {
-  console.log('ViewController::setGoalSteps', steps);
   this.goalSteps = steps;
 }
 
@@ -442,7 +434,6 @@ ViewController.prototype.getGoalPeriod = function() {
 }
 
 ViewController.prototype.setGoalPeriod = function(period) {
-  console.log('ViewController::setGoalPeriod', period);
   this.goalPeriod = period;
 }
 
