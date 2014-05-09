@@ -2,9 +2,8 @@ var stepCounter;
 var bleManager;
 var view;
 var locker;
-var tScan, tConnect, tGoal;
 
-var demo = true; // use Accelerometer
+var demo = false; // use Accelerometer
 
 var app = {
   
@@ -35,12 +34,14 @@ var app = {
     view = new ViewController(app);
 
     if(demo == true) {
-      console.log('\n\nthis is demo mode\n\n');
+      console.log('\n\n\nthis is demo mode\n\n\n');
       navigator.notification.alert('Shake your phone to win the treat! Go!', null, 'Go Get It!', 'Ok');
       app.watchAcceleration();
 
       view.setWeeklySteps([2415,2325,4605,6378,8706,2122]);
-      app.onAvailable(true);
+
+      bleManager = new BLEManager();
+      app.startScan();
     } else {
       stepCounter = new M7StepCounter();
       stepCounter.isAvailable(app.onAvailable, function(err){ console.log('isAvailable Failed'); });
@@ -49,21 +50,16 @@ var app = {
   onAvailable: function(res) {
     console.log('GGIT::onAvailable', res);
 
-    if(!demo) {
-      if(res) {
-        locker = new Locker(bleManager);
-        app.startStepCounter();        
-      } else {
-        navigator.notification.alert('Your device is not supported for tracking steps. Sorry!', null, 'Go Get It!', 'Ok');
-        view.notSupportedDevice();
-        app.watchAcceleration();
-      }
+    res = true;
+    if(!res) {
+      navigator.notification.alert('Your device is not supported for tracking steps. Sorry!', null, 'Go Get It!', 'Ok');
+      view.notSupportedDevice();
+    } else {
+      locker = new Locker(bleManager);
+      app.startStepCounter();
+      bleManager = new BLEManager();
+      app.startScan();
     }
-
-    bleManager = new BLEManager();
-    app.startScan();
-
-    console.log('\n\nplugins initialized\n\n');
   },
   onPause: function() {
     console.log('\n\n\nGGIT::onPause\n\n\n');
@@ -74,8 +70,8 @@ var app = {
   onResume: function() {
     console.log('\n\n\nGGIT::onResume\n\n\n');
     // app.startStepCounter();
-    app.startScan();
     clearInterval(app.dashBoardIntervalId);
+    app.startScan();
   },
         
     
@@ -86,41 +82,32 @@ var app = {
   */
 
   startScan: function() {
-    var d = new Date();
-    tScan = d.getTime();
-    console.log('GGIT::startScan --- ' + tScan);
-
+    console.log('\n\nGGIT::startScan ----------\n\n');
     view.scan();
-    bleManager.startScan(app.didDiscover, function(err){console.log('startScan Failed');});
+
+    var didDiscover = function(peripheral) {
+      var name = '';
+      if(peripheral.hasOwnProperty('localname')) name = peripheral.localname;
+      if(peripheral.hasOwnProperty('uuid')) app.device_uuid = peripheral.uuid;
+      console.log('GGIT::didDiscover -- ', name, app.device_uuid);
+
+      if(name == app.GGIT_BOX_NAME) {
+        console.log('\n\nGGIT Box Found!!\n\n');
+        app.isSuccess = true;
+        app.stopScan();
+        app.connect();
+      }
+    };
+
+    bleManager.startScan(didDiscover, function(err){console.log('startScan Failed');});
     setTimeout(app.scanTimeout, 4000);
   },
   stopScan: function() {
-    console.log('GGIT::stopScan');
+    console.log('GGIT::stopScan ----------\n\n');
     bleManager.stopScan(function(res){}, function(err){console.log('stopScan Failed');});
   },
-  didDiscover: function(peripheral) {
-    console.log('GGIT::didDiscover');
-    var name;
-    if(peripheral.hasOwnProperty('localname')) {
-      name = peripheral.localname;
-      console.log('localname',name);
-    }
-    if(peripheral.hasOwnProperty('uuid')) {
-      app.device_uuid = peripheral.uuid;
-      console.log('uuid',app.device_uuid);
-    }
-
-    if(name == app.GGIT_BOX_NAME) {
-      console.log('\n\nGGIT Box Found!!\n\n');
-      app.isSuccess = true;
-      app.stopScan();
-      bleManager.connect(app.device_uuid, app.didConnect, function(err){console.log('connect Failed',app.device_uuid);});      
-    }
-  },    
   scanTimeout: function() {
-    var d = new Date();
-    console.log('GGIT::scanTimeout --- ', d.getTime());
-    
+    console.log('GGIT::scanTimeout --- ');
     if(app.isSuccess) {
       view.didConnect();
     } else {
@@ -129,34 +116,41 @@ var app = {
       setTimeout(app.startScan, 2000);
     }
   },
-  didConnect: function(peripheral) {
-    var d = new Date();
-    tConnect = d.getTime();
-    console.log('GGIT::didConnect --- ' + (tConnect-tScan), peripheral.name, peripheral.uuid);
-    if(peripheral.uuid == app.device_uuid) {
-      console.log('\n\nbox is connected\n\n');
-      bleManager.discoverServicesByUUID(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_GOAL_UUID, app.didDiscoverService, function(err){console.log('discoverServicesByUUID Failed');});
-    }
+  connect: function() {
+    console.log('GGIT::connect --- ');
+
+    var didConnect = function(peripheral) {
+      console.log('GGIT::didConnect --- ', peripheral.name, peripheral.uuid);
+      if(peripheral.uuid == app.device_uuid) {
+        console.log('\n\nbox is connected\n\n');
+        app.discoverService();
+      }
+    };
+
+    bleManager.connect(app.device_uuid, didConnect, function(err){console.log('connect Failed',app.device_uuid);});      
   },
-  didDiscoverService: function(res) {
-    var d = new Date();
-    tGoal = d.getTime();
-    console.log('GGIT::didDiscoverService --- ');
+  discoverService: function() {
+    console.log('GGIT::discoverService --- ');
     
-    if (res.hasOwnProperty("data")) {
-      if(!strcmp(res.data.toString(),'')) {
-        view.goalStatus = false;
-        console.log('goal is empty');
+    var didDiscoverService = function(res) {
+      console.log('GGIT::didDiscoverService --- ');
+      
+      if (res.hasOwnProperty("data")) {
+        if(!strcmp(res.data.toString(),'')) {
+          view.goalStatus = false;
+          console.log('goal is empty');
+        }
+        else {
+          console.log('goal', res.data);
+          view.goalStatus = true;
+        }
+        app.isSuccess = true;
+        view.setGoalStatus(res.data.toString());
+      } else {
+        console.log('fail to read goal', res);
       }
-      else {
-        console.log('goal', res.data);
-        view.goalStatus = true;
-      }
-      app.isSuccess = true;
-      view.setGoalStatus(res.data.toString());
-    } else {
-      console.log('fail to read goal', res);
-    }  
+    };
+    bleManager.discoverServicesByUUID(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_GOAL_UUID, app.didDiscoverService, function(err){console.log('discoverServicesByUUID Failed');});
   },
   setupGoal: function(steps, period) {
     console.log('GGIT::setupGoal', steps, period);   
