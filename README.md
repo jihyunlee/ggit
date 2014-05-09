@@ -18,5 +18,6 @@ tags: #bluetoothLE, #internetOfThing, #M7StepCounter, #motionTracker<br/>
 - <a href="https://github.com/katzer/cordova-plugin-local-notifications">(possible)Local Notifications</a>
     $ cordova plugin add https://github.com/katzer/cordova-plugin-local-notifications.git
 - <a href="https://github.com/apache/cordova-plugin-device-motion">(for demo)accelerometer</a>
-    $ cordova plugin add https://github.com/jihyunlee/M7StepCounter.git
     $ cordova plugin add org.apache.cordova.device-motion
+#### Installation
+    $ cordova plugin add https://github.com/jihyunlee/M7StepCounter.git
