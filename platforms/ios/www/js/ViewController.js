@@ -227,8 +227,6 @@ ViewController.prototype.dashBoard = function() {
 
   console.log('\n\nViewController::dashBoard\n\n');
 
-  // console.log('getLockstatus', this.lockStatus);
-
   if(this.debug) {
     this.status = 'dashboard';
     document.getElementById('status').innerHTML = this.status;
