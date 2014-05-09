@@ -1,31 +1,14 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
-
 var stepCounter;
 var bleManager;
 var view;
 var locker;
 var tScan, tConnect, tGoal;
 
+var demo = true; // use Accelerometer
+
 var app = {
   
-  GGIT_BOX_NAME: 'GoGetIt',//,'LightBlue'
+  GGIT_BOX_NAME: 'GoGetIt',
   device_uuid: '',
   GGIT_SERVICE_UUID: '474f',
   GGIT_CHARACTERISTIC_GOAL_UUID: '4954',
@@ -34,10 +17,7 @@ var app = {
   GGIT_CHARACTERISTIC_PERIOD_UUID: '5072',
 
   isSuccess: false,
-
-  //GGIT_BOX_UUID: 'CAA089E5-7152-14B3-8EF5-173CAB557676', // Liz's Biscuit
-  //GGIT_SERVICE_UUID: '713D0000-503E-4C75-BA94-3148F18D941E', // Liz's Biscuit
-  //GGIT_CHARACTERISTIC_GOAL: '713D0001-503E-4C75-BA94-3148F18D941E', // Liz's Biscuit
+  dashBoardIntervalId: '',
 
   initialize: function() {
     this.bindEvents();
@@ -50,33 +30,52 @@ var app = {
   onDeviceReady: function() {
     if(window.cordova.logger) window.cordova.logger.__onDeviceReady();
 
-    stepCounter = new M7StepCounter();
-    stepCounter.isAvailable(app.onAvailable, function(err){ console.log('isAvailable Failed'); });
-    bleManager = new BLEManager();
+    console.log('GGIT::onDeviceReady');
+
     view = new ViewController(app);
-    locker = new Locker(bleManager);
 
-    console.log('plugins initialized');
+    if(demo == true) {
+      console.log('\n\nthis is demo mode\n\n');
+      navigator.notification.alert('Shake your phone to win the treat! Go!', null, 'Go Get It!', 'Ok');
+      app.watchAcceleration();
 
-    view.welcome('deviceready');
-    app.startStepCounter();
-    app.startScan();   
+      view.setWeeklySteps([2415,2325,4605,6378,8706,2122]);
+      app.onAvailable(true);
+    } else {
+      stepCounter = new M7StepCounter();
+      stepCounter.isAvailable(app.onAvailable, function(err){ console.log('isAvailable Failed'); });
+    }
   },
   onAvailable: function(res) {
-    console.log('app.onAvailable', res);
-    if(!res) console.log('M7 not available');
+    console.log('GGIT::onAvailable', res);
+
+    if(!demo) {
+      if(res) {
+        locker = new Locker(bleManager);
+        app.startStepCounter();        
+      } else {
+        navigator.notification.alert('Your device is not supported for tracking steps. Sorry!', null, 'Go Get It!', 'Ok');
+        view.notSupportedDevice();
+        app.watchAcceleration();
+      }
+    }
+
+    bleManager = new BLEManager();
+    app.startScan();
+
+    console.log('\n\nplugins initialized\n\n');
   },
   onPause: function() {
-    console.log('[index.js] onPause');
+    console.log('\n\n\nGGIT::onPause\n\n\n');
     app.isSuccess = false;
     bleManager.disconnect(function(){}, function(err){console.log('pause Failed');});
-    app.stopStepCounter();
+    // app.stopStepCounter();
   },
   onResume: function() {
-    console.log('\n\n\n[index.js] onResume\n\n');
-    view.welcome('deviceready');
-    app.startStepCounter();
+    console.log('\n\n\nGGIT::onResume\n\n\n');
+    // app.startStepCounter();
     app.startScan();
+    clearInterval(app.dashBoardIntervalId);
   },
         
     
@@ -89,18 +88,18 @@ var app = {
   startScan: function() {
     var d = new Date();
     tScan = d.getTime();
-    console.log('[index.js] startScan --- ' + tScan);
+    console.log('GGIT::startScan --- ' + tScan);
 
     view.scan();
     bleManager.startScan(app.didDiscover, function(err){console.log('startScan Failed');});
     setTimeout(app.scanTimeout, 4000);
   },
   stopScan: function() {
-    console.log('[index.js] stopScan');
+    console.log('GGIT::stopScan');
     bleManager.stopScan(function(res){}, function(err){console.log('stopScan Failed');});
   },
   didDiscover: function(peripheral) {
-    console.log('[index.js] didDiscover');
+    console.log('GGIT::didDiscover');
     var name;
     if(peripheral.hasOwnProperty('localname')) {
       name = peripheral.localname;
@@ -112,7 +111,7 @@ var app = {
     }
 
     if(name == app.GGIT_BOX_NAME) {
-      console.log('\n\nggit box found\n\n');
+      console.log('\n\nGGIT Box Found!!\n\n');
       app.isSuccess = true;
       app.stopScan();
       bleManager.connect(app.device_uuid, app.didConnect, function(err){console.log('connect Failed',app.device_uuid);});      
@@ -120,7 +119,7 @@ var app = {
   },    
   scanTimeout: function() {
     var d = new Date();
-    console.log('[index.js] scanTimeout --- ', d.getTime());
+    console.log('GGIT::scanTimeout --- ', d.getTime());
     
     if(app.isSuccess) {
       view.didConnect();
@@ -133,7 +132,7 @@ var app = {
   didConnect: function(peripheral) {
     var d = new Date();
     tConnect = d.getTime();
-    console.log('[index.js] didConnect --- ' + (tConnect-tScan), peripheral.name, peripheral.uuid);
+    console.log('GGIT::didConnect --- ' + (tConnect-tScan), peripheral.name, peripheral.uuid);
     if(peripheral.uuid == app.device_uuid) {
       console.log('\n\nbox is connected\n\n');
       bleManager.discoverServicesByUUID(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_GOAL_UUID, app.didDiscoverService, function(err){console.log('discoverServicesByUUID Failed');});
@@ -142,55 +141,76 @@ var app = {
   didDiscoverService: function(res) {
     var d = new Date();
     tGoal = d.getTime();
-    console.log('[index.js] didDiscoverService --- ');
+    console.log('GGIT::didDiscoverService --- ');
     
     if (res.hasOwnProperty("data")) {
-      if(res.goal == '') console.log('goal is empty');
-      else console.log('goal', res.data);
-
+      if(!strcmp(res.data.toString(),'')) {
+        view.goalStatus = false;
+        console.log('goal is empty');
+      }
+      else {
+        console.log('goal', res.data);
+        view.goalStatus = true;
+      }
       app.isSuccess = true;
-      view.setGoalStatus(res.data);
+      view.setGoalStatus(res.data.toString());
     } else {
       console.log('fail to read goal', res);
     }  
   },
   setupGoal: function(steps, period) {
-    console.log('[index.js] setupGoal', steps, period);   
+    console.log('GGIT::setupGoal', steps, period);   
     app.goalSteps = steps;
     app.goalPeriod = period;
     
     var didWritePeriod = function(res) {
-      console.log('[index.js] didWritePeriod', res);
+      console.log('GGIT::didWritePeriod', res);
     };
 
     var didWriteSteps = function(res) {
-      console.log('[index.js] didWriteSteps', res);
+      console.log('GGIT::didWriteSteps', res);
       bleManager.writeValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_PERIOD_UUID, app.goalPeriod, didWritePeriod, function(err){console.log('writeValueForCharacteristic Failed');});
     };
     
     var didSetupGoals = function(res) {
-      console.log('[index.js] didSetupGoals', res);
+      console.log('GGIT::didSetupGoals', res);
       bleManager.writeValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_STEPS_UUID, app.goalSteps, didWriteSteps, function(err){console.log('writeValueForCharacteristic Failed');});
     }; 
 
-    bleManager.writeValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_GOAL_UUID, 'true', didSetupGoals, function(err){console.log('writeValueForCharacteristic Failed');});
+    var didLock = function(res) {
+      console.log('GGIT::didLock', res);
+      bleManager.writeValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_GOAL_UUID, 'true', didSetupGoals, function(err){console.log('writeValueForCharacteristic Failed');});
+    };
+
+    bleManager.writeValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_LOCK_STATUS_UUID, 'true', didLock, function(err){console.log('writeValueForCharacteristic Failed');});
   },
   fetch: function() {
-    console.log('[index.js] fetch');
+    console.log('GGIT::fetch');
+
+    var didDisconnect = function() {
+      app.dashBoardIntervalId = setInterval(function(){view.dashBoard();},500);
+      console.log('dashBoardIntervalId', app.dashBoardIntervalId);
+      // app.getLockStatus();
+    };
+
     var didGetGoal = function() {
-      console.log('[index.js] didGetGoal');
-      view.dashBoard();
+      console.log('GGIT::didGetGoal');
+      bleManager.disconnect(didDisconnect, function(err){console.log('pause Failed');});
     };
     var didGetWeeklySteps = function() {
       app.getGoal(didGetGoal);
     };
-    app.getWeeklySteps(didGetWeeklySteps);
+    if(demo == true) {
+      didGetWeeklySteps();
+    } else {
+      app.getWeeklySteps(didGetWeeklySteps);  
+    }
   },
   getGoal: function(callback) {
-    console.log('[index.js] getGoal');
+    console.log('GGIT::getGoal');
 
     var didReadPeriod = function(res) {
-      console.log('[index.js] didReadPeriod');
+      console.log('GGIT::didReadPeriod');
       if (res.hasOwnProperty('data')) {
         console.log('period', res.data);
         app.goalPeriod = res.data;
@@ -200,7 +220,7 @@ var app = {
     };
 
     var didReadSteps = function(res) {
-      console.log('[index.js] didReadSteps');
+      console.log('GGIT::didReadSteps');
       if (res.hasOwnProperty('data')) {
         console.log('steps', res.data);
         app.goalSteps = res.data;
@@ -211,6 +231,22 @@ var app = {
 
     bleManager.readValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_STEPS_UUID, didReadSteps, function(err){console.log('readValueForCharacteristic Failed');});
   },
+  getLockStatus: function() {
+    var that = this;
+    var didGetLockStatus = function(res) {
+      console.log('GGIT::didGetLockStatus');
+      if (res.hasOwnProperty('data')) {
+        console.log('lockstatus', res.data);
+        view.setLockStatus(res.data);
+      }
+      that.getLockStatus();
+    };
+
+    bleManager.readValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_LOCK_STATUS_UUID, didReadSteps, function(err){console.log('readValueForCharacteristic Failed');});
+  },
+  setLockStatus: function(lock) {
+    bleManager.writeValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_LOCK_STATUS_UUID, lock, function(){}, function(err){console.log('writeValueForCharacteristic Failed');});
+  },
 
 
 /**
@@ -220,30 +256,30 @@ var app = {
   */
 
   startStepCounter: function() {
-    console.log('[index.js] startStepCounter');
+    console.log('GGIT::startStepCounter');
     stepCounter.start(app.onStartStepCounter, function(err){console.log('startStepCounter Failed');});
   },
   onStartStepCounter: function() {
-    console.log('[index.js] onStartStepCounter');
+    console.log('GGIT::onStartStepCounter');
     app.getWeeklySteps(function(){});
   },
   stopStepCounter: function() {
-    console.log('[index.js] stopStepCounter');
+    console.log('GGIT::stopStepCounter');
     stepCounter.stop(app.onStopStepCounter, function(err){console.log('stopStepCounter Failed');});
   },
   onStopStepCounter: function() {
-    console.log('[index.js] onStopStepCounter');
+    console.log('GGIT::onStopStepCounter');
   },
   getSteps: function() {
-    // console.log('[index.js] getSteps');
+    // console.log('GGIT::getSteps');
     stepCounter.getSteps(0, app.gotSteps, function(err){console.log('getTodaySteps Failed');});
   },
   gotSteps: function(steps) {
-    // console.log('[index.js] app.gotSteps', steps);
+    // console.log('GGIT::gotSteps', steps);
     view.setTodaySteps(steps);
   },
   getWeeklySteps: function(callback) {
-    console.log('[index.js] getWeeklySteps');
+    console.log('GGIT::getWeeklySteps');
         
     var weeklySteps = [];
     
@@ -251,7 +287,7 @@ var app = {
       weeklySteps.push(steps);
       console.log('weeklySteps',weeklySteps);
       view.setWeeklySteps(weeklySteps);
-      setInterval(function(){app.getSteps();},1000);
+      setInterval(function(){app.getSteps();},500);
       callback();
     };
     var getDayFive = function(steps) {
@@ -286,10 +322,62 @@ var app = {
   */
   
   lock: function() {
-    locker.lock();
+    if(demo == false) {
+      console.log('GGIT::lock');
+      locker.lock();
+    }
   },
   unlock: function() {
-    locker.unlock();
-  }
+    if(demo == false) {
+      console.log('GGIT::unlock');
+      locker.unlock();      
+    }
+  },
 
+
+/**
+
+    Accelerometer (alternative way)
+
+  */
+
+  watchAcceleration: function() {
+
+    console.log('GGIT::watchAcceleration');
+
+    var prevX = undefined,
+        prevY = undefined,
+        prevZ = undefined;
+
+    var randomMin = 10,
+        randomMax = 100,
+        threshold = 50;
+
+    function success(acceleration) {
+      if(prevX != undefined && prevY != undefined && prevZ != undefined) {
+        if(Math.abs(acceleration.x-prevX) > threshold ||
+           Math.abs(acceleration.y-prevY) > threshold || 
+           Math.abs(acceleration.z-prevZ) > threshold) {
+          prevX = acceleration.x;
+          prevY = acceleration.y;
+          prevZ = acceleration.z;
+          view.setTodaySteps(view.getTodaySteps() + Math.floor(Math.random() * (randomMax - randomMin + 1)) + randomMin);
+
+          if(parseInt(view.getTodaySteps()) >= parseInt(view.goalSteps)) {
+            app.setLockStatus('false');
+            clearInterval(app.dashBoardIntervalId);
+            view.congrats();
+          } else {
+            view.dashBoard();
+          }
+        }
+      }
+      
+      prevX = acceleration.x;
+      prevY = acceleration.y;
+      prevZ = acceleration.z;
+    }
+
+    navigator.accelerometer.watchAcceleration(success, function(err){console.log('watchAcceleration Failed');}, { frequency: 100 });
+  }
 };
