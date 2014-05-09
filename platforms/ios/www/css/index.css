@@ -50,16 +50,6 @@ body {
   width:100%;
 }
 
-/*
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-  .app {
-    background-position:left center;
-    padding:75px 0px 75px 70px;
-    margin:-90px 0px 0px 0px;
-  }
-}
-*/
-
 h1 {
   font-size:24px;
   font-weight:normal;
@@ -179,36 +169,9 @@ li {
   padding: 50px 30px 30px 30px;
 }
 
-#selectOne{
-    height: 500px;
-    text-align: center;
-}
-
 div.user-role{
-    vertical-align:middle;
-    display:inline-block;
-}
-
-.myButton {
-    background-color:#81B497;
-    -moz-border-radius:2px;
-    -webkit-border-radius:2px;
-    border-radius:2px;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-family:arial;
-    font-size:17px;
-    padding:12px 31px;
-    text-decoration:none;
-    width: 100px;
-}
-.myButton:hover {
-    background-color:#66E0C2;
-}
-.myButton:active {
-    position:relative;
-    top:1px;
+  vertical-align:middle;
+  display:inline-block;
 }
 
 #scan-animation {
@@ -217,13 +180,13 @@ div.user-role{
 }
 
 #scan-mask {
-content:url(../img/scan.png);
-position: absolute;
-left: -80px;
-top: 50px;
+  content:url(../img/scan.png);
+  position: absolute;
+  left: -80px;
+  top: 50px;
 
--webkit-animation:movemask 3.5s; /* Chrome, Safari, Opera */
--webkit-animation-iteration-count:infinite;
+  -webkit-animation:movemask 3.5s; /* Chrome, Safari, Opera */
+  -webkit-animation-iteration-count:infinite;
 }
 
 /* Chrome, Safari, Opera */
@@ -245,45 +208,42 @@ top: 50px;
 }
 
 #message {
-    position: absolute;
-    top: 100px;
-    left: 80px;
+  position: absolute;
+  top: 100px;
+  left: 80px;
 }
 .scanfailed {
-    content:url(../img/page2.png);
-    width: 100%;
+  content:url(../img/page2.png);
+  width: 100%;
 }
 #boxAnimation {
-    width: 120px;
-    margin-left:auto;
-    margin-right:auto;
-    position: relative;
+  width: 120px;
+  margin-left:auto;
+  margin-right:auto;
+  position: relative;
 }
 
 .originalImage {
-    content:url(../img/box1.jpg);
+  content:url(../img/box1.jpg);
 }
 .changeImage{
-    content:url(../img/box2.jpg);
-
+  content:url(../img/box2.jpg);
 }
 .buttonPair{
-    width: 40%;
+  width: 40%;
 }
 
 #lockillust{
-    width: 120px;
-    margin-left:auto;
-    margin-right:auto;
-    position: relative;
-
+  width: 120px;
+  margin-left:auto;
+  margin-right:auto;
+  position: relative;
 }
 .lockImage{
-    content:url(../img/lock.png);
+  content:url(../img/lock.png);
 }
-
 .runImage{
-    content:url(../img/run.png);
+  content:url(../img/run.png);
 }
 
 .section-title{
@@ -291,24 +251,14 @@ top: 50px;
   border-style:solid;
   border-color:#66FFCC;
   border-width:1px 0px 1px 0px;
-
 }
 .today-section{
   width: 100%;
   height: 180px;
-/*  margin: 40px 0px 0px 0px;*/
-/*  border-style:solid;
-  border-color:#66FFCC;
-  border-width:1px;*/
-
 }
 .todayRing{
   width: 62%;
   height: 180px;
-/*  border-style:solid;
-  border-color:#66FFCC;
-  border-width:1px;*/
-/*  background-color:white;*/
   float:left;
 }
 .dateStatus{
@@ -320,7 +270,6 @@ top: 50px;
   float:right;
   text-align: left;
 }
-
 .bigDate{
   padding: 20px 10px;
   color:#66FFCC;
@@ -351,15 +300,9 @@ top: 50px;
   border-style:solid;
   border-color:#66FFCC;
   border-width:1px 0px 0px 0px;
-
 }
 .goal-statement{
   height: 50%;
-/*  padding: 10px 0px 0px 0px;*/
-/*  border-style:solid;
-  border-color:#66FFCC;*/
-/*  border-width:1px;*/
-/*  background-color:#66FFCC;*/
   vertical-align: top;
 
 }
@@ -375,29 +318,20 @@ top: 50px;
 .week-section{
   width: 100%;
   height: 100px;
-/*  border-style:solid;
-  border-color:#66FFCC;
-  border-width:1px 0px 0px 0px;*/
   margin-top: 10px;
   position: relative;
 }
 
 .weeksRing {
-    width: 15%;
-    height: 100px;
-/*    background-color:white;*/
-    float: left;
-    margin: 2px;
-}
-
-.goalRing {
-/*  position: fixed;*/
-	/* width and height can be anything, as long as they're equal */
+  width: 15%;
+  height: 100px;
+  float: left;
+  margin: 2px;
 }
 
 .sub-section{
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 progress:not(value) {
@@ -471,16 +405,16 @@ progress[value]::-webkit-progress-value:after {
 progress[value]::-moz-progress-bar {
 	/* Gradient background with Stripes */
 	background-image:
-	-moz-linear-gradient( 135deg,
-													 transparent,
-													 transparent 33%,
-													 rgba(0,0,0,.1) 33%,
-													 rgba(0,0,0,.1) 66%,
-													 transparent 66%),
-    -moz-linear-gradient( top,
-														rgba(255, 255, 255, .25),
-														rgba(0,0,0,.2)),
-     -moz-linear-gradient( left, #09c, #690);
+	-moz-linear-gradient(135deg,
+											 transparent,
+											 transparent 33%,
+											 rgba(0,0,0,.1) 33%,
+											 rgba(0,0,0,.1) 66%,
+											 transparent 66%),
+  -moz-linear-gradient(top,
+											 rgba(255, 255, 255, .25),
+											 rgba(0,0,0,.2)),
+  -moz-linear-gradient(left, #09c, #690);
 
 	background-size: 35px 20px, 100% 100%, 100% 100%;
 	border-radius:3px;
@@ -520,16 +454,16 @@ p[data-value]:after {
 .goal-progress::-webkit-progress-value {
 	/* Gradient background with Stripes */
 	background-image:
-	-webkit-linear-gradient( 135deg,
-													 transparent,
-													 transparent 33%,
-													 rgba(0,0,0,.1) 33%,
-													 rgba(0,0,0,.1) 66%,
-													 transparent 66%),
-    -webkit-linear-gradient( top,
-														rgba(255, 255, 255, .25),
-														rgba(0,0,0,.2)),
-     -webkit-linear-gradient( left,#09c, #66FFCC);
+	-webkit-linear-gradient(135deg,
+													transparent,
+													transparent 33%,
+													rgba(0,0,0,.1) 33%,
+													rgba(0,0,0,.1) 66%,
+													transparent 66%),
+  -webkit-linear-gradient(top,
+													rgba(255, 255, 255, .25),
+													rgba(0,0,0,.2)),
+  -webkit-linear-gradient(left,#09c, #66FFCC);
 }
 
 /* Similarly, for Mozillaa. Unfortunately combining the styles for different browsers will break every other browser. Hence, we need a separate block. */
@@ -537,39 +471,36 @@ p[data-value]:after {
 .goal-progress::-webkit-progress-value {
 	/* Gradient background with Stripes */
 	background-image:
-	-moz-linear-gradient( 135deg,
-													 transparent,
-													 transparent 33%,
-													 rgba(0,0,0,.1) 33%,
-													 rgba(0,0,0,.1) 66%,
-													 transparent 66%),
-    -moz-linear-gradient( top,
-														rgba(255, 255, 255, .25),
-														rgba(0,0,0,.2)),
-     -moz-linear-gradient( left, #09c, #f44);
+	-moz-linear-gradient(135deg,
+											 transparent,
+											 transparent 33%,
+											 rgba(0,0,0,.1) 33%,
+											 rgba(0,0,0,.1) 66%,
+											 transparent 66%),
+  -moz-linear-gradient(top,
+								 			 rgba(255, 255, 255, .25),
+											 rgba(0,0,0,.2)),
+  -moz-linear-gradient(left, #09c, #f44);
 }
 
 .date-disc {
-    vertical-align: top;
-    color: #FFF;
-    margin-bottom: 5px;
-
+  vertical-align: top;
+  color: #FFF;
+  margin-bottom: 5px;
 }
 .circle {
-    vertical-align: bottom;
-    border-radius: 50%;
-    float: left;
-    display: inline-block;
-/*    margin-right: 20px;*/
-    /* text styling */
-    font-size: 8px;
-    width: 32px;
-    height: 32px;
-    color: #FFF;  border: 1px solid #fff;
-    line-height: 32px;
-    text-align: center;
-    font-family: Arial;
-    margin: auto;
+  vertical-align: bottom;
+  border-radius: 50%;
+  float: left;
+  display: inline-block;
+  font-size: 8px;
+  width: 32px;
+  height: 32px;
+  color: #FFF;  border: 1px solid #fff;
+  line-height: 32px;
+  text-align: center;
+  font-family: Arial;
+  margin: auto;
 }
 .color-1 { background: #f06060;}
 .color-2 { background: #0b5b67; }
