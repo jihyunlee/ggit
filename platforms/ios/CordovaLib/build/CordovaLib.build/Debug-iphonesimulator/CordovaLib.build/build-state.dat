@@ -381,108 +381,108 @@ t1398925599
 s9164
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDV.h
-t1398925596
-s1302
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
-t1398925596
-s3293
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
-t1398925596
-s2234
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h
-t1398925596
-s1205
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
-t1398925596
-s1283
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h
-t1398925596
-s1227
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVDebug.h
-t1398925596
-s1025
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
-t1398925596
-s2022
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVJSON.h
-t1398925596
-s986
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h
-t1398925596
-s1743
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
-t1398925596
-s2194
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
-t1398925596
-s3091
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
-t1398925596
-s1032
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVShared.h
-t1398925596
-s998
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVTimer.h
-t1398925597
-s909
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h
-t1398925596
-s1052
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h
-t1398925597
-s1057
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
-t1398925596
-s2764
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h
-t1398925597
-s1442
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
-t1398925596
-s1204
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h
-t1398925596
-s914
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h
-t1398925596
-s893
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h
-t1398925596
-s1498
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
-t1398925596
-s928
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h
-t1398925596
-s1142
+t2
+s0
 
 N/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/libCordova.a
-t1398925600
-s862344
+t2
+s0
 
 N/var/folders/_b/f3hpk0190cjf9dspb_2tykdh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-arypvhahrdxdsrayosmgzoguipfh/CordovaLib_Prefix.pch.pch
 t1398925597
@@ -490,7 +490,7 @@ s3239000
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies98f8fb0b9018b941^8e01f50c9018b941^---0#1#1#--18"Check dependencies36"37831D1E-ECBA-44D1-BAD9-1CB226C88DB8-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesb6a2f172711cb941^11729a73711cb941^---0#1#1#--18"Check dependencies36"57FB90A7-677E-4913-9077-2A16DC2F52B9-
 
 CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s420618399.706973
@@ -907,265 +907,265 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile
 b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
 
 CCpHeader Classes/CDV.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDV.h
-s420618396.952029
-e420618396.953875
+s421294451.655837
+e421294451.669343
 r1
 xCpHeader
 xClasses/CDV.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDV.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDV.h120"[1mCpHeader[0m Classes/CDV.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDV.h[0mc7daf39c2012b941^8717009d2012b941^---0#0#1#-19%DVTDocumentLocation2@88"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDV.h0034bcb5dcffdf42^833"[1mCpHeader[0m Classes/CDV.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDV.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDV.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"2262B81D-06FC-4DD0-9601-3378774796A7-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDV.h120"[1mCpHeader[0m Classes/CDV.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDV.h[0mdd07a873711cb941^fb03b973711cb941^---0#0#1#-19%DVTDocumentLocation2@88"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDV.h0034bcb5dcffdf42^833"[1mCpHeader[0m Classes/CDV.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDV.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDV.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"B5766D2F-3184-4093-8DA5-7F1638067EE7-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/CDVAvailability.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
-s420618396.961795
-e420618396.966279
+s421294451.669278
+e421294451.679666
 r1
 xCpHeader
 xClasses/CDVAvailability.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h144"[1mCpHeader[0m Classes/CDVAvailability.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h[0m0c5cf69c2012b941^e6c9059d2012b941^---0#0#1#-19%DVTDocumentLocation2@100"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h0034bcb5dcffdf42^869"[1mCpHeader[0m Classes/CDVAvailability.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVAvailability.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"9FA0B90C-ABEE-4FEC-9E29-34C716AA82E2-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h144"[1mCpHeader[0m Classes/CDVAvailability.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h[0m207dab73711cb941^cbd6ba73711cb941^---0#0#1#-19%DVTDocumentLocation2@100"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h0034bcb5dcffdf42^869"[1mCpHeader[0m Classes/CDVAvailability.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVAvailability.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"D45AF95D-4045-4A28-B1EC-A38EFCD2E2DA-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/CDVCommandDelegate.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
-s420618396.948252
-e420618396.952997
+s421294451.653234
+e421294451.668905
 r1
 xCpHeader
 xClasses/CDVCommandDelegate.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h150"[1mCpHeader[0m Classes/CDVCommandDelegate.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h[0mb4e3f29c2012b941^da90fb9c2012b941^---0#0#1#-19%DVTDocumentLocation2@103"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h0034bcb5dcffdf42^878"[1mCpHeader[0m Classes/CDVCommandDelegate.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVCommandDelegate.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"2C0D7F91-16C4-49CA-A654-9B027B601109-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h150"[1mCpHeader[0m Classes/CDVCommandDelegate.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h[0madc1a773711cb941^10b2b873711cb941^---0#0#1#-19%DVTDocumentLocation2@103"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h0034bcb5dcffdf42^878"[1mCpHeader[0m Classes/CDVCommandDelegate.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVCommandDelegate.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"9A6E2AAC-B6CE-4F2A-A2A0-9C110BA9A60D-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/CDVCommandDelegateImpl.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h
-s420618396.982970
-e420618396.987404
+s421294451.708719
+e421294451.711630
 r1
 xCpHeader
 xClasses/CDVCommandDelegateImpl.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection105"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h158"[1mCpHeader[0m Classes/CDVCommandDelegateImpl.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h[0mefc9fb9c2012b941^ab20069d2012b941^---0#0#1#-19%DVTDocumentLocation2@107"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h0034bcb5dcffdf42^890"[1mCpHeader[0m Classes/CDVCommandDelegateImpl.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"C8286240-5E9E-4B08-876A-7A8C44315B81-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection105"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h158"[1mCpHeader[0m Classes/CDVCommandDelegateImpl.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h[0m8a91b573711cb941^7782c173711cb941^---0#0#1#-19%DVTDocumentLocation2@107"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h0034bcb5dcffdf42^890"[1mCpHeader[0m Classes/CDVCommandDelegateImpl.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"01668A54-67B4-44B7-A4C9-29958CA22579-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/CDVCommandQueue.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
-s420618396.974408
-e420618396.976840
+s421294451.706061
+e421294451.708403
 r1
 xCpHeader
 xClasses/CDVCommandQueue.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h144"[1mCpHeader[0m Classes/CDVCommandQueue.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h[0m8d98f99c2012b941^2b13069d2012b941^---0#0#1#-19%DVTDocumentLocation2@100"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h0034bcb5dcffdf42^869"[1mCpHeader[0m Classes/CDVCommandQueue.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVCommandQueue.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"DD2E41F2-3198-496B-88E4-52C66843F56C-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h144"[1mCpHeader[0m Classes/CDVCommandQueue.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h[0m08e6b473711cb941^a0a8c073711cb941^---0#0#1#-19%DVTDocumentLocation2@100"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h0034bcb5dcffdf42^869"[1mCpHeader[0m Classes/CDVCommandQueue.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVCommandQueue.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"8437B661-EC97-4AA1-A529-94C42278CD9E-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/CDVConfigParser.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h
-s420618396.993681
-e420618396.996471
+s421294451.756993
+e421294451.768909
 r1
 xCpHeader
 xClasses/CDVConfigParser.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h144"[1mCpHeader[0m Classes/CDVConfigParser.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h[0m25cefe9c2012b941^fa7e069d2012b941^---0#0#1#-19%DVTDocumentLocation2@100"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h0034bcb5dcffdf42^869"[1mCpHeader[0m Classes/CDVConfigParser.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVConfigParser.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"E163F503-A06B-4A7D-B439-71AC8AD2B1FD-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h144"[1mCpHeader[0m Classes/CDVConfigParser.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h[0me814c473711cb941^253cc573711cb941^---0#0#1#-19%DVTDocumentLocation2@100"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h0034bcb5dcffdf42^869"[1mCpHeader[0m Classes/CDVConfigParser.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVConfigParser.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"29EC8C6E-CE74-4717-94D2-1B7C30C3AD94-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/CDVDebug.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVDebug.h
-s420618396.916727
-e420618396.919363
+s421294451.616390
+e421294451.622624
 r1
 xCpHeader
 xClasses/CDVDebug.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVDebug.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVDebug.h130"[1mCpHeader[0m Classes/CDVDebug.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVDebug.h[0m31cfea9c2012b941^a663ee9c2012b941^---0#0#1#-19%DVTDocumentLocation2@93"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVDebug.h0034bcb5dcffdf42^848"[1mCpHeader[0m Classes/CDVDebug.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVDebug.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVDebug.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"9AC6EEA6-3C1C-4E04-8F43-93D111F536DF-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVDebug.h130"[1mCpHeader[0m Classes/CDVDebug.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVDebug.h[0m0fb49e73711cb941^ab07ac73711cb941^---0#0#1#-19%DVTDocumentLocation2@93"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVDebug.h0034bcb5dcffdf42^848"[1mCpHeader[0m Classes/CDVDebug.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVDebug.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVDebug.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"0A10B567-3743-4DAA-B7BC-2BE0A9C8B74A-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/CDVInvokedUrlCommand.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
-s420618396.872189
-e420618396.885422
+s421294451.602636
+e421294451.612112
 r1
 xCpHeader
 xClasses/CDVInvokedUrlCommand.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h154"[1mCpHeader[0m Classes/CDVInvokedUrlCommand.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h[0me17bdf9c2012b941^e547e49c2012b941^---0#0#1#-19%DVTDocumentLocation2@105"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h0034bcb5dcffdf42^884"[1mCpHeader[0m Classes/CDVInvokedUrlCommand.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"E04BBCF3-796E-4E8A-9EFF-CD23E71DF475-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h154"[1mCpHeader[0m Classes/CDVInvokedUrlCommand.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h[0mb3eb9a73711cb941^81e89d73711cb941^---0#0#1#-19%DVTDocumentLocation2@105"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h0034bcb5dcffdf42^884"[1mCpHeader[0m Classes/CDVInvokedUrlCommand.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"51E566AD-6883-44A2-85B3-E9422A8A3C25-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/CDVJSON.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVJSON.h
-s420618396.992653
-e420618396.994719
+s421294451.766135
+e421294451.770095
 r1
 xCpHeader
 xClasses/CDVJSON.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVJSON.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVJSON.h128"[1mCpHeader[0m Classes/CDVJSON.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVJSON.h[0md541fe9c2012b941^ae46069d2012b941^---0#0#1#-19%DVTDocumentLocation2@92"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVJSON.h0034bcb5dcffdf42^845"[1mCpHeader[0m Classes/CDVJSON.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVJSON.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVJSON.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"D425A513-EB6E-4F0F-A51C-175B01DA3357-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVJSON.h128"[1mCpHeader[0m Classes/CDVJSON.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVJSON.h[0ma452c473711cb941^9948c573711cb941^---0#0#1#-19%DVTDocumentLocation2@92"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVJSON.h0034bcb5dcffdf42^845"[1mCpHeader[0m Classes/CDVJSON.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVJSON.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVJSON.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"FE7AA573-683A-452A-9AEF-A0B6AC913DB2-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/CDVLocalStorage.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h
-s420618396.963123
-e420618396.966286
+s421294451.695145
+e421294451.701340
 r1
 xCpHeader
 xClasses/CDVLocalStorage.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h144"[1mCpHeader[0m Classes/CDVLocalStorage.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h[0m7db2f69c2012b941^02d7059d2012b941^---0#0#1#-19%DVTDocumentLocation2@100"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h0034bcb5dcffdf42^869"[1mCpHeader[0m Classes/CDVLocalStorage.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVLocalStorage.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"310EF4B0-0F5D-4849-8F1B-C81CC22E15E2-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h144"[1mCpHeader[0m Classes/CDVLocalStorage.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h[0mfc1db273711cb941^b058bb73711cb941^---0#0#1#-19%DVTDocumentLocation2@100"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h0034bcb5dcffdf42^869"[1mCpHeader[0m Classes/CDVLocalStorage.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVLocalStorage.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"B2B3D18F-5527-4006-9DEF-5B881E9A88BC-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/CDVPlugin.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
-s420618396.913661
-e420618396.915655
+s421294451.613152
+e421294451.615114
 r1
 xCpHeader
 xClasses/CDVPlugin.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h132"[1mCpHeader[0m Classes/CDVPlugin.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h[0m8506ea9c2012b941^344bee9c2012b941^---0#0#1#-19%DVTDocumentLocation2@94"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h0034bcb5dcffdf42^851"[1mCpHeader[0m Classes/CDVPlugin.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVPlugin.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"15632821-292D-4450-A867-752456760A2E-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h132"[1mCpHeader[0m Classes/CDVPlugin.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h[0mf8179d73711cb941^e0beaa73711cb941^---0#0#1#-19%DVTDocumentLocation2@94"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h0034bcb5dcffdf42^851"[1mCpHeader[0m Classes/CDVPlugin.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVPlugin.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"2936C126-0091-433A-8416-B6C490A47E3E-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/CDVPluginResult.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
-s420618396.913442
-e420618396.919754
+s421294451.610539
+e421294451.612844
 r1
 xCpHeader
 xClasses/CDVPluginResult.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h144"[1mCpHeader[0m Classes/CDVPluginResult.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h[0m5681ea9c2012b941^f967ee9c2012b941^---0#0#1#-19%DVTDocumentLocation2@100"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h0034bcb5dcffdf42^869"[1mCpHeader[0m Classes/CDVPluginResult.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVPluginResult.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"586108CD-BAA6-45E0-915D-1F231BC12300-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h144"[1mCpHeader[0m Classes/CDVPluginResult.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h[0m616d9c73711cb941^63b3a373711cb941^---0#0#1#-19%DVTDocumentLocation2@100"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h0034bcb5dcffdf42^869"[1mCpHeader[0m Classes/CDVPluginResult.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVPluginResult.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"DEDA1042-4A0D-4901-8433-A5F9F8BCA3D4-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/CDVScreenOrientationDelegate.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
-s420618396.988072
-e420618396.992308
+s421294451.730800
+e421294451.755055
 r1
 xCpHeader
 xClasses/CDVScreenOrientationDelegate.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection111"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h170"[1mCpHeader[0m Classes/CDVScreenOrientationDelegate.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h[0m2316fd9c2012b941^9f3a069d2012b941^---0#0#1#-19%DVTDocumentLocation2@113"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h0034bcb5dcffdf42^908"[1mCpHeader[0m Classes/CDVScreenOrientationDelegate.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVScreenOrientationDelegate.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"AE5C7CC4-C81B-4EA4-A6B2-322193C86298-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection111"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h170"[1mCpHeader[0m Classes/CDVScreenOrientationDelegate.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h[0mb20fbe73711cb941^0f62c373711cb941^---0#0#1#-19%DVTDocumentLocation2@113"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h0034bcb5dcffdf42^908"[1mCpHeader[0m Classes/CDVScreenOrientationDelegate.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVScreenOrientationDelegate.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"898CC588-2C4A-4BB1-AC98-BCDAA1C8E28A-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/CDVShared.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVShared.h
-s420618396.984326
-e420618396.987532
+s421294451.721794
+e421294451.755566
 r1
 xCpHeader
 xClasses/CDVShared.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVShared.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVShared.h132"[1mCpHeader[0m Classes/CDVShared.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVShared.h[0m001ffc9c2012b941^fa29069d2012b941^---0#0#1#-19%DVTDocumentLocation2@94"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVShared.h0034bcb5dcffdf42^851"[1mCpHeader[0m Classes/CDVShared.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVShared.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVShared.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"AA4EC8DB-CD59-49DC-B66C-C2E4206E5326-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVShared.h132"[1mCpHeader[0m Classes/CDVShared.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVShared.h[0m0b0ebb73711cb941^9f92c373711cb941^---0#0#1#-19%DVTDocumentLocation2@94"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVShared.h0034bcb5dcffdf42^851"[1mCpHeader[0m Classes/CDVShared.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVShared.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVShared.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"D681FDE4-14B6-41C9-8F5C-E9B2885C6404-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/CDVTimer.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVTimer.h
-s420618397.014113
-e420618397.018752
+s421294451.776870
+e421294451.810723
 r1
 xCpHeader
 xClasses/CDVTimer.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVTimer.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVTimer.h130"[1mCpHeader[0m Classes/CDVTimer.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVTimer.h[0mfb3e049d2012b941^a9a0069d2012b941^---0#0#1#-19%DVTDocumentLocation2@93"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVTimer.h0034bcb5dcffdf42^848"[1mCpHeader[0m Classes/CDVTimer.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVTimer.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVTimer.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"5F17CD14-ADA3-4B40-BA5F-A29BDBEAB863-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVTimer.h130"[1mCpHeader[0m Classes/CDVTimer.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVTimer.h[0m4205c773711cb941^8acdcf73711cb941^---0#0#1#-19%DVTDocumentLocation2@93"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVTimer.h0034bcb5dcffdf42^848"[1mCpHeader[0m Classes/CDVTimer.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVTimer.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVTimer.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"9078BED3-5F74-491F-AF5B-5924F3A73050-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/CDVURLProtocol.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h
-s420618396.943484
-e420618396.945530
+s421294451.637578
+e421294451.641782
 r1
 xCpHeader
 xClasses/CDVURLProtocol.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h142"[1mCpHeader[0m Classes/CDVURLProtocol.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h[0m26acf19c2012b941^97c5f89c2012b941^---0#0#1#-19%DVTDocumentLocation2@99"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h0034bcb5dcffdf42^866"[1mCpHeader[0m Classes/CDVURLProtocol.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVURLProtocol.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"D9FDFFB5-966C-4D43-B788-F3DDAF821302-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h142"[1mCpHeader[0m Classes/CDVURLProtocol.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h[0mf75ba373711cb941^ca15b273711cb941^---0#0#1#-19%DVTDocumentLocation2@99"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h0034bcb5dcffdf42^866"[1mCpHeader[0m Classes/CDVURLProtocol.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVURLProtocol.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"402E619B-1509-4EBE-A5E8-A6B125FC50F5-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/CDVUserAgentUtil.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h
-s420618397.005751
-e420618397.015532
+s421294451.775192
+e421294451.798264
 r1
 xCpHeader
 xClasses/CDVUserAgentUtil.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h146"[1mCpHeader[0m Classes/CDVUserAgentUtil.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h[0md89a019d2012b941^2d96069d2012b941^---0#0#1#-19%DVTDocumentLocation2@101"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h0034bcb5dcffdf42^872"[1mCpHeader[0m Classes/CDVUserAgentUtil.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"F157385B-A549-4FE3-A794-BC19E900A737-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h146"[1mCpHeader[0m Classes/CDVUserAgentUtil.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h[0m0b9ac673711cb941^9371cc73711cb941^---0#0#1#-19%DVTDocumentLocation2@101"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h0034bcb5dcffdf42^872"[1mCpHeader[0m Classes/CDVUserAgentUtil.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"10D15BD0-B9B0-420C-9573-4E88129B0395-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/CDVViewController.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
-s420618396.947925
-e420618396.951602
+s421294451.642112
+e421294451.644736
 r1
 xCpHeader
 xClasses/CDVViewController.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVViewController.h148"[1mCpHeader[0m Classes/CDVViewController.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVViewController.h[0m3414f39c2012b941^3b8afb9c2012b941^---0#0#1#-19%DVTDocumentLocation2@102"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVViewController.h0034bcb5dcffdf42^875"[1mCpHeader[0m Classes/CDVViewController.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVViewController.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVViewController.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"9775954F-D00C-438B-AC78-643E8CA5B5B7-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVViewController.h148"[1mCpHeader[0m Classes/CDVViewController.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVViewController.h[0m0aa0a473711cb941^8faab673711cb941^---0#0#1#-19%DVTDocumentLocation2@102"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVViewController.h0034bcb5dcffdf42^875"[1mCpHeader[0m Classes/CDVViewController.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVViewController.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVViewController.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"29DCE8F3-122E-4BFE-8E09-113EA9C9B484-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/CDVWebViewDelegate.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h
-s420618397.004268
-e420618397.013708
+s421294451.769227
+e421294451.776524
 r1
 xCpHeader
 xClasses/CDVWebViewDelegate.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h150"[1mCpHeader[0m Classes/CDVWebViewDelegate.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h[0mf23f019d2012b941^df8c069d2012b941^---0#0#1#-19%DVTDocumentLocation2@103"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h0034bcb5dcffdf42^878"[1mCpHeader[0m Classes/CDVWebViewDelegate.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"EA56E4D7-1FBA-4A98-9C7D-A835E1CEC3A5-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h150"[1mCpHeader[0m Classes/CDVWebViewDelegate.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h[0me410c573711cb941^2cbccb73711cb941^---0#0#1#-19%DVTDocumentLocation2@103"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h0034bcb5dcffdf42^878"[1mCpHeader[0m Classes/CDVWebViewDelegate.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"824348F9-936E-4A35-A315-DE3F899C7EFC-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/CDVWhitelist.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
-s420618396.934071
-e420618396.936806
+s421294451.629411
+e421294451.632559
 r1
 xCpHeader
 xClasses/CDVWhitelist.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h138"[1mCpHeader[0m Classes/CDVWhitelist.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h[0m7443ef9c2012b941^1c45f29c2012b941^---0#0#1#-19%DVTDocumentLocation2@97"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h0034bcb5dcffdf42^860"[1mCpHeader[0m Classes/CDVWhitelist.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVWhitelist.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"06547B78-0EDA-4006-BF72-744B403942EF-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h138"[1mCpHeader[0m Classes/CDVWhitelist.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h[0m0e49a173711cb941^321dae73711cb941^---0#0#1#-19%DVTDocumentLocation2@97"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h0034bcb5dcffdf42^860"[1mCpHeader[0m Classes/CDVWhitelist.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/CDVWhitelist.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"1029A9E2-AABD-4682-B9C4-91A8FA0F2EFE-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/NSArray+Comparisons.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h
-s420618396.971102
-e420618396.973461
+s421294451.701656
+e421294451.704005
 r1
 xCpHeader
 xClasses/NSArray+Comparisons.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h152"[1mCpHeader[0m Classes/NSArray+Comparisons.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h[0md4bbf89c2012b941^b403069d2012b941^---0#0#1#-19%DVTDocumentLocation2@104"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h0034bcb5dcffdf42^881"[1mCpHeader[0m Classes/NSArray+Comparisons.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"FE53A9E9-295B-4190-887A-8CFAE4CB6347-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h152"[1mCpHeader[0m Classes/NSArray+Comparisons.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h[0m76c2b373711cb941^5743be73711cb941^---0#0#1#-19%DVTDocumentLocation2@104"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h0034bcb5dcffdf42^881"[1mCpHeader[0m Classes/NSArray+Comparisons.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"45F7D4BD-4288-4326-A092-3925F643E5D3-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/NSData+Base64.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h
-s420618396.885912
-e420618396.887806
+s421294451.607792
+e421294451.610265
 r1
 xCpHeader
 xClasses/NSData+Base64.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h140"[1mCpHeader[0m Classes/NSData+Base64.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h[0m78f1e29c2012b941^c05be49c2012b941^---0#0#1#-19%DVTDocumentLocation2@98"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h0034bcb5dcffdf42^863"[1mCpHeader[0m Classes/NSData+Base64.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/NSData+Base64.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"72504959-5AE5-4881-9C43-EA2610C5359B-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h140"[1mCpHeader[0m Classes/NSData+Base64.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h[0m6fbc9b73711cb941^a1bfa073711cb941^---0#0#1#-19%DVTDocumentLocation2@98"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h0034bcb5dcffdf42^863"[1mCpHeader[0m Classes/NSData+Base64.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/NSData+Base64.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"B21B18A0-C4E5-4EA3-8DE0-71CCA98B3C0D-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/NSDictionary+Extensions.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h
-s420618396.867645
-e420618396.882662
+s421294451.600121
+e421294451.607410
 r1
 xCpHeader
 xClasses/NSDictionary+Extensions.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h160"[1mCpHeader[0m Classes/NSDictionary+Extensions.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h[0mf817e19c2012b941^4c4fe49c2012b941^---0#0#1#-19%DVTDocumentLocation2@108"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h0034bcb5dcffdf42^893"[1mCpHeader[0m Classes/NSDictionary+Extensions.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"17737ACA-E501-4B19-94F7-7CE8D4B98DD8-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h160"[1mCpHeader[0m Classes/NSDictionary+Extensions.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h[0m35ee9973711cb941^27da9d73711cb941^---0#0#1#-19%DVTDocumentLocation2@108"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h00a8c76a8affdf42^893"[1mCpHeader[0m Classes/NSDictionary+Extensions.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"51DDA502-EB23-460C-9EEE-89CC41DF7329-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/NSMutableArray+QueueAdditions.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
-s420618396.932350
-e420618396.936968
+s421294451.618282
+e421294451.643587
 r1
 xCpHeader
 xClasses/NSMutableArray+QueueAdditions.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h172"[1mCpHeader[0m Classes/NSMutableArray+QueueAdditions.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h[0mbbd6ee9c2012b941^be4af29c2012b941^---0#0#1#-19%DVTDocumentLocation2@114"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h0034bcb5dcffdf42^911"[1mCpHeader[0m Classes/NSMutableArray+QueueAdditions.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"B6770783-2942-4019-82E6-6BF09F03A92B-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h172"[1mCpHeader[0m Classes/NSMutableArray+QueueAdditions.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h[0mb56b9e73711cb941^b001b573711cb941^---0#0#1#-19%DVTDocumentLocation2@114"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h0034bcb5dcffdf42^911"[1mCpHeader[0m Classes/NSMutableArray+QueueAdditions.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"F41408E4-8D38-4893-8C96-FD41E9C1541B-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CCpHeader Classes/UIDevice+Extensions.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h
-s420618396.970147
-e420618396.973075
+s421294451.699843
+e421294451.709763
 r1
 xCpHeader
 xClasses/UIDevice+Extensions.h
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h152"[1mCpHeader[0m Classes/UIDevice+Extensions.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h[0m0a81f89c2012b941^86e3059d2012b941^---0#0#1#-19%DVTDocumentLocation2@104"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h0034bcb5dcffdf42^881"[1mCpHeader[0m Classes/UIDevice+Extensions.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"30ACD4CC-359A-4B55-8D3A-2E4FEB83438A-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Copy /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h152"[1mCpHeader[0m Classes/UIDevice+Extensions.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h[0mec4eb373711cb941^eaaec073711cb941^---0#0#1#-19%DVTDocumentLocation2@104"file:///Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h0034bcb5dcffdf42^881"[1mCpHeader[0m Classes/UIDevice+Extensions.h [1m/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h[0m    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.h /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/include/Cordova36"58CC6BA6-FC0C-45F3-AE15-5C26C5DDA564-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CLibtool /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/libCordova.a normal i386
-s420618400.671078
-e420618400.696375
+s421294451.855311
+e421294451.951800
 r1
 xLibtool
 x/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/libCordova.a
 xnormal
 xi386
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"[1mLibtool[0m /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/libCordova.a normal i386100"[1mLibtool[0m /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/libCordova.a normal i38666f8aba02012b941^2ee2b3a02012b941^---0#0#1#--1155"[1mLibtool[0m /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/libCordova.a normal i386    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export IPHONEOS_DEPLOYMENT_TARGET=5.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only i386 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator -filelist /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/Cordova.LinkFileList -o /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/libCordova.a36"8E754C78-1B1B-4C69-BD47-599805FBDD76-
-b63744C74-9DFB-4704-AAA3-A96EA4DCE4CB
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"[1mLibtool[0m /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/libCordova.a normal i386100"[1mLibtool[0m /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/libCordova.a normal i386272edb73711cb941^9bc9f373711cb941^---0#0#1#--1155"[1mLibtool[0m /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/libCordova.a normal i386    cd /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib    export IPHONEOS_DEPLOYMENT_TARGET=5.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ez/.rvm/bin:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:/Users/ez/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only i386 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator -filelist /Users/ez/Documents/itp/t/ggit/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/Cordova.LinkFileList -o /Users/ez/Documents/itp/t/ggit/platforms/ios/build/emulator/libCordova.a36"F6BD415D-A064-485C-BD93-D3EF5706ADE3-
+b71CAA79F-FF1F-41A0-A2E9-4F180F1A0CFA
 
 CProcessPCH /var/folders/_b/f3hpk0190cjf9dspb_2tykdh0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-arypvhahrdxdsrayosmgzoguipfh/CordovaLib_Prefix.pch.pch CordovaLib_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s420618397.058085
