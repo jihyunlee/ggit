@@ -1,23 +1,4 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
-
 <html>
   <head>
     <meta charset="utf-8" />
@@ -28,44 +9,30 @@
     <title>Go! Get It!</title>
   </head>
   <body>
-    <div class="app">
-      <img id = "logo" src = "img/logo_.png" />
-      <div id="deviceready" class="blink">
-        <p class="event listening">LOADING..</p>
-        <p class="event received">Box is Ready</p>
-      </div>
-    </div>
+    <div data-role="page" id="page-notSupported">
+    </div><!-- /page-notSupported -->
 
-    <div data-role="page" id="page1">
-      <div data-role="header"></div><!-- /header -->
+    <div data-role="page" id="page-scanning">
       <div id="scan-animation">
-        <div id ="scan-background" class = "image"></div>
-        <div id ="scan-mask" class = "image"></div>
+        <div id="scan-background" class="image"></div>
+        <div id="scan-mask" class="image"></div>
       </div>
-
       <div id="message"><h2></h2></div>
       <div class="blink">
         <p class="event searching"> Looking for a GGIT box </p>
       </div>
-      <div data-role="footer"></div>
-    </div><!--/page -->
+    </div><!--/page-scanning -->
 
-    <div data-role="page" id="page2">
-        <div data-role="header"></div><!-- /header -->
-        <div data-role="content"></div><!-- /content -->
-        <div data-role="footer"></div>
-    </div><!-- /page -->
+    <div data-role="page" id="page-failToConnect">
+    </div><!-- /page-failToConnect -->
 
-    <div data-role="page" id="page3">
-      <div data-role="header"></div><!-- /header -->
+    <div data-role="page" id="page-fillBox">
       <div id="messageDiv"><h2></h2></div>
       <div id = "boxAnimation" class = "originalImage"></div>
       <input type="submit" data-inline="true" value="I did it!" id ="fillboxsubmit">
-      <div data-role="footer"></div>
-    </div><!-- /page -->
+    </div><!-- /page-fillBox -->
 
-    <div data-role="page" id="page4">
-      <div data-role="header"></div><!-- /header -->
+    <div data-role="page" id="page-setupGoal">
       <div id="messageDiv"><h2></h2></div>
       <form action="" id="form-set-goal" class="" style=""></br>
         <input id="form-steps" name="steps" type="number" placeholder="5000" /></br>
@@ -75,30 +42,24 @@
         <input id="form-activity" type="hidden" /></br>
         <input type="submit" data-inline="true" value="SAVE GOAL" id ="goalsubmit">
       </form>
-      <div data-role="footer"></div><!-- /footer -->
-    </div><!-- /page -->
+    </div><!-- /page-setupGoal -->
 
-    <div data-role="page" id="page5">
-      <div data-role="header"></div><!-- /header -->
+    <div data-role="page" id="page-confirmGoal">
       <div id="messageDiv"><h2></h2></div>
       <input type="submit" data-inline="true" value="CONFIRM" id ="goNext" class="buttonPair">
       <input type="submit" data-inline="true" class="buttonPair" value="RESET GOAL" id ="resetGoal">
-      <div data-role="footer"></div>
     </div><!-- /page -->
 
-    <div data-role="page" id="page6">
-      <div data-role="header"></div><!-- /header -->
+    <div data-role="page" id="page-checkToJoin">
       <div data-role="main" class="ui-content">
         <div id = "lockillust" class = "lockImage"></div>
         <div id="messageDiv"><h2></h2></div>
         <input type="submit" data-inline="true" value="Yes" id ="join" class="buttonPair">
         <input type="submit" data-inline="true" class="buttonPair" value="No" id ="notJoin">
       </div>
-      <div data-role="footer"></div><!-- /footer -->
-    </div><!-- /page -->
+    </div><!-- /page-checkToJoin -->
 
     <div data-role="page" id="dashboard">
-      <div data-role="header"></div><!-- /header -->
       <section class="section-title">
         <h2 id="title-today">TODAY</h2>
       </section>
@@ -129,54 +90,43 @@
           <p id='goal-progress-text' style="width: 80%; text-align: left; margin: 5px;">until open GGIT box</p>
           <progress max="100" value="50" class="goal-progress"></progress>
         </section>
-      </section>
+      </section><br/>
       <section class="section-title">
-        <h2 id='title-thisweek'>THIS WEEK</h2>
+        <h2 id='title-thisweek'>LAST WEEK</h2>
       </section>
       <section class="week-section">
         <ul class="sub-section">
           <li class="weeksRing">
-            <div class="date-disc">4/19</div>
-            <div class="circle color-1 color1-box-shadow">Good</div>
+            <div class="date-disc"></div>
+            <div class="circle color-1 color1-box-shadow"></div>
           </li>
           <li class="weeksRing">
-            <div class="date-disc">4/20</div>
+            <div class="date-disc"></div>
             <div class="circle color-2 color2-box-shadow"></div>
           </li>
           <li class="weeksRing">
-            <div class="date-disc">4/21</div>
+            <div class="date-disc"></div>
             <div class="circle color-2 color2-box-shadow"></div>
           </li>
           <li class="weeksRing">
-            <div class="date-disc">4/22</div>
+            <div class="date-disc"></div>
             <div class="circle color-2 color2-box-shadow"></div>
           </li>
           <li class="weeksRing">
-            <div class="date-disc">4/23</div>
-            <div class="circle color-1 color1-box-shadow">Good</div>
+            <div class="date-disc"></div>
+            <div class="circle color-1 color1-box-shadow"></div>
           </li>
           <li class="weeksRing">
-            <div class="date-disc">4/24</div>
+            <div class="date-disc"></div>
             <div class="circle color-2 color2-box-shadow"></div>
           </li>
         </ul>
       </section>
-
-      <div data-role="footer"></div><!-- /footer -->
     </div><!-- /page -->
 
     <div data-role="page" id="page-congrats">
-        <div data-role="header"></div><!-- /header -->
-        <div data-role="content">
-          <div id="congratAnimation" class="congrat0"></div>
-        </div><!-- /content -->
-        <div data-role="footer">
-        </div>
-    </div><!-- /page -->
-
-    <div id="status" style="position:absolute;top:50px;left:10px;width:500px;height:100px;"></div>
-    <div id="today-steps" style="position:absolute;top:80px;left:10px;width:500px;height:100px;"></div>
-    <div id="weekly-steps" style="position:absolute;top:110px;left:10px;width:500px;height:100px;"></div>
+      <div id="congratAnimation" class="congrat0"></div>
+    </div><!-- /page-congrats -->
 
     <script type="text/javascript" src="cordova.js"></script>
     <script src="js/jquery-1.9.1.min.js"></script>
@@ -187,7 +137,7 @@
     <script type="text/javascript">
       app.initialize();
       $.mobile.loadingMessage = false;
-      document.ontouchmove = function(e) {e.preventDefault()};
+      document.ontouchmove = function(e) {e.preventDefault()}; // prevent from scrolling horizontally on mobile
     </script>
   </body>
 </html>
