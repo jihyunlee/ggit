@@ -1,12 +1,9 @@
 Go Get it!
 -------------
 
-instructor: Tom Igoe<br/>
-collaborators: Eojin Chae, Jess Jung and Liz Koo<br/>
-tags: #bluetoothLE, #internetOfThing, #M7StepCounter, #motionTracker<br/>
-
-#### Installation
-    $ cordova plugin add https://github.com/jihyunlee/M7StepCounter.git
+Instructor: <a href="http://tigoe.net/" target="_blank">Tom Igoe</a><br/>
+Collaborators: Eojin Chae, Jess Jung and Liz Koo<br/>
+Tags: #bluetoothLE, #internetOfThings, #M7StepCounter, #motionTracker<br/>
 
 #### Plugins installed
 <!--a href="https://github.com/jihyunlee/BLEManager">BLEManager</a><br/-->
