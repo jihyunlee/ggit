@@ -34,6 +34,34 @@ module.exports = [
         "merges": [
             "navigator.notification"
         ]
+    },
+    {
+        "file": "plugins/de.appplant.cordova.plugin.local-notification/www/local-notification.js",
+        "id": "de.appplant.cordova.plugin.local-notification.LocalNotification",
+        "clobbers": [
+            "plugin.notification.local"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.device-motion/www/Acceleration.js",
+        "id": "org.apache.cordova.device-motion.Acceleration",
+        "clobbers": [
+            "Acceleration"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.device-motion/www/accelerometer.js",
+        "id": "org.apache.cordova.device-motion.accelerometer",
+        "clobbers": [
+            "navigator.accelerometer"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.device/www/device.js",
+        "id": "org.apache.cordova.device.device",
+        "clobbers": [
+            "device"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -42,7 +70,10 @@ module.exports.metadata =
     "org.apache.cordova.console": "0.2.9-dev",
     "com.hellojihyun.cordova.plugin.M7StepCounter": "1.0.0",
     "com.hellojihyun.cordova.plugin.BLEManager": "1.0.0",
-    "org.apache.cordova.dialogs": "0.2.7"
+    "org.apache.cordova.dialogs": "0.2.7",
+    "de.appplant.cordova.plugin.local-notification": "0.8.0dev",
+    "org.apache.cordova.device-motion": "0.2.7",
+    "org.apache.cordova.device": "0.2.10-dev"
 }
 // BOTTOM OF METADATA
 });

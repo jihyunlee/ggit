@@ -7,7 +7,10 @@
         "config.xml": {
             "/*": {
                 "<feature name=\"Console\"><param name=\"ios-package\" value=\"CDVLogger\" /></feature>": 1,
-                "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>": 1
+                "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>": 1,
+                "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>": 1,
+                "<feature name=\"LocalNotification\"><param name=\"ios-package\" onload=\"true\" value=\"APPLocalNotification\" /><param name=\"onload\" value=\"true\" /></feature>": 1,
+                "<feature name=\"Accelerometer\"><param name=\"ios-package\" value=\"CDVAccelerometer\" /></feature>": 1
             },
             "/widget": {
                 "<feature name=\"M7StepCounter\"><param name=\"ios-package\" value=\"CDVM7StepCounter\" /></feature>": 1,
@@ -16,7 +19,7 @@
         },
         "framework": {
             "CoreMotion.framework": {
-                "false": 1
+                "false": 2
             },
             "CoreBluetooth.framework": {
                 "false": 1
@@ -38,7 +41,17 @@
         },
         "org.apache.cordova.dialogs": {
             "PACKAGE_NAME": "com.hellojihyun.ggit"
+        },
+        "de.appplant.cordova.plugin.local-notification": {
+            "PACKAGE_NAME": "com.hellojihyun.ggit"
+        },
+        "org.apache.cordova.device-motion": {
+            "PACKAGE_NAME": "com.hellojihyun.ggit"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "com.hellojihyun.ggit"
+        }
+    }
 }
