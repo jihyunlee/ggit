@@ -3,7 +3,7 @@ var bleManager;
 var view;
 var locker;
 
-var demo = false; // use Accelerometer
+var demo = true; // use Accelerometer
 
 var app = {
   
@@ -30,35 +30,50 @@ var app = {
 
     console.log('GGIT::onDeviceReady');
 
+    window.localStorage.removeItem('isM7Available');
+    window.localStorage.removeItem('goalStatus');
+
     view = new ViewController(app);
 
-    if(demo == true) {
+    if(demo) {
       console.log('\n\n\nthis is demo mode\n\n\n');
       navigator.notification.alert('Shake your phone to win the treat! Go!', null, 'Go Get It!', 'Ok');
       app.watchAcceleration();
-
       view.setWeeklySteps([2415,2325,4605,6378,8706,2122]);
-
-      bleManager = new BLEManager();
-      app.startScan();
+      app.initBluetooth();
     } else {
       stepCounter = new M7StepCounter();
-      stepCounter.isAvailable(app.onAvailable, function(err){ console.log('isAvailable Failed'); });
+      app.isM7Available = window.localStorage.getItem('isM7Available');
+      if(app.isM7Available == undefined) {
+        console.log('localStorage -- isM7Available not set up yet')
+        var onAvailable = function(res) {
+          console.log('GGIT::onAvailable', res);
+          app.isM7Available = res;
+          window.localStorage.setItem('isM7Available', res);
+          app.onM7Available();
+        };
+        stepCounter.isAvailable(onAvailable, function(err){ console.log('isAvailable Failed'); });
+      } else {
+        console.log('localStorage -- isM7Available', app.isM7Available);
+        app.onM7Available();        
+      }
     }
   },
-  onAvailable: function(res) {
-    console.log('GGIT::onAvailable', res);
-
-    res = true;
-    if(!res) {
+  onM7Available: function() {
+    console.log('GGIT::onM7Available', app.isM7Available);
+    if(app.isM7Available) {
+      app.startStepCounter();
+      app.initBluetooth();
+    } else {
       navigator.notification.alert('Your device is not supported for tracking steps. Sorry!', null, 'Go Get It!', 'Ok');
       view.notSupportedDevice();
-    } else {
-      locker = new Locker(bleManager);
-      app.startStepCounter();
-      bleManager = new BLEManager();
-      app.startScan();
     }
+  },
+  initBluetooth: function() {
+    console.log('GGIT::initBluetooth');
+    bleManager = new BLEManager();
+    locker = new Locker(bleManager);
+    app.startScan();
   },
   onPause: function() {
     console.log('\n\n\nGGIT::onPause\n\n\n');
@@ -198,10 +213,10 @@ var app = {
     var didGetWeeklySteps = function() {
       app.getGoal(didGetGoal);
     };
-    if(demo == true) {
-      didGetWeeklySteps();
+    if(app.isM7Available == true) {
+      app.getWeeklySteps(didGetWeeklySteps);
     } else {
-      app.getWeeklySteps(didGetWeeklySteps);  
+      didGetWeeklySteps();
     }
   },
   getGoal: function(callback) {
@@ -320,16 +335,16 @@ var app = {
   */
   
   lock: function() {
-    if(demo == false) {
-      console.log('GGIT::lock');
-      locker.lock();
-    }
+    // if(app.isM7Available == true) {
+    //   console.log('GGIT::lock');
+    //   locker.lock();
+    // }
   },
   unlock: function() {
-    if(demo == false) {
-      console.log('GGIT::unlock');
-      locker.unlock();      
-    }
+    // if(app.isM7Available == true) {
+    //   console.log('GGIT::unlock');
+    //   locker.unlock();      
+    // }
   },
 
 
@@ -349,7 +364,7 @@ var app = {
 
     var randomMin = 10,
         randomMax = 100,
-        threshold = 50;
+        threshold = 5;
 
     function success(acceleration) {
       if(prevX != undefined && prevY != undefined && prevZ != undefined) {
