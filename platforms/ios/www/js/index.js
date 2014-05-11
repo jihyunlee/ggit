@@ -30,9 +30,15 @@ var app = {
 
     console.log('GGIT::onDeviceReady');
 
-    window.localStorage.removeItem('isM7Available');
-    window.localStorage.removeItem('goalStatus');
+    // window.localStorage.removeItem('isM7Available');
+    // window.localStorage.removeItem('goalStatus');
+    // window.localStorage.removeItem('goalSteps');
 
+    window.localStorage.setItem('isM7Available', false);
+    window.localStorage.setItem('goalStatus', true);
+    window.localStorage.setItem('goalSteps', 5000);
+    window.localStorage.setItem('goalPeriod', 2);
+    
     view = new ViewController(app);
 
     if(demo) {
@@ -40,12 +46,11 @@ var app = {
       navigator.notification.alert('Shake your phone to win the treat! Go!', null, 'Go Get It!', 'Ok');
       app.watchAcceleration();
       view.setWeeklySteps([2415,2325,4605,6378,8706,2122]);
-      app.initBluetooth();
+      app.isGoalSetup();
     } else {
       stepCounter = new M7StepCounter();
       app.isM7Available = window.localStorage.getItem('isM7Available');
       if(app.isM7Available == undefined) {
-        console.log('localStorage -- isM7Available not set up yet')
         var onAvailable = function(res) {
           console.log('GGIT::onAvailable', res);
           app.isM7Available = res;
@@ -54,7 +59,6 @@ var app = {
         };
         stepCounter.isAvailable(onAvailable, function(err){ console.log('isAvailable Failed'); });
       } else {
-        console.log('localStorage -- isM7Available', app.isM7Available);
         app.onM7Available();        
       }
     }
@@ -63,10 +67,39 @@ var app = {
     console.log('GGIT::onM7Available', app.isM7Available);
     if(app.isM7Available) {
       app.startStepCounter();
-      app.initBluetooth();
+      app.isGoalSetup();
     } else {
       navigator.notification.alert('Your device is not supported for tracking steps. Sorry!', null, 'Go Get It!', 'Ok');
       view.notSupportedDevice();
+    }
+  },
+  isGoalSetup: function() {    
+    var goalStatus = window.localStorage.getItem('goalStatus');
+    console.log('GGIT::isGoalSetup -- ', goalStatus);
+    if(goalStatus !== 'true') app.initBluetooth();
+    else app.isGoalAchieved();
+  },
+  isGoalAchieved: function() {
+    console.log('GGIT::isGoalAchieved');
+    var goalSteps = window.localStorage.getItem('goalSteps');
+    var goalPeriod = window.localStorage.getItem('goalPeriod');
+    if(goalSteps != undefined && goalPeriod != undefined) {
+      goalSteps = parseInt(goalSteps);
+      goalPeriod = parseInt(goalPeriod);
+      var count = 0;
+        console.log('goalSteps', goalSteps);
+      for(var i=0; i<view.weeklySteps.length; i++) {
+          console.log('view.weeklySteps', view.weeklySteps[i]);
+        if(parseInt(view.weeklySteps[i]) >= goalSteps) count++;
+          console.log('count', count);
+      }
+        console.log('view.todaySteps', view.todaySteps);
+      if(parseInt(view.getTodaySteps) >= goalSteps) count++;
+        console.log('count',count, 'goalPeriod', goalPeriod);
+      if(count >= goalPeriod) view.congrats();
+      else view.dashBoard();
+    } else {
+      console.log('something wrong with saving data in localStorage');
     }
   },
   initBluetooth: function() {
@@ -270,26 +303,25 @@ var app = {
 
   startStepCounter: function() {
     console.log('GGIT::startStepCounter');
-    stepCounter.start(app.onStartStepCounter, function(err){console.log('startStepCounter Failed');});
-  },
-  onStartStepCounter: function() {
-    console.log('GGIT::onStartStepCounter');
-    app.getWeeklySteps(function(){});
+    var onStartStepCounter = function() {
+      console.log('GGIT::onStartStepCounter');
+      app.getWeeklySteps(function(){});
+    };
+    stepCounter.start(onStartStepCounter, function(err){console.log('startStepCounter Failed');});
   },
   stopStepCounter: function() {
     console.log('GGIT::stopStepCounter');
-    stepCounter.stop(app.onStopStepCounter, function(err){console.log('stopStepCounter Failed');});
-  },
-  onStopStepCounter: function() {
-    console.log('GGIT::onStopStepCounter');
+    var onStopStepCounter = function() {
+      console.log('GGIT::onStopStepCounter');
+    };
+    stepCounter.stop(onStopStepCounter, function(err){console.log('stopStepCounter Failed');});
   },
   getSteps: function() {
     // console.log('GGIT::getSteps');
-    stepCounter.getSteps(0, app.gotSteps, function(err){console.log('getTodaySteps Failed');});
-  },
-  gotSteps: function(steps) {
-    // console.log('GGIT::gotSteps', steps);
-    view.setTodaySteps(steps);
+    var gotSteps = function(steps) {
+      view.setTodaySteps(steps);
+    };
+    stepCounter.getSteps(0, gotSteps, function(err){console.log('getTodaySteps Failed');});
   },
   getWeeklySteps: function(callback) {
     console.log('GGIT::getWeeklySteps');
@@ -335,14 +367,14 @@ var app = {
   */
   
   lock: function() {
+    console.log('GGIT::lock');
     // if(app.isM7Available == true) {
-    //   console.log('GGIT::lock');
     //   locker.lock();
     // }
   },
   unlock: function() {
+    console.log('GGIT::unlock');
     // if(app.isM7Available == true) {
-    //   console.log('GGIT::unlock');
     //   locker.unlock();      
     // }
   },
