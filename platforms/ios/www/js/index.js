@@ -33,19 +33,19 @@ var app = {
     // window.localStorage.removeItem('isM7Available');
     // window.localStorage.removeItem('goalStatus');
     // window.localStorage.removeItem('goalSteps');
+    // window.localStorage.removeItem('goalPeriod');
+    // window.localStorage.removeItem('todaySteps');
 
-    window.localStorage.setItem('isM7Available', false);
-    window.localStorage.setItem('goalStatus', true);
-    window.localStorage.setItem('goalSteps', 5000);
-    window.localStorage.setItem('goalPeriod', 2);
+    // window.localStorage.setItem('isM7Available', false);
+    // window.localStorage.setItem('goalStatus', true);
+    // window.localStorage.setItem('goalSteps', 5000);
+    // window.localStorage.setItem('goalPeriod', 2);
     
     view = new ViewController(app);
 
     if(demo) {
       console.log('\n\n\nthis is demo mode\n\n\n');
-      navigator.notification.alert('Shake your phone to win the treat! Go!', null, 'Go Get It!', 'Ok');
       app.watchAcceleration();
-      view.setWeeklySteps([2415,2325,4605,6378,8706,2122]);
       app.isGoalSetup();
     } else {
       stepCounter = new M7StepCounter();
@@ -80,26 +80,52 @@ var app = {
     else app.isGoalAchieved();
   },
   isGoalAchieved: function() {
-    console.log('GGIT::isGoalAchieved');
+    
     var goalSteps = window.localStorage.getItem('goalSteps');
     var goalPeriod = window.localStorage.getItem('goalPeriod');
+    var todaySteps = window.localStorage.getItem('todaySteps');
+    console.log('GGIT::isGoalAchieved', goalSteps, goalPeriod, todaySteps);
+
     if(goalSteps != undefined && goalPeriod != undefined) {
       goalSteps = parseInt(goalSteps);
       goalPeriod = parseInt(goalPeriod);
-      var count = 0;
-        console.log('goalSteps', goalSteps);
-      for(var i=0; i<view.weeklySteps.length; i++) {
-          console.log('view.weeklySteps', view.weeklySteps[i]);
-        if(parseInt(view.weeklySteps[i]) >= goalSteps) count++;
-          console.log('count', count);
+      todaySteps = parseInt(todaySteps);
+      if(isNaN(todaySteps)) {
+        todaySteps = 0;
       }
-        console.log('view.todaySteps', view.todaySteps);
+      view.setGoalSteps(goalSteps);
+      view.setGoalPeriod(goalPeriod);
+      view.setTodaySteps(todaySteps);
+
+      //randomly generate last week's steps based on goal
+      if(demo) {
+        var weekly = [];
+        for(var i=0; i<6-goalPeriod; i++) {
+          weekly.push(Math.floor(Math.random() * goalSteps));
+        }
+        for(var i=0; i<goalPeriod-1; i++) {
+          var r = Math.floor(Math.random() * 2048) + goalSteps;
+          var index = Math.floor(Math.random() * weekly.length);
+          weekly.splice(index, 0, r);
+        }
+        console.log('last week', weekly);
+        view.setWeeklySteps(weekly);
+      }
+
+      var count = 0;
+      for(var i=0; i<view.weeklySteps.length; i++) {
+        if(parseInt(view.weeklySteps[i]) >= goalSteps) count++;
+      }
       if(parseInt(view.getTodaySteps) >= goalSteps) count++;
-        console.log('count',count, 'goalPeriod', goalPeriod);
       if(count >= goalPeriod) view.congrats();
-      else view.dashBoard();
+      else {
+        navigator.notification.alert('Shake your phone to win the treat! Go!', null, 'Go Get It!', 'Ok');
+        app.dashBoardIntervalId = setInterval(function(){view.dashBoard();},500);
+        // view.dashBoard();
+      }
     } else {
       console.log('something wrong with saving data in localStorage');
+      app.initBluetooth();
     }
   },
   initBluetooth: function() {
@@ -110,15 +136,19 @@ var app = {
   },
   onPause: function() {
     console.log('\n\n\nGGIT::onPause\n\n\n');
+    clearInterval(app.dashBoardIntervalId);
     app.isSuccess = false;
-    bleManager.disconnect(function(){}, function(err){console.log('pause Failed');});
+    // bleManager.disconnect(function(){}, function(err){console.log('pause Failed');}); //this cause exception error
     // app.stopStepCounter();
   },
   onResume: function() {
     console.log('\n\n\nGGIT::onResume\n\n\n');
-    // app.startStepCounter();
-    clearInterval(app.dashBoardIntervalId);
-    app.startScan();
+
+    if(demo) {
+      app.isGoalSetup();      
+    } else {
+
+    }
   },
         
     
@@ -188,16 +218,19 @@ var app = {
       console.log('GGIT::didDiscoverService --- ');
       
       if (res.hasOwnProperty("data")) {
-        if(!strcmp(res.data.toString(),'')) {
+        if(res.data === 'true') {
+          console.log('goal', res.data);
+          view.goalStatus = true;
+        } else {
           console.log('goal is empty');
           view.goalStatus = false;
         }
-        else {
-          console.log('goal', res.data);
-          view.goalStatus = true;
-        }
+        // if(!strcmp(res.data.toString(),'')) {
+        // }
+        // else {
+        // }
         app.isSuccess = true;
-        view.setGoalStatus(res.data.toString());
+        // view.setGoalStatus(res.data.toString());
       } else {
         console.log('fail to read goal', res);
       }
@@ -205,21 +238,49 @@ var app = {
     bleManager.discoverServicesByUUID(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_GOAL_UUID, didDiscoverService, function(err){console.log('discoverServicesByUUID Failed');});
   },
   setupGoal: function(steps, period) {
-    console.log('GGIT::setupGoal', steps, period);   
+    console.log('GGIT::setupGoal', steps, period);
     app.goalSteps = steps;
     app.goalPeriod = period;
-    
+
+    //randomly generate last week's steps based on goal
+    if(demo) {
+      var weekly = [];
+      for(var i=0; i<6-parseInt(period); i++) {
+        weekly.push(Math.floor(Math.random() * parseInt(steps)));
+      }
+      for(var i=0; i<parseInt(period)-1; i++) {
+        var r = Math.floor(Math.random() * 2048) + parseInt(steps);
+        var index = Math.floor(Math.random() * weekly.length);
+        weekly.splice(index, 0, r);
+      }
+      console.log('last week', weekly);
+      view.setWeeklySteps(weekly);
+    }
+
+    var didDisconnect = function() {
+      console.log('GGIT::didDisconnect');
+      // callback();
+      view.checkToJoin();
+    };
+
     var didWritePeriod = function(res) {
       console.log('GGIT::didWritePeriod', res);
+      window.localStorage.setItem('goalPeriod', period);
+      view.setGoalPeriod(period);
+      // disconnect
+      bleManager.disconnect(didDisconnect, function(err){console.log('pause Failed');});
     };
 
     var didWriteSteps = function(res) {
       console.log('GGIT::didWriteSteps', res);
+      window.localStorage.setItem('goalSteps', steps);
+      view.setGoalSteps(steps);
       bleManager.writeValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_PERIOD_UUID, app.goalPeriod, didWritePeriod, function(err){console.log('writeValueForCharacteristic Failed');});
     };
     
     var didSetupGoals = function(res) {
       console.log('GGIT::didSetupGoals', res);
+      window.localStorage.setItem('goalStatus', true);
       bleManager.writeValueForCharacteristic(app.GGIT_SERVICE_UUID, app.GGIT_CHARACTERISTIC_STEPS_UUID, app.goalSteps, didWriteSteps, function(err){console.log('writeValueForCharacteristic Failed');});
     }; 
 
@@ -396,7 +457,7 @@ var app = {
 
     var randomMin = 10,
         randomMax = 100,
-        threshold = 5;
+        threshold = 50/5;
 
     function success(acceleration) {
       if(prevX != undefined && prevY != undefined && prevZ != undefined) {
@@ -406,9 +467,23 @@ var app = {
           prevX = acceleration.x;
           prevY = acceleration.y;
           prevZ = acceleration.z;
-          view.setTodaySteps(view.getTodaySteps() + Math.floor(Math.random() * (randomMax - randomMin + 1)) + randomMin);
 
-          if(parseInt(view.getTodaySteps()) >= parseInt(view.goalSteps)) {
+          var todaySteps = parseInt(view.getTodaySteps());
+          if(isNaN(todaySteps)) todaySteps = 0;
+          var s = todaySteps + Math.floor(Math.random() * (randomMax - randomMin + 1)) + randomMin;
+          window.localStorage.setItem('todaySteps',s);
+          view.setTodaySteps(s);
+
+          var count = 0;
+          var goalSteps = parseInt(window.localStorage.getItem('goalSteps'));
+          var goalPeriod = parseInt(window.localStorage.getItem('goalPeriod'));
+          if(isNaN(goalSteps)) goalSteps = 0;
+          if(isNaN(goalPeriod)) goalPeriod = 0;
+          for(var i=0; i<view.weeklySteps.length; i++) {
+            if(parseInt(view.weeklySteps[i]) >= goalSteps) count++;
+          }
+          if(parseInt(view.getTodaySteps) >= goalSteps) count++;
+          if(count >= goalPeriod) {
             app.setLockStatus('false');
             clearInterval(app.dashBoardIntervalId);
             view.congrats();
