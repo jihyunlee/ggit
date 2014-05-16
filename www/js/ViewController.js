@@ -95,7 +95,15 @@ ViewController.prototype.didFailToConnect = function() {
 
 ViewController.prototype.hasGoal = function() {
   console.log("\n\nViewController::hasGoal " + this.goalStatus.toString() +"\n\n");
-  if(!strcmp(this.goalStatus.toString(), 'true')) this.app.fetch();
+  // if(!strcmp(this.goalStatus.toString(), 'true')) {
+  var that = this;
+  if(this.goalStatus === 'true') {
+    // this.app.fetch();
+    this.goalSteps = window.localStorage.getItem('goalSteps');
+    this.goalPeriod = window.localStorage.getItem('goalPeriod');
+    console.log('steps', this.goalSteps, 'period', this.goalPeriod);
+    this.app.dashBoardIntervalId = setInterval(function(){that.dashBoard();},500);
+  }
   else this.fillBox();
 }
 
@@ -177,7 +185,6 @@ ViewController.prototype.confirmGoal = function() {
   $('#goNext').click(function() {
     that.app.setupGoal(steps, period);
 //    that.app.lock();
-    that.checkToJoin();
   });
   
   $('#resetGoal').click(function() {
@@ -206,7 +213,11 @@ ViewController.prototype.checkToJoin = function() {
     $('#lockillust').toggleClass('lockImage');
     $('#lockillust').toggleClass('runImage');
     $('.buttonPair').css('display','none');
-    that.app.fetch();
+    // that.app.fetch();
+    // that.goalSteps = window.localStorage.getItem('goalSteps');
+    // that.goalPeriod = window.localStorage.getItem('goalPeriod');
+    // console.log('steps', that.goalSteps, 'period', that.goalPeriod);
+    this.app.dashBoardIntervalId = setInterval(function(){that.dashBoard();},500);
   });
   
   $('#notJoin').click(function() {
@@ -252,7 +263,7 @@ ViewController.prototype.dashBoard = function() {
 
 ViewController.prototype.drawTodayRing = function() {
 
-  console.log('ViewController::drawTodayRing');
+  // console.log('ViewController::drawTodayRing');
 
   // Update the wheel giving to it a value in degrees,
   // getted from the percentage of the input value
@@ -283,7 +294,7 @@ ViewController.prototype.drawTodayRing = function() {
     degrees = ( todaySteps * 360 ) / goalSteps;
   }
 
-  console.log("degrees: "+degrees);
+  // console.log("degrees: "+degrees);
       // Convert the degrees value to radians
   var rad = degrees * toRadians,
       // Determine X and cut to 2 decimals
@@ -307,7 +318,7 @@ ViewController.prototype.drawTodayRing = function() {
 
 ViewController.prototype.setDateGap = function() {
 
-  console.log('ViewController::setDateGap');
+  // console.log('ViewController::setDateGap');
 
   var passedDays = 24;  // fake data for data gap
   var startingDate = "04/30/2014"; // fake data for starting date
@@ -323,7 +334,7 @@ ViewController.prototype.setDateGap = function() {
 
 ViewController.prototype.weekStatusDot = function() {
 
-  console.log('ViewController::weekStatusDot');
+  // console.log('ViewController::weekStatusDot');
 
   var successDays = 0;
 
@@ -345,6 +356,7 @@ ViewController.prototype.weekStatusDot = function() {
     weekStatus.appendChild(dot);
     weekStatus.appendChild(date);
   }
+  if(parseInt(this.todaySteps) >= parseInt(this.goalSteps)) successDays++;
 
   var goalPeriod = parseInt(this.goalPeriod);
   $('.goal-progress').val(Math.floor(successDays/goalPeriod*100));
@@ -353,8 +365,12 @@ ViewController.prototype.weekStatusDot = function() {
     this.congrats();
   } else {
     if(goalPeriod-successDays == 1) {
-      var needSteps = parseInt(this.goalSteps) - parseInt(this.todaySteps);
-      $('#goal-progress-text').html('You will get it if you have '+needSteps+' more steps today!');
+      if(parseInt(this.todaySteps) >= parseInt(this.goalSteps)) {
+        $('#goal-progress-text').html('You will get it if you make '+this.goalSteps+' steps tomorrow!');
+      } else {
+        var needSteps = parseInt(this.goalSteps) - parseInt(this.todaySteps);
+        $('#goal-progress-text').html('You will get it if you have '+needSteps+' more steps today!');        
+      }
     }
     else
       $('#goal-progress-text').html(goalPeriod-successDays+' more days to go!');    
