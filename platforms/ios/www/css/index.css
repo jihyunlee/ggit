@@ -142,7 +142,7 @@ li {
     -webkit-animation:fade 3000ms infinite;
 }
 
-#page-notSupported, #page-scanning, #page-failToConnect, #page-fillBox, #page-setupGoal, #page-confirmGoal, #page-checkToJoin, #dashboard, #page-congrats {
+#page-notSupported, #page-welcome, #page-scanning, #page-failToConnect, #page-fillBox, #page-setupGoal, #page-confirmGoal, #page-checkToJoin, #dashboard, #page-congrats {
   display:none;
 }
 
@@ -151,13 +151,32 @@ li {
   width: 100%;
 }
 
+#bgImage {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+#form-wrapper {
+  position: fixed;
+  top: 270px;
+  left: 90px;
+}
+
+.welcome0 { content:url(../img/welcome0.png); width: 100%; }
+.welcome1 { content:url(../img/welcome1.png); width: 100%; }
+.welcome2 { content:url(../img/welcome2.png); width: 100%; }
+.welcome3 { content:url(../img/welcome3.png); width: 100%; }
+.welcome4 { content:url(../img/welcome4.png); width: 100%; }
+.welcome5 { content:url(../img/welcome5.png); width: 100%; }
+
 #page-scanning{
   text-align:center;
   font-family: 'quicksandregular';
   padding: 220px 30px 30px 30px;
 }
 
-#page-fillBox, #page-setupGoal, #page-confirmGoal, #page-checkToJoin {
+#page-welcome, #page-fillBox, #page-setupGoal, #page-confirmGoal, #page-checkToJoin {
   text-align:center;
   font-family: 'quicksandregular';
   padding: 150px 30px 30px 30px;
